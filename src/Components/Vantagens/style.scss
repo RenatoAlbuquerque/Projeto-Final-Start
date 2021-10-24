@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.lineGradient{
+        height: 50px;
+        width: 100%;
+        background: 
+        linear-gradient(90deg, 
+        rgba(246, 177, 166, 1) 0%, 
+        rgba(233, 155, 158, 1) 35%, 
+        rgba(212, 114, 143, 1) 100%);
+    }
+
+main{
+    margin: 0 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .vantagens{
+    display: flex;
+    height: 100px;
+    width: 1320px;
+    justify-content: center;
+    justify-content: space-between;
+    user-select: none;
+
+        .pagamento, .frete, .atendimento, .seguranca{
+            display: flex;
+            align-items: center;
+
+            svg{
+                width: 62px;
+                height: 40px;
+                margin-right: 10px;
+                color: #D6778E;
+            }
+
+            h3{
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            
+            p{
+                color: #696868;
+                font-weight: 400;
+                font-size: .75rem;
+                line-height: 1.32;
+                font-style: italic;
+            }
+        }
+    }
+}

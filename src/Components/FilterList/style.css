@@ -1,0 +1,48 @@
+* {
+    background-color: #fbfbfb;
+}
+
+.filter{
+    margin: 0 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-list{
+    display: flex;
+    height: 100px;
+    width: 1320px;
+    justify-content: space-between;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.filter-brand button{
+    font-size: 1.875rem;
+    font-weight: 400;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-brand button:hover{
+    background-color: #FDF4F3;
+    border: 1px solid #D6778E;
+
+}
+
+.filter-price_rating{
+    display: flex;
+    gap: 36px;
+}
+
+.filter-price_rating button{
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    color: #D6778E;
+    font-weight: 700;
+}
