@@ -1,12 +1,18 @@
 import React, {useState, useEffect} from "react";
 import * as Style from './style';
 import api from '../../Services/api';
+import FilterList from '../FilterList';
+
 
 export default function ListaDeProdutos (){
   const [posts, setPosts] = useState([])
 
-  const sliceData = (array, limite) => {
-    return array.slice(0,limite) 
+  const updateStateOnSort = (productsList) =>{
+    setPosts([...productsList])
+  }
+
+  const sliceData = (array) => {
+    return array.slice(450,500)
   }
 
   const sliceColors = (array) => {
@@ -40,9 +46,8 @@ export default function ListaDeProdutos (){
     const getData = async()=>{
       try{
        const { data } = await api.get('/products.json')
-       const sliced = sliceData(data,30)
-       setPosts([...sliced])
-
+       const sliced = sliceData(data)
+       setPosts([...data])
       }catch(error){
         console.log(error)
       }
@@ -50,12 +55,10 @@ export default function ListaDeProdutos (){
       getData()
   }, [])
 
-  
-
-    
 
   return (
     <div>
+      <FilterList products={posts && posts} updateStateOnSort={updateStateOnSort} />
       <Style.GlobalStyle>
         <Style.Global>
           {posts.map((post) =>(
@@ -77,8 +80,8 @@ export default function ListaDeProdutos (){
                 Preço: R${post.price}
               </Style.CardPrice>
               <Style.CardRating>
-                  Avaliação: {post.rating}
-                </Style.CardRating>
+                Avaliação: {post.rating}
+              </Style.CardRating>
               <Style.CardGapDetail>
                 <Style.CardFooter>
                   <Style.CardLocalColor>
@@ -93,9 +96,6 @@ export default function ListaDeProdutos (){
           ))} 
         </Style.Global>
       </Style.GlobalStyle>
-
-      
-      <Style.Loading>LOADING</Style.Loading>
          
        
     </div>

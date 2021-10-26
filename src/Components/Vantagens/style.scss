@@ -13,20 +13,15 @@
         rgba(212, 114, 143, 1) 100%);
     }
 
-main{
-    margin: 0 15vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.vantagens-lista {
+    width: 100%;
     .vantagens{
-    display: flex;
-    height: 100px;
-    width: 1320px;
-    justify-content: center;
-    justify-content: space-between;
-    user-select: none;
+        margin: 0 auto;
+        display: flex;
+        height: 100px;
+        width: 75%;
+        justify-content: center;
+        user-select: none;
 
         .pagamento, .frete, .atendimento, .seguranca{
             display: flex;
@@ -54,3 +49,36 @@ main{
         }
     }
 }
+
+@media (max-width: 1680px){
+    .vantagens-lista {
+        .vantagens {
+            margin: 0 auto;
+            display: flex;
+            height: 100px;
+            width: 85%;
+            justify-content: space-between;
+            user-select: none;
+        }  
+    }
+}
+@media (max-width: 1440px){
+
+    .vantagens-lista {
+        .vantagens{
+            width: 90%;
+        }
+    }  
+}
+    
+@media (max-width: 940px){
+
+    .vantagens-lista {
+        .vantagens{
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+        }
+    }  
+}
+    

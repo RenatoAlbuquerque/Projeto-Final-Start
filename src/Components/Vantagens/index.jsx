@@ -10,7 +10,7 @@ export default function Vantagem (){
   return (
     <>
       <div className="lineGradient"></div>
-      <main>
+      <div className="vantagens-lista">
         <div className="vantagens">
           <div className="pagamento">
             <BsFillCreditCard2FrontFill/>
@@ -41,7 +41,7 @@ export default function Vantagem (){
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
