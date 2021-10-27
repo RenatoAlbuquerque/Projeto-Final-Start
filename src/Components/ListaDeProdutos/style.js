@@ -3,18 +3,41 @@ import styled from 'styled-components';
 export const GlobalStyle = styled.div`
     margin: 0;
     padding: 0;
+    width: 100%;
+    background-color: #FDF4F3;
+    display: flex;
+    justify-content: center;
 `
 
 
 export const Global = styled.div`
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 54px;
     grid-row-gap: 0px;
     justify-items: center;
-    justify-content: center;
-    padding: 0 25%;
     background-color: #FDF4F3;
+
+    @media(max-width: 1440px){
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2vw;
+    }
+    @media(max-width: 950px){
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2vw;
+    }
+    @media(max-width: 950px){
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2vw;
+    }
+    @media(max-width: 700px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10vw;
+    }
+    @media(max-width: 500px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 `
 
 export const Card = styled.div`

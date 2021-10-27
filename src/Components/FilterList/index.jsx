@@ -1,6 +1,7 @@
-import React from "react";
-import './style.css';
+import React, { useState} from "react";
+import './style.scss';
 import { AiFillStar, AiOutlineStar, AiOutlineCaretUp, AiOutlineCaretDown} from "react-icons/ai";
+import api from '../../Services/api';
 
 
 export default function FilterList ({products, updateStateOnSort}){
@@ -68,7 +69,17 @@ export default function FilterList ({products, updateStateOnSort}){
     <div className="filter">
         <div className="filter-list">
             <div className="filter-brand">
-                <button>Por Marcas</button>
+                <button >Por Marcas</button>
+                  <div className="modal">
+                    <div className="modal-brand">
+                      <button>marca1</button>
+                      <button>marca2</button>
+                      <button>marca3</button>
+                      <button>marca4</button>
+                      <button>marca5</button>
+                    </div>
+                  </div>
+                
             </div>
             <div className="filter-price_rating">
                 <button onClick={filterByMinPrice}>Menor Preço<AiOutlineCaretDown/></button>

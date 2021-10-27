@@ -12,7 +12,7 @@ export default function ListaDeProdutos (){
   }
 
   const sliceData = (array) => {
-    return array.slice(450,500)
+    return array.slice(450,460)
   }
 
   const sliceColors = (array) => {
@@ -47,7 +47,7 @@ export default function ListaDeProdutos (){
       try{
        const { data } = await api.get('/products.json')
        const sliced = sliceData(data)
-       setPosts([...data])
+       setPosts([...sliced])
       }catch(error){
         console.log(error)
       }
@@ -96,8 +96,6 @@ export default function ListaDeProdutos (){
           ))} 
         </Style.Global>
       </Style.GlobalStyle>
-         
-       
     </div>
   );
 }
