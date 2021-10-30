@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import * as Style from './style';
+import './style.scss';
 import api from '../../Services/api';
 import FilterList from '../FilterList';
 
@@ -8,8 +8,8 @@ export default function ListaDeProdutos (){
   const [posts, setPosts] = useState([])
 
   const updateStateOnSort = (productsList) =>{
-    setPosts([...productsList])
-  }
+      setPosts([...productsList])
+    }
 
   const sliceData = (array) => {
     return array.slice(450,460)
@@ -21,10 +21,12 @@ export default function ListaDeProdutos (){
       return(
         <>
           {colorsArray.map((color, index)=>(
-            <Style.CardColor 
+            <div className="CardColor" 
               key={index} 
-              color={color.hex_value}>
-            </Style.CardColor> 
+              color={color.hex_value}
+              style={{backgroundColor: `${(color.hex_value)}`}}
+              >
+            </div> 
           ))}
         </> 
       ) 
@@ -32,10 +34,12 @@ export default function ListaDeProdutos (){
       return(
         <>
           {array.map((color, index)=>(
-          <Style.CardColor 
+          <div className="CardColor" 
             key={index} 
-            color={color.hex_value}>
-          </Style.CardColor> 
+            color={color.hex_value}
+            style={{backgroundColor: `${(color.hex_value)}`}}
+            >
+          </div> 
           ))} 
         </>
       ) 
@@ -55,47 +59,55 @@ export default function ListaDeProdutos (){
       getData()
   }, [])
 
-
   return (
     <div>
       <FilterList products={posts && posts} updateStateOnSort={updateStateOnSort} />
-      <Style.GlobalStyle>
-        <Style.Global>
-          {posts.map((post) =>(
-            <Style.Card key={post.id}>
-              <Style.CardImage 
-                src={post.api_featured_image} 
-                alt={post.name}
-              />
-              <Style.CardName>
-                Nome: {post.name}
-              </Style.CardName>
-              <Style.CardBrand>
-                Marca: {post.brand}
-              </Style.CardBrand>
-              <Style.CardCategory>
-                Tipo: {post.category}
-              </Style.CardCategory>
-              <Style.CardPrice>
-                Preço: R${post.price}
-              </Style.CardPrice>
-              <Style.CardRating>
-                Avaliação: {post.rating}
-              </Style.CardRating>
-              <Style.CardGapDetail>
-                <Style.CardFooter>
-                  <Style.CardLocalColor>
-                    {sliceColors(post.product_colors)}
-                  </Style.CardLocalColor>
-                </Style.CardFooter>
-                <Style.CardDetail>
-                    + DETALHES
-                </Style.CardDetail>
-              </Style.CardGapDetail>
-            </Style.Card>
-          ))} 
-        </Style.Global>
-      </Style.GlobalStyle>
+      <div className="GlobalStyle">
+        <div className="Global">
+          {posts.length > 0 ?
+            posts.map((post) =>(
+              <div className="Card" key={post.id}>
+                <div className="CardImage">
+                  <img src={post.api_featured_image} alt={post.name}></img>
+                </div>
+                <div className="CardName">
+                  {post.name}
+                </div>
+                <div className="CardBrand">
+                  Marca: {post.brand}
+                </div>
+                <div className="CardCategory">
+                  Tipo: {post.category}
+                </div>
+                <div className="CardPrice">
+                  Preço: R${post.price}
+                </div>
+                <div className="CardRating">
+                  Avaliação: {post.rating}
+                </div>
+                <div className="CardGapDetail">
+                  <div className="CardFooter">
+                    <div className="CardLocalColor">
+                      {sliceColors(post.product_colors)}
+                    </div>
+                  </div>
+                  <div className="CardDetail">
+                      + DETALHES
+                  </div>
+                </div>
+              </div>
+            ))
+          :
+            <div className="loading">
+              <input type="checkbox" id="check"/>
+              <label for="check">
+                <div class="check-icon"></div>
+              </label>
+            </div>
+          }
+          
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,28 @@ import api from '../../Services/api';
 
 
 export default function FilterList ({products, updateStateOnSort}){
+  const [brand, setBrand] = useState();
+  const [menuBrand, setMenuBrand] = useState(false);
+
+    setMenuBrand(!menuBrand)
+  }
+
+  const handleBrand = (e)=>{
+    e.preventDefault();
+    const inputBrand = e.target.value
+
+    api.get(`/products.json?brand=${inputBrand}`)
+    .then((response) =>  setBrand(response.data))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      });
+    filterByBrand(brand)
+  } 
+
+  const filterByBrand = (array)=>{
+    const slicedBrand = array.slice(0,45)
+    updateStateOnSort(slicedBrand)
+  }
 
   const filterByMinPrice = () =>{
     const sortedArray = products.sort((a,b)=>{
@@ -34,6 +56,7 @@ export default function FilterList ({products, updateStateOnSort}){
 
   const filterByMaxRating = () =>{
     const sortedArray = products.sort((a,b)=>{
+      
       if (a.rating !== null && b.rating !== null){
         if(parseInt(a.rating) > parseInt(b.rating)){
           return -1;
@@ -64,22 +87,25 @@ export default function FilterList ({products, updateStateOnSort}){
     updateStateOnSort(sortedArray)
   }
 
-
   return (
     <div className="filter">
         <div className="filter-list">
             <div className="filter-brand">
-                <button >Por Marcas</button>
-                  <div className="modal">
-                    <div className="modal-brand">
-                      <button>marca1</button>
-                      <button>marca2</button>
-                      <button>marca3</button>
-                      <button>marca4</button>
-                      <button>marca5</button>
-                    </div>
+                <div className="brand-btn">
+                  <button onClick={MenuToogleBrand} >Por Marcas</button>
+                </div>
+                <div className={menuBrand ? "modal" : "modalNone"}>
+                  <div className="modal-brand">
+                    <button onClick={handleBrand} value="benefit">Benefit</button>
+                    <button onClick={handleBrand} value="clinique">Clinique</button>
+                    <button onClick={handleBrand} value="covergirl">Covergirl</button>
+                    <button onClick={handleBrand} value="dior">Dior</button>
+                    <button onClick={handleBrand} value="l'oreal">L'oreal</button>
+                    <button onClick={handleBrand} value="maybelline">Maybelline</button>
+                    <button onClick={handleBrand} value="nyx">Nyx</button>
+                    <button onClick={handleBrand} value="revlon">Revlon</button>
                   </div>
-                
+                </div>
             </div>
             <div className="filter-price_rating">
                 <button onClick={filterByMinPrice}>Menor Preço<AiOutlineCaretDown/></button>

@@ -6,10 +6,10 @@ import { BiConversation } from "react-icons/bi";
 import { RiLockPasswordFill, } from "react-icons/ri";
 
 
-export default function Vantagem (){
+export default function Vantagens (){
   return (
     <>
-      <div className="lineGradient"></div>
+      <div className="lineGradientDown"></div>
       <div className="vantagens-lista">
         <div className="vantagens">
           <div className="pagamento">
