@@ -8,6 +8,7 @@ export default function FilterList ({products, updateStateOnSort}){
   const [brand, setBrand] = useState();
   const [menuBrand, setMenuBrand] = useState(false);
 
+  const MenuToogleBrand = () =>{
     setMenuBrand(!menuBrand)
   }
 
