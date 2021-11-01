@@ -5,17 +5,27 @@ import bronzerIcon from '../../Images/IconsProductTypes/bronzer.png';
 import esmalteIcon from '../../Images/IconsProductTypes/esmalte.png';
 import delineadorIcon from '../../Images/IconsProductTypes/delineador.png';
 import rimelIcon from '../../Images/IconsProductTypes/rimel.png';
+import React, { useState} from "react";
 
 export default function ProductTypes(){
+    const [type, setType] = useState();
+
+
+    const inputType=(e)=>{
+        const inputType = e.target.value
+        console.log(inputType)
+    }
+
+
 
     return(
         <>
             <div className="lineGradientUP"></div>
             <div className="product"> 
                 <div className="types">
-                    <div className="lipstick">
+                    <div className="lipstick" onClick={inputType}>
                         <img src={batomIcon} alt="batom-icon"/>
-                        <button>Batom</button>
+                        <button  value="lipdstick">Batom</button>
                     </div>
                     <div className="blush">
                         <img src={blushIcon} alt="blush-icon"/>

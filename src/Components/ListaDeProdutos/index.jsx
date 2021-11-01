@@ -105,9 +105,9 @@ export default function ListaDeProdutos (){
             ))
           :
             <div className="loading">
-              <input type="checkbox" id="check"/>
-              <label for="check">
-                <div class="check-icon"></div>
+              <input type="checkbox" id="check" />
+              <label>
+                <div className="check-icon"></div>
               </label>
             </div>
           }
