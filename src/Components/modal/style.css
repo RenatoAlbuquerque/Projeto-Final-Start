@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap');
+
+*{
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+.modal{
+    background-color: #ED9D9D;
+    color: #333;
+    border-radius: 10px 10px 0 0;
+    max-width: 600px;
+    height: 10px;
+    margin: 100px auto 0 auto;
+    padding: 15px;
+    box-shadow:  0 0 0.6em #cbb4b4;
+}
+
+.content{
+
+    background-color: #ED9D9D;
+    color: #333;
+    border-radius: 0 0 10px 10px;
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+}
+
+.content h3{
+    text-align: center;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-close{
+    background-color: #fff;
+    border-radius: 50px;
+    width: 20px;
+    float: right;
+    border: unset;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-product{
+    width: 40%;
+}
+
+.img-product img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.details{
+    list-style-type: none;
+}
+
+.details li{
+    margin-bottom: 20px;
+}
+
+.btn-comprar{
+    border: none;
+    color: #333;
+    font-weight: bold;
+    background-image: linear-gradient(90deg,
+                            rgba(246, 177, 166, 1) 0%,
+                            rgba(233, 155, 158, 1) 35%,
+                            rgba(212, 114, 143, 1) 100%);
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.description{
+    font-size: 12px;
+    text-align: justify;
+}

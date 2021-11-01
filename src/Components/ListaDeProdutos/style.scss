@@ -129,7 +129,7 @@
                         background-color: transparent;
                     }
                 }
-                .CardDetail {
+                .CardDetail button{
                     font: normal 400 0.938rem cursive;
                     letter-spacing: 1px;
                     text-align: left;
@@ -240,9 +240,9 @@ label .check-icon:after {
     }
 }
 
-input {
+ input {
     display: none;
-}
+} 
 
 input:checked~label .check-icon {
     display: block;

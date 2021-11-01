@@ -2,10 +2,14 @@ import React, {useState, useEffect} from "react";
 import './style.scss';
 import api from '../../Services/api';
 import FilterList from '../FilterList';
+import Modal   from "../modal/Modal";
+import Content from "../modal/Content";
 
 
 export default function ListaDeProdutos (){
   const [posts, setPosts] = useState([])
+  const [modalOn, setModalOn] = useState(false);
+  const [positionCard, setPositionCard] = useState('');
 
   const updateStateOnSort = (productsList) =>{
       setPosts([...productsList])
@@ -59,14 +63,16 @@ export default function ListaDeProdutos (){
       getData()
   }, [])
 
+  const filteredCard = posts[positionCard];
+
   return (
     <div>
       <FilterList products={posts && posts} updateStateOnSort={updateStateOnSort} />
       <div className="GlobalStyle">
         <div className="Global">
           {posts.length > 0 ?
-            posts.map((post) =>(
-              <div className="Card" key={post.id}>
+            posts.map((post,index) =>(
+              <div className="Card" key={index}>
                 <div className="CardImage">
                   <img src={post.api_featured_image} alt={post.name}></img>
                 </div>
@@ -92,7 +98,7 @@ export default function ListaDeProdutos (){
                     </div>
                   </div>
                   <div className="CardDetail">
-                      + DETALHES
+                    <button onClick={()=>{setPositionCard(index); setModalOn(true)}}> + Detalhes</button>
                   </div>
                 </div>
               </div>
@@ -108,6 +114,19 @@ export default function ListaDeProdutos (){
           
         </div>
       </div>
+            {modalOn ?                
+              <div>
+                  <Modal onClose={() => setModalOn(false)}>
+                      <Content 
+                        img={filteredCard.api_featured_image}
+                        name={filteredCard.name}
+                        preco={filteredCard.price}
+                        marca={filteredCard.brand}
+                        desc={filteredCard.description}      
+                      />
+                  </Modal>
+              </div>
+            : null}
     </div>
   );
 }
