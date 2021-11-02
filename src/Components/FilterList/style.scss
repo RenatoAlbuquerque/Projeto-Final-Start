@@ -42,7 +42,7 @@
                 }
             }
         }
-        .modal{
+        .modalGlobalBrand{
             position: absolute;
             top: 360px;
             left: 0;
@@ -127,6 +127,39 @@
                     color: transparent;
                 }
             }    
+        }
+    }
+}
+
+@media(max-width: 933px){
+    .filter{
+        .filter-list{
+            .filter-brand{
+                .modalGlobalBrand{
+                top: 400px;
+            }
+                .modalNone{
+                    top: 400px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media(max-width: 730px) {
+    .filter {
+        .filter-list {
+            .filter-brand {
+                .modalGlobalBrand {
+                    top: 435px;
+                }
+
+                .modalNone {
+                    top: 435px;
+                }
+            }
+
         }
     }
 }

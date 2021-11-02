@@ -6,14 +6,27 @@ import esmalteIcon from '../../Images/IconsProductTypes/esmalte.png';
 import delineadorIcon from '../../Images/IconsProductTypes/delineador.png';
 import rimelIcon from '../../Images/IconsProductTypes/rimel.png';
 import React, { useState} from "react";
+import api from '../../Services/api';
 
-export default function ProductTypes(){
+export default function ProductTypes({updateStateOnType}){
     const [type, setType] = useState();
 
-
-    const inputType=(e)=>{
+    const handleType=(e)=>{
+        e.preventDefault();
         const inputType = e.target.value
-        console.log(inputType)
+        
+        api.get(`/products.json?product_type=${inputType}`)
+        .then((response) =>  setType(response.data))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+        });
+        filterByType(type)
+    }
+
+    const filterByType = (array)=>{
+        const slicedType = array.slice(0,45)
+        updateStateOnType(slicedType)
+        console.log(slicedType)
     }
 
 
@@ -23,29 +36,29 @@ export default function ProductTypes(){
             <div className="lineGradientUP"></div>
             <div className="product"> 
                 <div className="types">
-                    <div className="lipstick" onClick={inputType}>
+                    <div className="lipstick" onClick={handleType}> 
                         <img src={batomIcon} alt="batom-icon"/>
-                        <button  value="lipdstick">Batom</button>
+                        <button  value="lipstick">Batom</button>
                     </div>
-                    <div className="blush">
+                    <div className="blush" onClick={handleType}>
                         <img src={blushIcon} alt="blush-icon"/>
-                        <button>Blush</button>
+                        <button value="blush">Blush</button>
                     </div>
-                    <div className="bronzer">
+                    <div className="bronzer" onClick={handleType}>
                         <img src={bronzerIcon} alt="bronzer-icon"/>
-                        <button>Bronzer</button>
+                        <button value="bronzer">Bronzer</button>
                     </div>
-                    <div className="nail-polish">
+                    <div className="nail-polish" onClick={handleType}>
                         <img src={esmalteIcon} alt="esmalte-icon"/>
-                        <button>Esmalte</button>
+                        <button value="nail_polish">Esmalte</button>
                     </div>
-                    <div className="eyebrow">
+                    <div className="eyebrow" onClick={handleType}>
                         <img src={delineadorIcon} alt="delineador-icon"/>
-                        <button>Delineador</button>
+                        <button value="eyebrow">Delineador</button>
                     </div>
-                    <div className="mascara">
+                    <div className="mascara" onClick={handleType}>
                         <img src={rimelIcon} alt="rimel-icon"/>
-                        <button>Rímel</button>
+                        <button value="mascara">Rímel</button>
                     </div>
                     
                 </div>

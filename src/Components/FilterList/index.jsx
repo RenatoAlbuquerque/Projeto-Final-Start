@@ -16,7 +16,7 @@ export default function FilterList ({products, updateStateOnSort}){
     e.preventDefault();
     const inputBrand = e.target.value
 
-    api.get(`/products.json?brand=${inputBrand}`)
+    api.get(`/products.json?product_type=${inputBrand}`)
     .then((response) =>  setBrand(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
@@ -95,7 +95,7 @@ export default function FilterList ({products, updateStateOnSort}){
                 <div className="brand-btn">
                   <button onClick={MenuToogleBrand} >Por Marcas</button>
                 </div>
-                <div className={menuBrand ? "modal" : "modalNone"}>
+                <div className={menuBrand ? "modalGlobalBrand" : "modalNone"}>
                   <div className="modal-brand">
                     <button onClick={handleBrand} value="benefit">Benefit</button>
                     <button onClick={handleBrand} value="clinique">Clinique</button>

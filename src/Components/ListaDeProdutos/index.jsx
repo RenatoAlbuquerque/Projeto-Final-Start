@@ -4,16 +4,16 @@ import api from '../../Services/api';
 import FilterList from '../FilterList';
 import Modal   from "../modal/Modal";
 import Content from "../modal/Content";
+import ProductTypes from '../ProductTypes';
+import Benefits from "../../Components/Benefits";
+
+
 
 
 export default function ListaDeProdutos (){
   const [posts, setPosts] = useState([])
   const [modalOn, setModalOn] = useState(false);
   const [positionCard, setPositionCard] = useState('');
-
-  const updateStateOnSort = (productsList) =>{
-      setPosts([...productsList])
-    }
 
   const sliceData = (array) => {
     return array.slice(450,460)
@@ -63,14 +63,24 @@ export default function ListaDeProdutos (){
       getData()
   }, [])
 
+  const updateStateOnSort = (productsList) =>{
+    setPosts([...productsList])
+  }
+
+  const updateStateOnType = (productsList) =>{
+    setPosts([...productsList])
+  }
+
   const filteredCard = posts[positionCard];
 
   return (
     <div>
+      <ProductTypes  updateStateOnType={updateStateOnType}/>
+      <Benefits/>
       <FilterList products={posts && posts} updateStateOnSort={updateStateOnSort} />
       <div className="GlobalStyle">
         <div className="Global">
-          {posts.length > 0 ?
+          {posts.length ?
             posts.map((post,index) =>(
               <div className="Card" key={index}>
                 <div className="CardImage">
