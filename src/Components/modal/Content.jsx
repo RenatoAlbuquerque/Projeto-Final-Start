@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Content(props){
-
-    console.log(props.avaliacao)
+    const [num, setNum] = useState(0);
+    
+    function sub(){
+        if(num > 0){
+            setNum(num - 1);
+        }
+    }
+   
     return(
         <div className="content">
                 <h3>{props.name}</h3>
@@ -12,16 +18,20 @@ export default function Content(props){
                             <img src={props.img}alt="img"/>
                         </div>
 
-                        <div>
+                        <div className="item">
                            <ul className="details">
                                 <li><b>Marca:</b> {props.marca}</li>
                                 <li><b>Tipo:</b> {props.tipo}</li>
                                 <li><b>Preço:</b> R$ {props.preco}</li>
                                 <li><b>Cores:</b><span className="cor">{props.cor}</span></li>
-                                <li> 
-                                    <button className="btn-comprar" type="button">Comprar</button>
-                                </li>
                            </ul>
+                           <div className="btns">
+                                    <p>Quant:</p>
+                                    <button className="btn-calculo" onClick={()=> setNum(num+1)}>+</button>
+                                    <p className="quantCompras">{num}</p>
+                                    <button className="btn-calculo" onClick={sub}>-</button>                                    
+                            </div>
+                            <button className="btn-comprar" type="button">Comprar</button>
                         </div>
                     </div>
                     <div className="description">

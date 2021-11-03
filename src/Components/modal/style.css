@@ -8,7 +8,7 @@
     border-radius: 10px 10px 0 0;
     max-width: 600px;
     height: 10px;
-    margin: 100px auto 0 auto;
+    margin: 70px auto 0 auto;
     padding: 15px;
     box-shadow:  0 0 0.6em #cbb4b4;
 }
@@ -49,11 +49,15 @@
 
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.item{
+    width: 40%;
 }
 
 .img-product{
-    width: 40%;
+    width: 50%;
 }
 
 .img-product img{
@@ -71,8 +75,7 @@
 
 span{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-column-gap: 4px;
+    grid-template-columns: repeat(10, 1fr);
     grid-row-gap: 2px;
 }
 
@@ -90,9 +93,36 @@ span{
     cursor: pointer;
     border-radius: 7px;
     padding: 7px;
+    margin: 15px 0 0 0;
+    box-shadow:  0 0 0.3em #333;
+    width: 70%;
+    height: 15%;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.quantCompras{
+    margin: 8px;
+    font-weight: bold;
+    border: 1px 0 1px 0 solid black;
+}
+
+.btn-calculo{
+    width: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff
 }
 
 .description{
     font-size: 12px;
     text-align: justify;
+    margin-top: 10px;
 }
