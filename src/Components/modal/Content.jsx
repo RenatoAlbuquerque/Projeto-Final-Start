@@ -15,16 +15,18 @@ export default function Content(props){
                         <div>
                            <ul className="details">
                                 <li><b>Marca:</b> {props.marca}</li>
+                                <li><b>Tipo:</b> {props.tipo}</li>
                                 <li><b>Preço:</b> R$ {props.preco}</li>
-                                <li><b>Rating:</b>{props.avaliacao}</li>
-                                <li></li>
-                                <li><button className="btn-comprar" type="button">Comprar</button></li>
+                                <li><b>Cores:</b><span className="cor">{props.cor}</span></li>
+                                <li> 
+                                    <button className="btn-comprar" type="button">Comprar</button>
+                                </li>
                            </ul>
                         </div>
                     </div>
                     <div className="description">
-                        <p>
-                            Descrição: {props.desc.substr(0,1000)}
+                        <p className="texto-desc">
+                            <b>Descrição:</b> {props.desc.substr(0,1000)}
                         </p>
                     </div>
         </div>
