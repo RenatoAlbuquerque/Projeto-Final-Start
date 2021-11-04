@@ -239,10 +239,10 @@ label .check-icon:after {
     }
 }
 
- input {
-    display: none;
-} 
-
+//  input {
+//     display: none;
+// } 
+//Os inptus do Login não estavam aparecendo por conta da linha acima
 input:checked~label .check-icon {
     display: block;
 }
