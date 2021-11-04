@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom'
 
 
 const Login = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   let history = useHistory();
 
@@ -26,6 +26,10 @@ const Login = () => {
     }
   }
 
+  // function cadastro(){
+  //   console.log('adsd')
+  // }
+
   return (
     <div className="App">
           <div className="login-container">
@@ -42,7 +46,9 @@ const Login = () => {
                 alert('Por favor consulte a administração para alterar a senha')
               }}>Esqueci minha senha</h6>
               <button className="btn">Login</button>
-              <span className="btn-cadastro" onClick={()=>{}}>Cadastro</span>                          
+              <span className="btn-cadastro" onClick={()=>{
+                console.log('ads')
+              }}>Cadastro</span>                          
             </div>
           </form>
 

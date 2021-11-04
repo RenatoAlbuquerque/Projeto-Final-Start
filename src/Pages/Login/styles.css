@@ -1,5 +1,5 @@
 .login-container {
-  background-color: #FF9F9F;
+  background-color: #ffa5d9;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -8,7 +8,7 @@
 }
 
 .card{
-  background-color: #F7B6A6;
+  background-color: #ae72c5;
   height: 60vh; 
   width: 25vw;
   display: flex;
