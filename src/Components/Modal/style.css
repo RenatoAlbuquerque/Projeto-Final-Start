@@ -3,24 +3,21 @@
 .modal{
     box-sizing: border-box;
     font-family: 'Poppins';
-    background-color: #ED9D9D;
-    color: #333;
-    border-radius: 10px 10px 0 0;
     max-width: 600px;
     height: 10px;
-    margin: 70px auto 0 auto;
+    margin: 80px auto 0 auto;
     padding: 15px;
-    box-shadow:  0 0 0.6em #cbb4b4;
 }
 
 .content{
 
-    background-color: #ED9D9D;
+    background-color: #f4f4f4;
     color: #333;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     max-width: 570px;
     margin: 0 auto 0 auto;
     padding: 15px;
+    box-shadow:  0 0 0.6em #333;
 }
 
 .content h3{
@@ -34,17 +31,24 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .btn-close{
-    background-color: #fff;
+    background-color:#333;
+    color: #fff;
     border-radius: 15px;
     width: 24px;
     height: 24px;
     float: right;
     border: unset;
     cursor: pointer;
+    margin: 10px; 
+    transition: 0.12s ease-in;
+}
+
+.btn-close:hover{
+   background-color:  #d13737;
 }
 
 .container{
@@ -70,7 +74,7 @@
 }
 
 .details li{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 span{
@@ -85,18 +89,21 @@ span{
 .btn-comprar{
     border: none;
     color: #333;
+    font-size: 18px;
     font-weight: bold;
-    background-image: linear-gradient(90deg,
-                            rgba(246, 177, 166, 1) 0%,
-                            rgba(233, 155, 158, 1) 35%,
-                            rgba(212, 114, 143, 1) 100%);
+    background-image: linear-gradient(90deg,rgba(246, 177, 166, 1) 0%,rgba(233, 155, 158, 1) 35%,rgba(212, 114, 143, 1) 100%);
     cursor: pointer;
     border-radius: 7px;
     padding: 7px;
     margin: 15px 0 0 0;
-    box-shadow:  0 0 0.3em #333;
     width: 70%;
     height: 15%;
+    transition: 0.20s ease-in;
+}
+
+.btn-comprar:hover{
+    background-image: linear-gradient(90deg,rgba(212, 114, 143, 1) 0%,rgba(233, 155, 158, 1) 35%,rgba(246, 177, 166, 1) 100%);
+    transform: scale(1.1);
 }
 
 .btns{
@@ -105,20 +112,31 @@ span{
     align-items: center;
 }
 
+.text-quantidade{
+    margin-right: 10px;
+}
+
 .quantCompras{
     margin: 8px;
     font-weight: bold;
-    border: 1px 0 1px 0 solid black;
+    width: 25px;
+    text-align: center;
 }
 
 .btn-calculo{
-    width: 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    padding: 5px;
+    width: 24px;
+    height: 24px;
+    color: #333;
+    border: solid 2px #333;
+    border-radius: 15px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #fff
+    transition: 0.20s ease-in;
+}
+
+.btn-calculo:hover{
+    color: #fff;
+    background-color: #333;
 }
 
 .description{
