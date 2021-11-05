@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(240, 241, 225);
+}
+
+.conteiner{
+    height: 500px;
+    background-color: #E98CF9;
+    /* background-image: linear-gradient( #ffa5d9, #ae72c5); */
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin-top: -150px;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 350px;
+    width: 290px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
