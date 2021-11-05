@@ -5,18 +5,19 @@
     font-family: 'Poppins';
     max-width: 600px;
     height: 10px;
-    margin: 70px auto 0 auto;
+    margin: 80px auto 0 auto;
     padding: 15px;
 }
 
 .content{
 
-    background-color: #ED9D9D;
+    background-color: #f4f4f4;
     color: #333;
     border-radius: 10px;
     max-width: 570px;
     margin: 0 auto 0 auto;
     padding: 15px;
+    box-shadow:  0 0 0.6em #333;
 }
 
 .content h3{
@@ -30,11 +31,12 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .btn-close{
-    background-color: #fff;
+    background-color: #333;
+    color: #fff;
     border-radius: 15px;
     width: 24px;
     height: 24px;
@@ -67,7 +69,7 @@
 }
 
 .details li{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 span{
@@ -102,20 +104,25 @@ span{
     align-items: center;
 }
 
+.text-quantidade{
+    margin-right: 10px;
+}
+
 .quantCompras{
     margin: 8px;
     font-weight: bold;
-    border: 1px 0 1px 0 solid black;
+    width: 25px;
+    text-align: center;
 }
 
 .btn-calculo{
-    width: 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    padding: 5px;
+    width: 24px;
+    height: 24px;
+    color: #333;
+    border: solid 2px #333;
+    border-radius: 15px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #fff
 }
 
 .description{
