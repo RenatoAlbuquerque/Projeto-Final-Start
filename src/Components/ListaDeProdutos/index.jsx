@@ -105,9 +105,11 @@ export default function ListaDeProdutos() {
             <Content
               img={filteredCard.api_featured_image}
               name={filteredCard.name}
+              tipo={filteredCard.category}
               preco={filteredCard.price}
               marca={filteredCard.brand}
               desc={filteredCard.description}
+              cor={sliceColors(filteredCard.product_colors)}       
             />
           </Modal>
         </div>

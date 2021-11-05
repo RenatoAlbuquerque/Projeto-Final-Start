@@ -3,21 +3,17 @@
 .modal{
     box-sizing: border-box;
     font-family: 'Poppins';
-    background-color: #ED9D9D;
-    color: #333;
-    border-radius: 10px 10px 0 0;
     max-width: 600px;
     height: 10px;
     margin: 70px auto 0 auto;
     padding: 15px;
-    box-shadow:  0 0 0.6em #cbb4b4;
 }
 
 .content{
 
     background-color: #ED9D9D;
     color: #333;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     max-width: 570px;
     margin: 0 auto 0 auto;
     padding: 15px;
@@ -45,6 +41,7 @@
     float: right;
     border: unset;
     cursor: pointer;
+    margin: 10px; 
 }
 
 .container{
