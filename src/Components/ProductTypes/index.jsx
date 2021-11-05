@@ -5,59 +5,68 @@ import bronzerIcon from "../../Images/IconsProductTypes/bronzer.png";
 import esmalteIcon from "../../Images/IconsProductTypes/esmalte.png";
 import delineadorIcon from "../../Images/IconsProductTypes/delineador.png";
 import rimelIcon from "../../Images/IconsProductTypes/rimel.png";
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { ProductsContext } from '../providers/products';
 import api from "../../Services/api";
 
-export default function ProductTypes({ updateStateOnType }) {
-  const [type, setType] = useState();
+export default function ProductTypes() {
+  const products = useContext(ProductsContext);
 
-  const handleType = (e) => {
-    e.preventDefault();
-    const inputType = e.target.value;
+  const sliceType = (array) => {
+    const sliced = array.slice(0, 45)
+    products.setProducts(sliced)
+  }
 
-    api
-      .get(`/products.json?product_type=${inputType}`)
-      .then((response) => setType(response.data))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-      });
-    filterByType(type);
-  };
+  const getProductByType = async (type) => {
+    try {
+      const { data } = await api.get(`/products.json?product_type=${type}`)
+      sliceType(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-  const filterByType = (array) => {
-    const slicedType = array.slice(0, 45);
-    updateStateOnType(slicedType);
-    console.log(slicedType);
-  };
 
   return (
     <>
       <div className="lineGradientUP"></div>
       <div className="product">
         <div className="types">
-          <div className="lipstick" onClick={handleType}>
-            <img src={batomIcon} alt="batom-icon" />
-            <button value="lipstick">Batom</button>
+          <div className="lipstick">
+            <button onClick={() => getProductByType("lipstick")}>
+              <img src={batomIcon} alt="batom-icon" />
+              <span>Batom</span>
+            </button>
           </div>
-          <div className="blush" onClick={handleType}>
-            <img src={blushIcon} alt="blush-icon" />
-            <button value="blush">Blush</button>
+          <div className="blush" >
+            <button onClick={() => getProductByType("blush")}>
+              <img src={blushIcon} alt="blush-icon" />
+              <span>Blush</span>
+            </button>
           </div>
-          <div className="bronzer" onClick={handleType}>
-            <img src={bronzerIcon} alt="bronzer-icon" />
-            <button value="bronzer">Bronzer</button>
+          <div className="bronzer" >
+            <button onClick={() => getProductByType("bronzer")}>
+              <img src={bronzerIcon} alt="bronzer-icon" />
+              <span>Bronzer</span>
+            </button>
           </div>
-          <div className="nail-polish" onClick={handleType}>
-            <img src={esmalteIcon} alt="esmalte-icon" />
-            <button value="nail_polish">Esmalte</button>
+          <div className="nail-polish">
+            <button onClick={() => getProductByType("nail_polish")}>
+              <img src={esmalteIcon} alt="esmalte-icon" />
+              <span>Esmalte</span>
+            </button>
           </div>
-          <div className="eyebrow" onClick={handleType}>
-            <img src={delineadorIcon} alt="delineador-icon" />
-            <button value="eyebrow">Delineador</button>
+          <div className="eyebrow" >
+            <button onClick={() => getProductByType("eyebrow")}>
+              <img src={delineadorIcon} alt="delineador-icon" />
+              <span>Delineador</span>
+            </button>
           </div>
-          <div className="mascara" onClick={handleType}>
-            <img src={rimelIcon} alt="rimel-icon" />
-            <button value="mascara">Rímel</button>
+          <div className="mascara">
+            <button onClick={() => getProductByType("mascara")}>
+              <img src={rimelIcon} alt="rimel-icon" />
+              <span>Rímel</span>
+            </button>
           </div>
         </div>
       </div>

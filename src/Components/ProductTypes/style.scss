@@ -1,6 +1,7 @@
-.product{
+.product {
     width: 100%;
-    .types{
+
+    .types {
         display: flex;
         width: 75%;
         height: 70px;
@@ -8,28 +9,46 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        .lipstick, .blush, .bronzer, .nail-polish, .eyebrow, .mascara{
+
+        .lipstick,
+        .blush,
+        .bronzer,
+        .nail-polish,
+        .eyebrow,
+        .mascara {
             display: flex;
             align-items: center;
             flex-direction: column;
             border: 2px solid transparent;
-                &:hover{
-                    border: 2px solid rgba(212, 114, 143, 1);;
-                    border-radius: 10px;
-                    button{
+
+            button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            &:hover {
+                border: 2px solid rgba(212, 114, 143, 1);
+                ;
+                border-radius: 10px;
+
+                button {
                     color: rgba(212, 114, 143, 1);
-                    }
                 }
-            img{
+            }
+
+            img {
                 background: transparent;
                 width: 40px;
             }
-            button{
+
+            button {
                 border: none;
-                font-family: arial,sans-serif;
+                font-family: arial, sans-serif;
                 font-weight: 700;
                 font-size: 1rem;
-                background:transparent;
+                background: transparent;
                 padding: 0 5px;
             }
         }
@@ -37,26 +56,26 @@
 }
 
 @media (max-width: 1680px) {
-    .product{
+    .product {
         .types {
-            width: 85%;  
+            width: 85%;
         }
     }
 }
 
 @media (max-width: 700px) {
-    .product{
+    .product {
         .types {
-            width:95%;  
+            width: 95%;
         }
     }
-    
+
 }
 
 @media (max-width: 700px) {
-    .product{
+    .product {
         .types {
-            width:100%;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2 1fr);
@@ -66,5 +85,5 @@
             padding-bottom: 50px;
         }
     }
-    
+
 }
