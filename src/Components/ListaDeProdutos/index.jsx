@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { ProductsContext } from '../providers/products';
 import './style.scss';
 import FilterList from '../FilterList';
-import Modal from "../modal/Modal";
-import Content from "../modal/Content";
+import Modal from "../Modal/Modal";
+import Content from "../Modal/Content";
 import ProductTypes from '../ProductTypes';
 import Benefits from "../../Components/Benefits";
 

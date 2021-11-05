@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 export default function Content(props){
-    const [num, setNum] = useState(0);
+    const [num, setNum] = useState(1);
     
     function sub(){
-        if(num > 0){
+        if(num > 1){
             setNum(num - 1);
         }
     }
