@@ -1,113 +1,119 @@
-import React, {useState, useEffect} from "react";
+import React, { useContext, useState } from "react";
+import { ProductsContext } from '../providers/products';
 import './style.scss';
-import api from '../../Services/api';
 import FilterList from '../FilterList';
+import Modal from "../modal/Modal";
+import Content from "../modal/Content";
+import ProductTypes from '../ProductTypes';
+import Benefits from "../../Components/Benefits";
+
+export default function ListaDeProdutos() {
+  const products = useContext(ProductsContext);
+  const [modalOn, setModalOn] = useState(false);
+  const [positionCard, setPositionCard] = useState('');
 
 
-export default function ListaDeProdutos (){
-  const [posts, setPosts] = useState([])
-
-  const updateStateOnSort = (productsList) =>{
-      setPosts([...productsList])
-    }
-
-  const sliceData = (array) => {
-    return array.slice(450,460)
-  }
 
   const sliceColors = (array) => {
-    if(array.length > 7) {
-      let colorsArray = array.slice(0,14)
-      return(
+    if (array.length > 7) {
+      let colorsArray = array.slice(0, 14)
+      return (
         <>
-          {colorsArray.map((color, index)=>(
-            <div className="CardColor" 
-              key={index} 
+          {colorsArray.map((color, index) => (
+            <div className="CardColor"
+              key={index}
               color={color.hex_value}
-              style={{backgroundColor: `${(color.hex_value)}`}}
-              >
-            </div> 
-          ))}
-        </> 
-      ) 
-    }else{
-      return(
-        <>
-          {array.map((color, index)=>(
-          <div className="CardColor" 
-            key={index} 
-            color={color.hex_value}
-            style={{backgroundColor: `${(color.hex_value)}`}}
+              style={{ backgroundColor: `${(color.hex_value)}` }}
             >
-          </div> 
-          ))} 
+            </div>
+          ))}
         </>
-      ) 
+      )
+    } else {
+      return (
+        <>
+          {array.map((color, index) => (
+            <div className="CardColor"
+              key={index}
+              color={color.hex_value}
+              style={{ backgroundColor: `${(color.hex_value)}` }}
+            >
+            </div>
+          ))}
+        </>
+      )
     }
   }
 
-  useEffect(() => {
-    const getData = async()=>{
-      try{
-       const { data } = await api.get('/products.json')
-       const sliced = sliceData(data)
-       setPosts([...sliced])
-      }catch(error){
-        console.log(error)
-      }
-    }
-      getData()
-  }, [])
+
+  const filteredCard = products.products[positionCard];
 
   return (
     <div>
-      <FilterList products={posts && posts} updateStateOnSort={updateStateOnSort} />
+      <ProductTypes />
+      <Benefits />
+      <FilterList />
       <div className="GlobalStyle">
         <div className="Global">
-          {posts.length > 0 ?
-            posts.map((post) =>(
-              <div className="Card" key={post.id}>
+          {products.products.length ?
+            products.products.map((product, index) => (
+              <div className="Card" key={index}>
                 <div className="CardImage">
-                  <img src={post.api_featured_image} alt={post.name}></img>
+                  <img src={product.api_featured_image} alt={product.name}></img>
                 </div>
                 <div className="CardName">
-                  {post.name}
+                  {product.name}
                 </div>
                 <div className="CardBrand">
-                  Marca: {post.brand}
+                  Marca: {product.brand}
                 </div>
                 <div className="CardCategory">
-                  Tipo: {post.category}
+                  Tipo: {product.category}
                 </div>
                 <div className="CardPrice">
-                  Preço: R${post.price}
+                  Preço: R${product.price}
                 </div>
                 <div className="CardRating">
-                  Avaliação: {post.rating}
+                  Avaliação: {product.rating}
                 </div>
                 <div className="CardGapDetail">
                   <div className="CardFooter">
                     <div className="CardLocalColor">
-                      {sliceColors(post.product_colors)}
+                      {sliceColors(product.product_colors)}
                     </div>
                   </div>
-                  <div className="CardDetail">
-                      + DETALHES
+                  <div className="CardDetail" >
+                    <button onClick={() => { setPositionCard(index); setModalOn(true) }}> + Detalhes</button>
                   </div>
                 </div>
               </div>
             ))
-          :
+            :
             <div className="loading">
-              <input type="checkbox" id="check"/>
-              <label for="check">
-                <div class="check-icon"></div>
+              <input type="checkbox" id="check" />
+              <label>
+                <div className="check-icon"></div>
               </label>
             </div>
           }
-          
+
         </div>
       </div>
+      {modalOn ?
+        <div>
+          <Modal onClose={() => setModalOn(false)}>
+            <Content
+              img={filteredCard.api_featured_image}
+              name={filteredCard.name}
+              tipo={filteredCard.category}
+              preco={filteredCard.price}
+              marca={filteredCard.brand}
+              desc={filteredCard.description}
+              cor={sliceColors(filteredCard.product_colors)}       
+            />
+          </Modal>
+        </div>
+        : null}
     </div>
   );
 }

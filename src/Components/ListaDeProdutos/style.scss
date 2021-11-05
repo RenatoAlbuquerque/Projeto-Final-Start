@@ -1,12 +1,12 @@
-
-.GlobalStyle{
+.GlobalStyle {
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: #FDF4F3;
     display: flex;
     justify-content: center;
-    .Global{
+
+    .Global {
         justify-content: center;
         margin: auto;
         display: grid;
@@ -15,25 +15,31 @@
         grid-row-gap: 0px;
         justify-items: center;
         background-color: #FDF4F3;
-        @media(max-width: 1440px){
+
+        @media(max-width: 1440px) {
             grid-template-columns: repeat(4, 1fr);
             grid-column-gap: 2vw;
         }
-        @media(max-width: 950px){
+
+        @media(max-width: 950px) {
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 2vw;
         }
-        @media(max-width: 950px){
+
+        @media(max-width: 950px) {
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 2vw;
         }
-        @media(max-width: 700px){
+
+        @media(max-width: 700px) {
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 10vw;
         }
-        @media(max-width: 500px){
+
+        @media(max-width: 500px) {
             grid-template-columns: repeat(1, 1fr);
         }
+
         .Card {
             width: 180px;
             height: 450px;
@@ -44,24 +50,28 @@
             align-items: center;
             background-color: #FDF4F3;
             cursor: pointer;
+
             &:hover {
                 width: 220px;
                 height: 430px;
                 margin-bottom: 0;
                 padding: 0px;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-                &:hover .CardDetail{
+
+                &:hover .CardDetail {
                     margin-bottom: 20px;
                 }
             }
-            .CardImage{
-                img{
+
+            .CardImage {
+                img {
                     width: 156px;
                     height: 165px;
                     border-radius: 25px;
                 }
             }
-            .CardName{
+
+            .CardName {
                 font: normal 400 1.125rem cursive;
                 letter-spacing: 1px;
                 text-align: left;
@@ -70,7 +80,8 @@
                 margin: 3px 0;
                 background-color: transparent;
             }
-            .CardBrand{
+
+            .CardBrand {
                 font: normal 400 1rem cursive;
                 letter-spacing: 1px;
                 text-align: left;
@@ -79,7 +90,8 @@
                 margin: 3px 0;
                 background-color: transparent;
             }
-            .CardCategory{
+
+            .CardCategory {
                 font: normal 400 0.875rem cursive;
                 letter-spacing: 1px;
                 text-align: left;
@@ -88,6 +100,7 @@
                 margin: 3px 0;
                 background-color: transparent;
             }
+
             .CardPrice {
                 font: normal 400 0.75rem cursive;
                 letter-spacing: 1px;
@@ -97,6 +110,7 @@
                 margin: 3px 0;
                 background-color: transparent;
             }
+
             .CardRating {
                 font: normal 400 0.625rem cursive;
                 letter-spacing: 1px;
@@ -107,18 +121,21 @@
                 color: grey;
                 background-color: transparent;
             }
-            .CardGapDetail{
+
+            .CardGapDetail {
                 display: flex;
                 height: 100%;
                 background-color: transparent;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+
                 .CardFooter {
                     display: flex;
                     width: 100%;
                     align-items: center;
                     background-color: transparent;
+
                     .CardLocalColor {
                         width: 100%;
                         margin-bottom: 10px;
@@ -129,10 +146,12 @@
                         background-color: transparent;
                     }
                 }
-                .CardDetail {
+
+                .CardDetail button {
                     font: normal 400 0.938rem cursive;
                     letter-spacing: 1px;
                     text-align: left;
+                    height: 30px;
                     width: 120px;
                     padding-left: 10px;
                     margin: 3px 0;
@@ -151,30 +170,25 @@
     }
 }
 
-.CardColor{
+.CardColor {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
-
-
-
-
-
 //LOADING DE CARREGAMENTO
-.loading{
+.loading {
     position: fixed;
     padding-top: 200px;
     height: 600px;
     justify-content: center;
     align-items: center;
 }
-    
+
 label {
     margin: auto;
-    height: 225px;
-    width: 225px;
+    height: 150px;
+    width: 150px;
     display: inline-block;
     border: 3px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
@@ -253,4 +267,3 @@ input:checked~label {
     border-color: rgba(212, 114, 143, 1);
     transition: border 0.5s ease-out;
 }
-

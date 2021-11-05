@@ -6,7 +6,7 @@ import { BiConversation } from "react-icons/bi";
 import { RiLockPasswordFill, } from "react-icons/ri";
 
 
-export default function Vantagens (){
+export default function Benefits (){
   return (
     <>
       <div className="lineGradientDown"></div>
