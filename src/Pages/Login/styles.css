@@ -1,0 +1,95 @@
+.login-container {
+  background-color: #ffa5d9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  background-color: #ae72c5;
+  height: 60vh; 
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.person_icon{
+  width: 8vw;
+}
+
+.title{
+  color: #E5E5E5;
+  margin-bottom: 12px;
+}
+input{
+  width: 80%;
+  margin: 0 15px;
+  height: 45px;
+  padding: 5px 15px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  background: #e8ebed;
+  color: #576366;
+  font-size: 24px;
+  margin-bottom: 30px;
+  /* background: url(../Images/IconsLogin/key-icon.png) no-repeat scroll 1px 1px; */
+  background-size: 20px 20px;
+  background-position: right center;
+  background-color: white;
+}
+
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  width: 85%;
+  border-radius: 15px;
+  height: 50px;
+  font-size: 25px;
+  background-color: #DD6B6B;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px black;
+  transition: 200ms all;
+
+}
+
+.btn:hover{
+  background-color: #AA5353;
+}
+
+.btn-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 85%;
+  height: 45px;
+  background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px black;
+  color: #4A5568;
+  font-size: 25px;
+  transition: 200ms all;
+}
+.btn-cadastro:hover{
+  background-color: #CACACA;
+
+}
+.forget_password{
+  color: #AB2929;
+  margin-bottom: 20px;
+  margin-right: -220px;
+}
+
+.showcase{
+  width: 35vw;
+}
