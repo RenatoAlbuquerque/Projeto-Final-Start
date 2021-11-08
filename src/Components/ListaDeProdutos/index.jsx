@@ -1,18 +1,26 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ProductsContext } from '../providers/products';
 import './style.scss';
 import FilterList from '../FilterList';
-import Modal from "../Modal/Modal";
-import Content from "../Modal/Content";
+import Modal from "../modal/Modal";
+import Content from "../modal/Content";
 import ProductTypes from '../ProductTypes';
 import Benefits from "../../Components/Benefits";
+import PaginationComponent from "../../Components/PaginationComponent";
+import PaginationSelector from "../../Components/PaginationSelector";
 
 export default function ListaDeProdutos() {
   const products = useContext(ProductsContext);
   const [modalOn, setModalOn] = useState(false);
   const [positionCard, setPositionCard] = useState('');
 
+  const [itensPerPage, setItensPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(0);
 
+  const pages = Math.ceil(products.products.length / itensPerPage);
+  const startIndex = currentPage * itensPerPage;
+  const endIndex = startIndex + itensPerPage;
+  const currentItens = products.products.slice(startIndex, endIndex);
 
   const sliceColors = (array) => {
     if (array.length > 7) {
@@ -45,6 +53,9 @@ export default function ListaDeProdutos() {
     }
   }
 
+  useEffect(() => {
+    setCurrentPage(0)
+  }, [itensPerPage])
 
   const filteredCard = products.products[positionCard];
 
@@ -53,10 +64,14 @@ export default function ListaDeProdutos() {
       <ProductTypes />
       <Benefits />
       <FilterList />
+      {products.products.length ?
+        <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
+        : null}
+
       <div className="GlobalStyle">
         <div className="Global">
           {products.products.length ?
-            products.products.map((product, index) => (
+            currentItens.map((product, index) => (
               <div className="Card" key={index}>
                 <div className="CardImage">
                   <img src={product.api_featured_image} alt={product.name}></img>
@@ -96,8 +111,12 @@ export default function ListaDeProdutos() {
               </label>
             </div>
           }
-
         </div>
+      </div>
+      <div className="pagination">
+        {products.products.length ?
+          <PaginationComponent pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+          : null}
       </div>
       {modalOn ?
         <div>
@@ -109,7 +128,7 @@ export default function ListaDeProdutos() {
               preco={filteredCard.price}
               marca={filteredCard.brand}
               desc={filteredCard.description}
-              cor={sliceColors(filteredCard.product_colors)}       
+              cor={sliceColors(filteredCard.product_colors)}
             />
           </Modal>
         </div>

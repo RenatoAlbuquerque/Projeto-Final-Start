@@ -1,0 +1,21 @@
+.quant-pages {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 50px;
+
+  .paginationButton {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(90deg,
+          rgba(246, 177, 166, 1) 0%,
+          rgba(233, 155, 158, 1) 35%,
+          rgba(212, 114, 143, 1) 100%);
+      color: #FBFBFB;
+    }
+  }
+}

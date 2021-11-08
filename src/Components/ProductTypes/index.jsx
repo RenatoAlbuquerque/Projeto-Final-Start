@@ -32,42 +32,42 @@ export default function ProductTypes() {
       <div className="lineGradientUP"></div>
       <div className="product">
         <div className="types">
-          <div className="lipstick">
-            <button onClick={() => getProductByType("lipstick")}>
+          <button id="btnType" onClick={() => getProductByType("lipstick")}>
+            <div className="lipstick">
               <img src={batomIcon} alt="batom-icon" />
               <span>Batom</span>
-            </button>
-          </div>
-          <div className="blush" >
-            <button onClick={() => getProductByType("blush")}>
+            </div>
+          </button>
+          <button id="btnType" onClick={() => getProductByType("blush")}>
+            <div className="blush" >
               <img src={blushIcon} alt="blush-icon" />
               <span>Blush</span>
-            </button>
-          </div>
-          <div className="bronzer" >
-            <button onClick={() => getProductByType("bronzer")}>
+            </div>
+          </button>
+          <button id="btnType" onClick={() => getProductByType("bronzer")}>
+            <div className="bronzer" >
               <img src={bronzerIcon} alt="bronzer-icon" />
               <span>Bronzer</span>
-            </button>
-          </div>
-          <div className="nail-polish">
-            <button onClick={() => getProductByType("nail_polish")}>
-              <img src={esmalteIcon} alt="esmalte-icon" />
-              <span>Esmalte</span>
-            </button>
-          </div>
-          <div className="eyebrow" >
-            <button onClick={() => getProductByType("eyebrow")}>
+            </div>
+          </button>
+          <button id="btnType" onClick={() => getProductByType("eyebrow")}>
+            <div className="eyebrow" >
               <img src={delineadorIcon} alt="delineador-icon" />
               <span>Delineador</span>
-            </button>
-          </div>
-          <div className="mascara">
-            <button onClick={() => getProductByType("mascara")}>
+            </div>
+          </button>
+          <button id="btnType" onClick={() => getProductByType("nail_polish")}>
+            <div className="nail-polish">
+              <img src={esmalteIcon} alt="esmalte-icon" />
+              <span>Esmalte</span>
+            </div>
+          </button>
+          <button id="btnType" onClick={() => getProductByType("mascara")}>
+            <div className="mascara">
               <img src={rimelIcon} alt="rimel-icon" />
               <span>Rímel</span>
-            </button>
-          </div>
+            </div>
+          </button>
         </div>
       </div>
     </>

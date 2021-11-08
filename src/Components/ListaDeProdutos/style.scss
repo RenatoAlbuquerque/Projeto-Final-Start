@@ -147,27 +147,42 @@
                     }
                 }
 
-                .CardDetail button {
-                    font: normal 400 0.938rem cursive;
-                    letter-spacing: 1px;
-                    text-align: left;
-                    height: 30px;
-                    width: 120px;
-                    padding-left: 10px;
-                    margin: 3px 0;
-                    color: #fbfbfb;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    border: none;
-                    background-image: linear-gradient(90deg,
-                            rgba(246, 177, 166, 1) 0%,
-                            rgba(233, 155, 158, 1) 35%,
-                            rgba(212, 114, 143, 1) 100%);
-                    text-align: center;
+                .CardDetail {
+                    background-color: transparent;
+
+                    button {
+                        font: normal 400 0.938rem cursive;
+                        letter-spacing: 1px;
+                        text-align: left;
+                        height: 30px;
+                        width: 120px;
+                        padding-left: 10px;
+                        margin: 3px 0;
+                        color: #fbfbfb;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        border: none;
+                        background-image: linear-gradient(90deg,
+                                rgba(246, 177, 166, 1) 0%,
+                                rgba(233, 155, 158, 1) 35%,
+                                rgba(212, 114, 143, 1) 100%);
+                        text-align: center;
+                    }
                 }
+
+
             }
         }
     }
+}
+
+//PAGINAÇÃO
+.pagination {
+    background-color: #FDF4F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
 }
 
 .CardColor {
