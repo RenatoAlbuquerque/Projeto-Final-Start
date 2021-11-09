@@ -10,8 +10,7 @@
     background-color: transparent;
 }
 
-.content {
-
+#content {
     background-color: #f4f4f4;
     color: #333;
     border-radius: 10px;
@@ -21,9 +20,10 @@
     box-shadow: 0 0 0.6em #333;
 }
 
-.content h3 {
+#content h3 {
     text-align: center;
     margin-bottom: 20px;
+    background-color: #f4f4f4;
 }
 
 .modal-overlay {
@@ -55,33 +55,43 @@
 .container {
     display: flex;
     justify-content: space-between;
+    background-color: #f4f4f4;
 }
 
-.item {
+#item {
     width: 40%;
+    background-color: #f4f4f4;
 }
 
 .img-product {
     width: 50%;
+    background-color: #f4f4f4;
 }
 
 .img-product img {
-    border-radius: 10px;
     width: 100%;
 }
 
 .details {
     list-style-type: none;
+    background-color: #f4f4f4;
+    
 }
 
 .details li {
     margin-bottom: 10px;
+    background-color: #f4f4f4;
+}
+
+.details li b{
+    background-color: #f4f4f4;
 }
 
 span {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-row-gap: 2px;
+    background-color: #f4f4f4;
 }
 
 .texto-desc b {
@@ -112,10 +122,16 @@ span {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: #f4f4f4;
 }
 
 .text-quantidade {
     margin-right: 10px;
+    background-color: #f4f4f4;
+}
+
+.text-quantidade b  {
+    background-color: #f4f4f4;
 }
 
 .quantCompras {
@@ -123,6 +139,7 @@ span {
     font-weight: bold;
     width: 25px;
     text-align: center;
+    background-color: #f4f4f4;
 }
 
 .btn-calculo {
@@ -134,15 +151,10 @@ span {
     font-size: 20px;
     cursor: pointer;
     transition: 0.20s ease-in;
+    background-color: #f4f4f4;
 }
 
 .btn-calculo:hover {
     color: #fff;
     background-color: #333;
-}
-
-.description {
-    font-size: 12px;
-    text-align: justify;
-    margin-top: 10px;
 }

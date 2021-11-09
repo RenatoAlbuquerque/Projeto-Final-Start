@@ -144,7 +144,6 @@ export default function ListaDeProdutos() {
               tipo={filteredCard.category}
               preco={filteredCard.price}
               marca={filteredCard.brand}
-              desc={filteredCard.description}
               cor={sliceColors(filteredCard.product_colors)}
             />
           </Modal>
