@@ -16,7 +16,6 @@ export default function ListaDeProdutos() {
 
   const [itensPerPage, setItensPerPage] = useState(15);
   const [currentPage, setCurrentPage] = useState(0);
-
   const pages = Math.ceil(products.products.length / itensPerPage);
   const startIndex = currentPage * itensPerPage;
   const endIndex = startIndex + itensPerPage;
@@ -74,7 +73,10 @@ export default function ListaDeProdutos() {
             currentItens.map((product, index) => (
               <div className="Card" key={index}>
                 <div className="CardImage">
-                  <img src={product.api_featured_image} alt={product.name}></img>
+                  <img
+                    src={product.api_featured_image}
+                    alt={product.name}>
+                  </img>
                 </div>
                 <div className="CardName">
                   {product.name}
@@ -86,10 +88,16 @@ export default function ListaDeProdutos() {
                   Tipo: {product.category}
                 </div>
                 <div className="CardPrice">
-                  Preço: R${product.price}
+                  Preço: R${product.price === "0.0" ?
+                    product.price = parseFloat(Math.random() * (80 - 1) + 1).toFixed(2)
+                    :
+                    product.price}
                 </div>
                 <div className="CardRating">
-                  Avaliação: {product.rating}
+                  Avaliação:{product.rating === null ?
+                    product.rating = parseInt(Math.random() * (5 - 1) + 1).toFixed(1)
+                    :
+                    product.rating}
                 </div>
                 <div className="CardGapDetail">
                   <div className="CardFooter">
@@ -98,7 +106,11 @@ export default function ListaDeProdutos() {
                     </div>
                   </div>
                   <div className="CardDetail" >
-                    <button onClick={() => { setPositionCard(index); setModalOn(true) }}> + Detalhes</button>
+                    <button
+                      onClick={() => { setPositionCard(index); setModalOn(true) }}
+                    >
+                      + Detalhes
+                    </button>
                   </div>
                 </div>
               </div>
@@ -115,8 +127,12 @@ export default function ListaDeProdutos() {
       </div>
       <div className="pagination">
         {products.products.length ?
-          <PaginationComponent pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-          : null}
+          <PaginationComponent
+            pages={pages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage} />
+          :
+          null}
       </div>
       {modalOn ?
         <div>

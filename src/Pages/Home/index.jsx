@@ -10,15 +10,13 @@ import './index.css'
 export default function Home() {
   return (
     <div>
-
-
-      <Navbar/>
-      <App/>
-      <Cards/>
-        <div className="publi">
-            <h1>Start sua beleza, trazendo mais vida para seu dia a dia</h1>
-        </div>
-      <Valores/>
+      <Navbar />
+      <App />
+      <Cards />
+      <div className="publi">
+        <h1>Start sua beleza, trazendo mais vida para seu dia a dia</h1>
+      </div>
+      <Valores />
 
     </div>
   );
