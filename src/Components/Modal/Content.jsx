@@ -9,6 +9,25 @@ export default function Content(props) {
         }
     }
 
+    function addToSacola(nome, preco, quant, total) {
+        const produto = { nome, preco, quant, total }
+
+        console.log(produto)
+        let produtos = JSON.parse(localStorage.getItem('itens'))
+        produtos.push(produto)
+        console.log(produtos)
+        localStorage.setItem('itens', JSON.stringify(produtos))
+
+    }
+
+    useEffect(() => {
+        const val = localStorage.getItem('itens')
+        if (!val) {
+            const itens = [];
+            localStorage.setItem('itens', JSON.stringify(itens))
+        }
+    }, [])
+
     return (
         <div className="content">
             <h3>{props.name}</h3>
@@ -33,14 +52,27 @@ export default function Content(props) {
                         <p className="quantCompras">{num}</p>
                         <button className="btn-calculo" onClick={sub}>-</button>
                     </div>
-                    <button className="btn-comprar" type="button">Comprar</button>
+                    <button className="btn-comprar" type="button" onClick={() => {
+                        addToSacola(props.name, props.preco, num, num * props.preco);
+                    }}>Comprar</button>
                 </div>
             </div>
             <div className="description">
                 <p className="texto-desc">
                     <b>Descrição:</b> {props.desc.substr(0, 300)}
                 </p>
+                <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
+                <p className="quantCompras">{num}</p>
+                <button className="btn-calculo" onClick={sub}>-</button>
             </div>
+            <button className="btn-comprar" type="button">Comprar</button>
         </div>
+            </div >
+        <div className="description">
+            <p className="texto-desc">
+                <b>Descrição:</b> {props.desc.substr(0, 300)}
+            </p>
+        </div>
+        </div >
     );
 }
