@@ -6,7 +6,7 @@ export const ProductsContext = createContext({});
 const ProductsProvider = (props) => {
   const [products, setProducts] = useState([]);
   const sliceData = (array) => {
-    return array.slice(450, 460)
+    return array.slice(450, 495)
   }
 
   useEffect(() => {

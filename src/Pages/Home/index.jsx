@@ -2,16 +2,16 @@ import React from 'react';
 
 import Cards from '../../Components/Cards/Cards';
 import Valores from '../../Components/Valores/valores';
-import Navbar from '../../Components/Navbar';
 import App from '../../Components/Carrossel/Carrossel';
 import Newsletter from '../../Components/Newsletter/Index';
+import Footer from '../../Components/Footer';
+import Navbar from '../../Components/Navbar';
 
 import './index.css'
 
 export default function Home() {
   return (
     <div>
-
       
       <Navbar/>
       <App/>

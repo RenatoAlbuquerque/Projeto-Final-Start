@@ -1,4 +1,4 @@
-.GlobalStyle {
+.GlobalStyleProduct {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
 
-    .Global {
+    .GlobalProduct {
         justify-content: center;
         margin: auto;
         display: grid;
@@ -40,7 +40,7 @@
             grid-template-columns: repeat(1, 1fr);
         }
 
-        .Card {
+        .CardProduct {
             width: 180px;
             height: 450px;
             padding: 20px;
@@ -64,7 +64,7 @@
             }
 
             .CardImage {
-                img {
+                #imgProduct {
                     width: 156px;
                     height: 165px;
                     border-radius: 25px;
@@ -147,27 +147,42 @@
                     }
                 }
 
-                .CardDetail button {
-                    font: normal 400 0.938rem cursive;
-                    letter-spacing: 1px;
-                    text-align: left;
-                    height: 30px;
-                    width: 120px;
-                    padding-left: 10px;
-                    margin: 3px 0;
-                    color: #fbfbfb;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    border: none;
-                    background-image: linear-gradient(90deg,
-                            rgba(246, 177, 166, 1) 0%,
-                            rgba(233, 155, 158, 1) 35%,
-                            rgba(212, 114, 143, 1) 100%);
-                    text-align: center;
+                .CardDetail {
+                    background-color: transparent;
+
+                    #btnOpenModalDetail {
+                        font: normal 400 0.938rem cursive;
+                        letter-spacing: 1px;
+                        text-align: left;
+                        height: 30px;
+                        width: 120px;
+                        padding-left: 10px;
+                        margin: 3px 0;
+                        color: #fbfbfb;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        border: none;
+                        background-image: linear-gradient(90deg,
+                                rgba(246, 177, 166, 1) 0%,
+                                rgba(233, 155, 158, 1) 35%,
+                                rgba(212, 114, 143, 1) 100%);
+                        text-align: center;
+                    }
                 }
+
+
             }
         }
     }
+}
+
+//PAGINAÇÃO
+.pagination {
+    background-color: #FDF4F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
 }
 
 .CardColor {
@@ -183,9 +198,13 @@
     height: 600px;
     justify-content: center;
     align-items: center;
+
+    #check {
+        display: none;
+    }
 }
 
-label {
+#checkLoading {
     margin: auto;
     height: 150px;
     width: 150px;
@@ -210,11 +229,11 @@ label {
     }
 }
 
-label .check-icon {
+#checkLoading .check-icon {
     display: none;
 }
 
-label .check-icon:after {
+#checkLoading .check-icon:after {
     position: absolute;
     content: "";
     top: 50%;
@@ -254,15 +273,13 @@ label .check-icon:after {
     }
 }
 
-input {
-    display: none;
-}
 
-input:checked~label .check-icon {
+
+#checkLoading:checked~label .check-icon {
     display: block;
 }
 
-input:checked~label {
+#checkLoading:checked~label {
     animation: none;
     border-color: rgba(212, 114, 143, 1);
     transition: border 0.5s ease-out;

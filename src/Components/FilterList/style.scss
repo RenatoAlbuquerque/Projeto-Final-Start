@@ -1,6 +1,3 @@
-*{
-    background-color: transparent;
-}
 /*.lineGradientUP{
     height: 50px;
     width: 100%;
@@ -9,140 +6,186 @@
         rgba(233, 155, 158, 1) 35%,
         rgba(212, 114, 143, 1) 100%);
     }*/
-.filter{
+.filter {
     padding: 20px 0;
     width: 100%;
-    .filter-list{
+    background-color: #FBFBFB;
+
+    .filter-list {
         margin: 0 auto;
         display: flex;
         width: 85%;
         justify-content: space-between;
-        .filter-brand{
-            .brand-btn{
-                button{
-                font-size: 1.875rem;
-                font-weight: 400;
-                border-radius: 20px;
-                padding: 10px;
-                border: none;
-                cursor: pointer;
-                background-image:linear-gradient(90deg,
-                    rgba(246, 177, 166, 1) 0%,
-                    rgba(233, 155, 158, 1) 35%,
-                    rgba(212, 114, 143, 1) 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                &:hover{
-                    background: linear-gradient(90deg,
-                        rgba(246, 177, 166, 1) 0%,
-                        rgba(233, 155, 158, 1) 35%,
-                        rgba(212, 114, 143, 1) 100%);
-                        color: white;
-                }
-            }
-        }
-        .modalGlobalBrand{
-            position: absolute;
-            top: 360px;
-            left: 0;
-            color: white;
-            transition: all 0.5s ease-out;
-            .modal-brand {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background: linear-gradient(90deg,
-                        rgba(246, 177, 166, 1) 0%,
-                        rgba(233, 155, 158, 1) 35%,
-                        rgba(212, 114, 143, 1) 100%);
-                border-radius: 0 10px 10px 0;
-                button {
-                    background: transparent;
-                    border: transparent;
-                    font-size: 1.5rem;
-                    color: white;
-                    width: 100%;
-                    padding: 10px 30px;
+
+        .filter-brand {
+            .brand-btn {
+                #btnBrand {
+                    font-size: 1.875rem;
+                    font-weight: 400;
+                    border-radius: 20px;
+                    padding: 10px;
+                    border: none;
+                    background: #FBFBFB;
                     cursor: pointer;
+                    background-image: linear-gradient(90deg,
+                            rgba(246, 177, 166, 1) 0%,
+                            rgba(233, 155, 158, 1) 35%,
+                            rgba(212, 114, 143, 1) 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+
                     &:hover {
-                        background: #FDF4F3;
-                        color: #D6778E;
+                        background: linear-gradient(90deg,
+                                rgba(246, 177, 166, 1) 0%,
+                                rgba(233, 155, 158, 1) 35%,
+                                rgba(212, 114, 143, 1) 100%);
+                        color: white;
                     }
-                    
                 }
             }
-        }  
-        .modalNone{
-            position: absolute;
-            top: 360px;
-            left: -150px;
-            color: white;
-            transition: all 0.5s ease-out;
-            &:hover {
-                top: 360px;
-                left: 0px;
+
+            .modalGlobalBrand {
+                position: absolute;
+                top: 420px;
+                left: 0;
+                color: white;
+                transition: all 0.5s ease-out;
+
+                .modal-brand {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: linear-gradient(90deg,
+                            rgba(246, 177, 166, 1) 0%,
+                            rgba(233, 155, 158, 1) 35%,
+                            rgba(212, 114, 143, 1) 100%);
+                    border-radius: 0 10px 10px 0;
+
+                    #btnFilterBrand {
+                        background: transparent;
+                        border: transparent;
+                        font-size: 1.3rem;
+                        color: white;
+                        width: 100%;
+                        padding: 10px 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #FDF4F3;
+                            color: #D6778E;
+                        }
+
+                    }
+                }
             }
-            .modal-brand {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                background: linear-gradient(0deg,
-                    rgba(246, 177, 166, 1) 0%,
-                    rgba(233, 155, 158, 1) 35%,
-                    rgba(212, 114, 143, 1) 100%);
-                border-radius: 0 10px 10px 0;
-                button{
-                    background: transparent;
-                    border: transparent;
-                    font-size:1.5rem;
-                    color: white;
-                    width: 100%;
-                    padding: 10px 30px;
-                    cursor: pointer;
-                    &:hover{
-                        background: #FDF4F3;
-                        color: #D6778E;
+
+            .modalNone {
+                position: absolute;
+                top: 420px;
+                left: -150px;
+                color: white;
+                transition: all 0.5s ease-out;
+
+                &:hover {
+                    top: 360px;
+                    left: 0px;
+                }
+
+                .modal-brand {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: linear-gradient(0deg,
+                            rgba(246, 177, 166, 1) 0%,
+                            rgba(233, 155, 158, 1) 35%,
+                            rgba(212, 114, 143, 1) 100%);
+                    border-radius: 0 10px 10px 0;
+
+                    #btnFilterBrand {
+                        background: transparent;
+                        border: transparent;
+                        font-size: 1.3rem;
+                        color: white;
+                        width: 100%;
+                        padding: 10px 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #FDF4F3;
+                            color: #D6778E;
+                        }
                     }
                 }
             }
         }
-    }
-        .filter-price_rating{
+
+        .filter-price_rating {
             display: flex;
             gap: 36px;
-            button{
+
+
+            #btnFilterPrice_Rating {
                 font-size: 1rem;
                 border: none;
                 cursor: pointer;
                 color: #D6778E;
                 font-weight: 700;
-                &:hover{
-                    background-image:linear-gradient(90deg,
-                        rgba(246, 177, 166, 1) 0%,
-                        rgba(233, 155, 158, 1) 35%,
-                        rgba(212, 114, 143, 1) 100%);
+                background: #fbfbfb;
+
+                &:hover {
+                    background-image: linear-gradient(90deg,
+                            rgba(246, 177, 166, 1) 0%,
+                            rgba(233, 155, 158, 1) 35%,
+                            rgba(212, 114, 143, 1) 100%);
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;
                 }
-            }    
+            }
         }
     }
 }
 
-@media(max-width: 933px){
-    .filter{
-        .filter-list{
-            .filter-brand{
-                .modalGlobalBrand{
-                top: 400px;
-            }
-                .modalNone{
+@media(max-width: 933px) {
+    .filter {
+        .filter-list {
+            width: 95%;
+            margin: auto;
+
+            .filter-brand {
+                .brand-btn {
+                    #btnBrand {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .modalGlobalBrand {
                     top: 400px;
+
+                    .modal-brand {
+                        #btnBrand {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .modalNone {
+                    top: 400px;
+
+                    .modal-brand {
+                        #btnBrand {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
-            
+
+            .filter-price_rating {
+                #btnFilterPrice_Rating {
+                    font-size: .8rem;
+                }
+            }
         }
     }
 }
@@ -164,31 +207,28 @@
     }
 }
 
-@media (max-width: 940px){
-    .filter{
-        .filter-list{
-            width: 95%;
-            margin: auto;
-            .filter-brand{
-                button{
-                    font-size: 1.3rem;
-                }
-            }
-            .filter-price_rating{
-                button{
-                    font-size: .8rem;
-                }
-            }
-        }
-        
-    }
-    
-}
-@media (max-width: 470px){
-    .filter{
-        .filter-list{
+@media (max-width: 470px) {
+    .filter {
+        .filter-list {
             width: 90%;
-            .filter-price_rating{
+
+            .filter-brand {
+                .brand-btn {
+                    #btnFilterBrand {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .modalGlobalBrand {
+                    .modal-brand {
+                        #btnFilterBrand {
+                            font-size: .7rem;
+                        }
+                    }
+                }
+            }
+
+            .filter-price_rating {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
@@ -197,12 +237,7 @@
                 justify-items: center;
             }
         }
-        
+
     }
-    
+
 }
-
-
-
-
-

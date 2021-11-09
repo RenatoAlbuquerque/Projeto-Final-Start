@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ProductsContext } from '../providers/products';
 import './style.scss';
 import FilterList from '../FilterList';
@@ -6,13 +6,20 @@ import Modal from "../Modal/Modal";
 import Content from "../Modal/Content";
 import ProductTypes from '../ProductTypes';
 import Benefits from "../../Components/Benefits";
+import PaginationComponent from "../../Components/PaginationComponent";
+import PaginationSelector from "../../Components/PaginationSelector";
 
 export default function ListaDeProdutos() {
   const products = useContext(ProductsContext);
   const [modalOn, setModalOn] = useState(false);
   const [positionCard, setPositionCard] = useState('');
 
-
+  const [itensPerPage, setItensPerPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(0);
+  const pages = Math.ceil(products.products.length / itensPerPage);
+  const startIndex = currentPage * itensPerPage;
+  const endIndex = startIndex + itensPerPage;
+  const currentItens = products.products.slice(startIndex, endIndex);
 
   const sliceColors = (array) => {
     if (array.length > 7) {
@@ -45,6 +52,9 @@ export default function ListaDeProdutos() {
     }
   }
 
+  useEffect(() => {
+    setCurrentPage(0)
+  }, [itensPerPage])
 
   const filteredCard = products.products[positionCard];
 
@@ -53,13 +63,20 @@ export default function ListaDeProdutos() {
       <ProductTypes />
       <Benefits />
       <FilterList />
-      <div className="GlobalStyle">
-        <div className="Global">
+      {products.products.length ?
+        <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
+        : null}
+
+      <div className="GlobalStyleProduct">
+        <div className="GlobalProduct">
           {products.products.length ?
-            products.products.map((product, index) => (
-              <div className="Card" key={index}>
+            currentItens.map((product, index) => (
+              <div className="CardProduct" key={index}>
                 <div className="CardImage">
-                  <img src={product.api_featured_image} alt={product.name}></img>
+                  <img id="imgProduct"
+                    src={product.api_featured_image}
+                    alt={product.name}>
+                  </img>
                 </div>
                 <div className="CardName">
                   {product.name}
@@ -71,10 +88,16 @@ export default function ListaDeProdutos() {
                   Tipo: {product.category}
                 </div>
                 <div className="CardPrice">
-                  Preço: R${product.price}
+                  Preço: R${product.price === "0.0" ?
+                    product.price = parseFloat(Math.random() * (80 - 1) + 1).toFixed(2)
+                    :
+                    product.price}
                 </div>
                 <div className="CardRating">
-                  Avaliação: {product.rating}
+                  Avaliação:{product.rating === null ?
+                    product.rating = parseInt(Math.random() * (5 - 1) + 1).toFixed(1)
+                    :
+                    product.rating}
                 </div>
                 <div className="CardGapDetail">
                   <div className="CardFooter">
@@ -83,7 +106,12 @@ export default function ListaDeProdutos() {
                     </div>
                   </div>
                   <div className="CardDetail" >
-                    <button onClick={() => { setPositionCard(index); setModalOn(true) }}> + Detalhes</button>
+                    <button
+                      id="btnOpenModalDetail"
+                      onClick={() => { setPositionCard(index); setModalOn(true) }}
+                    >
+                      + Detalhes
+                    </button>
                   </div>
                 </div>
               </div>
@@ -91,13 +119,21 @@ export default function ListaDeProdutos() {
             :
             <div className="loading">
               <input type="checkbox" id="check" />
-              <label>
+              <label id="checkLoading">
                 <div className="check-icon"></div>
               </label>
             </div>
           }
-
         </div>
+      </div>
+      <div className="pagination">
+        {products.products.length ?
+          <PaginationComponent
+            pages={pages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage} />
+          :
+          null}
       </div>
       {modalOn ?
         <div>
@@ -108,8 +144,7 @@ export default function ListaDeProdutos() {
               tipo={filteredCard.category}
               preco={filteredCard.price}
               marca={filteredCard.brand}
-              desc={filteredCard.description}
-              cor={sliceColors(filteredCard.product_colors)}       
+              cor={sliceColors(filteredCard.product_colors)}
             />
           </Modal>
         </div>

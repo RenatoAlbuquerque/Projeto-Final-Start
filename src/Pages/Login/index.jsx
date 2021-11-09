@@ -2,8 +2,9 @@ import React from 'react';
 import person_icon from '../../Images/IconsLogin/person-icon.png'
 import showcase from '../../Images/IconsLogin/showcase.png';
 import './styles.css'
-import { useForm } from 'react-hook-form'
-import { useHistory } from 'react-router-dom'
+import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
+import Footer from '../../Components/Footer';
 
 
 
@@ -53,6 +54,7 @@ const Login = () => {
         </form>
 
       </div>
+      <Footer />
     </div>
   );
 }

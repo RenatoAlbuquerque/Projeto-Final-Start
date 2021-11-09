@@ -1,40 +1,36 @@
-.lineGradientDown{
-        height: 50px;
-        width: 100%;
-        background: 
-        linear-gradient(90deg, 
-        rgba(246, 177, 166, 1) 0%, 
-        rgba(233, 155, 158, 1) 35%, 
-        rgba(212, 114, 143, 1) 100%);
-    }
-
 .vantagens-lista {
     padding-top: 20px;
     width: 100%;
-    .vantagens{
+    background: #FBFBFB;
+
+    .vantagens {
         margin: 0 auto;
         display: flex;
         width: 75%;
         justify-content: space-between;
         user-select: none;
 
-        .pagamento, .frete, .atendimento, .seguranca{
+        .pagamento,
+        .frete,
+        .atendimento,
+        .seguranca {
             display: flex;
             align-items: center;
+            background-color: transparent;
 
-            svg{
+            #benefitImg {
                 width: 62px;
                 height: 40px;
                 margin-right: 10px;
                 color: #D6778E;
             }
 
-            h3{
+            #benefitType {
                 font-weight: 700;
                 font-size: 1.3rem;
             }
-            
-            p{
+
+            #benefitTypeComp {
                 color: #696868;
                 font-weight: 400;
                 font-size: .75rem;
@@ -45,7 +41,7 @@
     }
 }
 
-@media (max-width: 1680px){
+@media (max-width: 1680px) {
     .vantagens-lista {
         .vantagens {
             margin: 0 auto;
@@ -53,22 +49,23 @@
             width: 85%;
             justify-content: space-between;
             user-select: none;
-        }  
+        }
     }
 }
-@media (max-width: 1440px){
+
+@media (max-width: 1440px) {
 
     .vantagens-lista {
-        .vantagens{
+        .vantagens {
             width: 90%;
         }
-    }  
+    }
 }
-    
-@media (max-width: 940px){
+
+@media (max-width: 940px) {
 
     .vantagens-lista {
-        .vantagens{
+        .vantagens {
             width: 100%;
             margin: 0 auto;
             display: grid;
@@ -77,60 +74,71 @@
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             justify-items: center;
-            .pagamento{
+
+            .pagamento {
                 margin-right: 35px;
             }
-            .frete{
+
+            .frete {
                 margin-right: 55px;
             }
-            .seguranca{
+
+            .seguranca {
                 margin-right: 55px;
             }
         }
-    }  
+    }
 }
 
-@media (max-width: 470px){
+@media (max-width: 500px) {
 
     .vantagens-lista {
-        
-        .vantagens{
-            width: 100%;
+        .vantagens {
+            width: 90%;
+            display: grid;
             justify-items: start;
-            padding: 0 10px;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            .pagamento{
+            grid-row-gap: 10px;
+
+            .pagamento {
                 margin-right: 25px;
-                svg{
+
+                #benefitImg {
                     margin-right: 0;
                 }
             }
-            .atendimento{
-                margin-left: 3px;
+
+            .atendimento {
+                display: flex;
+
+                #benefitImg {
+                    padding-right: 1px;
+                }
             }
-            .pagamento h3,
-            .frete h3,
-            .atendimento h3,
-            .seguranca h3 {
+
+            .pagamento #benefitType,
+            .frete #benefitType,
+            .atendimento #benefitType,
+            .seguranca #benefitType {
                 font-size: .7rem;
                 width: 100%;
             }
-            .pagamento p,
-            .frete p,
-            .atendimento p,
-            .seguranca p {
+
+            .pagamento #benefitTypeComp,
+            .frete #benefitTypeComp,
+            .atendimento #benefitTypeComp,
+            .seguranca #benefitTypeComp {
                 font-size: .7rem;
             }
-            .pagamento svg,
-            .frete svg,
-            .atendimento svg,
-            .seguranca svg {
-                width:45px;
+
+            .pagamento #benefitImg,
+            .frete #benefitImg,
+            .atendimento #benefitImg,
+            .seguranca #benefitImg {
+                width: 45px;
                 height: 30px;
             }
         }
-    }  
+    }
 }
-    

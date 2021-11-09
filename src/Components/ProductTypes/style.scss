@@ -1,57 +1,74 @@
 .product {
     width: 100%;
+    background: linear-gradient(90deg,
+            rgba(246, 177, 166, 1) 0%,
+            rgba(233, 155, 158, 1) 35%,
+            rgba(212, 114, 143, 1) 100%);
 
     .types {
         display: flex;
+        padding: 10px 0;
         width: 75%;
-        height: 70px;
         margin: auto;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        background-color: transparent;
 
-        .lipstick,
-        .blush,
-        .bronzer,
-        .nail-polish,
-        .eyebrow,
-        .mascara {
+        #btnType {
             display: flex;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            font-family: arial, sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            background: transparent;
+            padding: 0 5px;
             border: 2px solid transparent;
 
-            button {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                cursor: pointer;
-            }
-
             &:hover {
-                border: 2px solid rgba(212, 114, 143, 1);
-                ;
+                border: 2px solid #fbfbfb;
                 border-radius: 10px;
 
-                button {
-                    color: rgba(212, 114, 143, 1);
+                #prodType {
+                    color: white;
                 }
+
             }
 
-            img {
+            #imgTypes {
                 background: transparent;
                 width: 40px;
             }
 
-            button {
-                border: none;
-                font-family: arial, sans-serif;
-                font-weight: 700;
+            .lipstick,
+            .blush,
+            .bronzer,
+            .nail-polish,
+            .eyebrow,
+            .mascara {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 2px solid transparent;
+                background-color: transparent;
+
+            }
+
+            #prodType {
                 font-size: 1rem;
-                background: transparent;
-                padding: 0 5px;
+                text-align: center;
+                letter-spacing: 1px;
+                display: block;
+                background-color: transparent;
+                color: rgb(27, 24, 24);
+                font-weight: 700;
             }
         }
+
+
     }
 }
 
@@ -66,15 +83,6 @@
 @media (max-width: 700px) {
     .product {
         .types {
-            width: 95%;
-        }
-    }
-
-}
-
-@media (max-width: 700px) {
-    .product {
-        .types {
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -82,8 +90,41 @@
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             justify-items: center;
-            padding-bottom: 50px;
+
         }
     }
+}
 
+@media (max-width: 470px) {
+    .product {
+        .types {
+            #btnType {
+
+                .lipstick,
+                .blush,
+                .bronzer,
+                .nail-polish,
+                .eyebrow,
+                .mascara {
+                    &:hover {
+                        #prodType {
+                            color: #fbfbfb;
+                        }
+                    }
+
+                    #imgTypes {
+                        background: transparent;
+                        width: 30px;
+                    }
+
+                    #prodType {
+                        letter-spacing: 1px;
+                        color: rgb(27, 24, 24);
+                        font-weight: 700;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
 }
