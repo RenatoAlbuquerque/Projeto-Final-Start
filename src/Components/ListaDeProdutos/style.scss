@@ -198,6 +198,10 @@
     height: 600px;
     justify-content: center;
     align-items: center;
+
+    #check {
+        display: none;
+    }
 }
 
 label {
@@ -269,9 +273,7 @@ label .check-icon:after {
     }
 }
 
-input {
-    display: none;
-}
+
 
 input:checked~label .check-icon {
     display: block;
