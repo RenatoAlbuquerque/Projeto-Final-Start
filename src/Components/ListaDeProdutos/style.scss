@@ -1,4 +1,4 @@
-.GlobalStyle {
+.GlobalStyleProduct {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
 
-    .Global {
+    .GlobalProduct {
         justify-content: center;
         margin: auto;
         display: grid;
@@ -40,7 +40,7 @@
             grid-template-columns: repeat(1, 1fr);
         }
 
-        .Card {
+        .CardProduct {
             width: 180px;
             height: 450px;
             padding: 20px;
@@ -150,7 +150,7 @@
                 .CardDetail {
                     background-color: transparent;
 
-                    button {
+                    #btnOpenModalDetail {
                         font: normal 400 0.938rem cursive;
                         letter-spacing: 1px;
                         text-align: left;
@@ -204,7 +204,7 @@
     }
 }
 
-label {
+#checkLoading {
     margin: auto;
     height: 150px;
     width: 150px;
@@ -229,11 +229,11 @@ label {
     }
 }
 
-label .check-icon {
+#checkLoading .check-icon {
     display: none;
 }
 
-label .check-icon:after {
+#checkLoading .check-icon:after {
     position: absolute;
     content: "";
     top: 50%;
@@ -275,11 +275,11 @@ label .check-icon:after {
 
 
 
-input:checked~label .check-icon {
+#checkLoading:checked~label .check-icon {
     display: block;
 }
 
-input:checked~label {
+#checkLoading:checked~label {
     animation: none;
     border-color: rgba(212, 114, 143, 1);
     transition: border 0.5s ease-out;

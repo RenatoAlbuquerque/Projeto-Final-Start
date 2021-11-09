@@ -67,11 +67,11 @@ export default function ListaDeProdutos() {
         <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
         : null}
 
-      <div className="GlobalStyle">
-        <div className="Global">
+      <div className="GlobalStyleProduct">
+        <div className="GlobalProduct">
           {products.products.length ?
             currentItens.map((product, index) => (
-              <div className="Card" key={index}>
+              <div className="CardProduct" key={index}>
                 <div className="CardImage">
                   <img
                     src={product.api_featured_image}
@@ -107,6 +107,7 @@ export default function ListaDeProdutos() {
                   </div>
                   <div className="CardDetail" >
                     <button
+                      id="btnOpenModalDetail"
                       onClick={() => { setPositionCard(index); setModalOn(true) }}
                     >
                       + Detalhes
@@ -118,7 +119,7 @@ export default function ListaDeProdutos() {
             :
             <div className="loading">
               <input type="checkbox" id="check" />
-              <label>
+              <label id="checkLoading">
                 <div className="check-icon"></div>
               </label>
             </div>

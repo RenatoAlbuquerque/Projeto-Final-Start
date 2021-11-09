@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar';
+import './style.css';
 
-export default function Header (){
+export default function Header() {
   return (
-    <div>
-        AQUI É O HEADER
-        <Navbar/>
-    </div>
+    <header>
+      <p id="constructor">EM CONSTRUÇÃO</p>
+      <Navbar />
+    </header>
   );
 }

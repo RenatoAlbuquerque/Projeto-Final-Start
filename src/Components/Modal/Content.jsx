@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Content(props) {
     const [num, setNum] = useState(1);
@@ -31,7 +31,6 @@ export default function Content(props) {
     return (
         <div className="content">
             <h3>{props.name}</h3>
-
             <div className="container">
                 <div className="img-product">
                     <img src={props.img} alt="img" />
@@ -61,18 +60,8 @@ export default function Content(props) {
                 <p className="texto-desc">
                     <b>Descrição:</b> {props.desc.substr(0, 300)}
                 </p>
-                <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
-                <p className="quantCompras">{num}</p>
-                <button className="btn-calculo" onClick={sub}>-</button>
             </div>
-            <button className="btn-comprar" type="button">Comprar</button>
+
         </div>
-            </div >
-        <div className="description">
-            <p className="texto-desc">
-                <b>Descrição:</b> {props.desc.substr(0, 300)}
-            </p>
-        </div>
-        </div >
     );
 }
