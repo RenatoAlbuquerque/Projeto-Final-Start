@@ -1,11 +1,16 @@
-.publi{
-    margin-top: 30px;
+.atendimento_feedback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
 }
 
-.publi h1{
-    width: 480px;
-    color: #E98CF9;
-    margin-left: 15px;
-    text-align: justify;
-    font-weight: 700;
+.atendimento_feedback div{
+    margin: 0 40px 20px 120px
+}
+
+.atendimento_feedback img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
 }

@@ -5,7 +5,7 @@ export default function Valores(){
     return(
         <div className="valores">
             <div>
-
+               
                 <h3>+ 50 MIL</h3>
                 <hr></hr>
                 <p>Produtos vendidos</p>
@@ -24,7 +24,7 @@ export default function Valores(){
 
                 <h3>+ 2 MIL</h3>
                 <hr></hr>
-                <p>Cidades atendidas</p>
+                <p>Cidades atendidas</p> 
 
             </div>
 
