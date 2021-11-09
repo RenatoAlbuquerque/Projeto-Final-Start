@@ -1,0 +1,57 @@
+.conteinerA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.texto{
+    color: rgb(235, 191, 191);
+    text-align: center;
+}
+
+.texto h3{
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.texto p{
+    font-size: 20px;
+    color: #E98CF9;
+    font-weight: bold;
+}
+
+textarea{
+    resize:none;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(226, 220, 213);
+    width: 360px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.areaTxt{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+textarea::-webkit-input-placeholder{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 6px;
+    opacity: 0.5;
+}
+
+.areaTxt button{
+    border-radius: 25px;
+    background-color: rgb(226, 220, 213);
+    height: 35px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}

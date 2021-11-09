@@ -8,18 +8,118 @@ body{
     /* background-image: linear-gradient( #ffa5d9, #ae72c5); */
 }
 
-.cards{
+.cards-conteiner{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card{
-    margin-top: -150px;
-    margin-left: 25px;
-    margin-right: 25px;
-    height: 350px;
-    width: 290px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
+#card{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background-color: #E98CF9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 50px;
+    box-shadow: 0 0 0.3em black;
+}
+
+#card:hover{
+    cursor: pointer;   
+}
+
+#card::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 191, 191);
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+#card:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+#card::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 7em;
+    color: rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+}
+
+#card .imgBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+#card .imgBx img{
+    margin-left:15px;
+    border-radius: 60%;
+    max-width: 90%;
+    transition: 0.5s;
+}
+
+#card:hover .imgBx img{
+    margin-left:50px;
+    max-width: 70%;
+}
+
+#card .contentBx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#card .contentBx h3{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#card .contentBx .price{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#card .contentBx .descricao{
+    cursor:default;
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 5px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+#card:hover .contentBx .descricao{
+    top: 0px;
+    opacity: 1;
 }
