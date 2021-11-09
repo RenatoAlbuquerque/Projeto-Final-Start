@@ -91,44 +91,96 @@ export default function FilterList() {
       <div className="filter-list">
         <div className="filter-brand">
           <div className="brand-btn">
-            <button onClick={MenuToogleBrand} >Por Marcas</button>
+            <button
+              id="btnBrand"
+              onClick={MenuToogleBrand}
+            >
+              Por Marcas
+            </button>
           </div>
           <div className={menuBrand ? "modalGlobalBrand" : "modalNone"}>
             <div className="modal-brand">
               <button
-                onClick={() => getProductsByBrand("benefit")}
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("benefit")}
               >
                 Benefit
               </button>
-              <button onClick={() => getProductsByBrand("clinique")}>Clinique</button>
-              <button onClick={() => getProductsByBrand("covergirl")}>Covergirl</button>
-              <button onClick={() => getProductsByBrand("dior")}>Dior</button>
-              <button onClick={() => getProductsByBrand("l'oreal")}>L'oreal</button>
-              <button onClick={() => getProductsByBrand("maybelline")}>Maybelline</button>
-              <button onClick={() => getProductsByBrand("nyx")}>Nyx</button>
-              <button onClick={() => getProductsByBrand("revlon")}>Revlon</button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("clinique")}
+              >
+                Clinique
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("covergirl")}
+              >
+                Covergirl
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("dior")}
+              >
+                Dior
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("l'oreal")}
+              >
+                L'oreal
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("maybelline")}
+              >
+                Maybelline
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() => getProductsByBrand("nyx")}
+              >
+                Nyx
+              </button>
+              <button
+                id="btnFilterBrand"
+                onClick={() =>
+                  getProductsByBrand("revlon")}
+              >
+                Revlon
+              </button>
             </div>
           </div>
         </div>
         <div className="filter-price_rating">
           <button
+            id="btnFilterPrice_Rating"
             onClick={filterByMinPrice}
           >
             Menor Preço
             <AiOutlineCaretDown />
           </button>
           <button
+            id="btnFilterPrice_Rating"
             onClick={filterByMaxPrice}
           >
             Maior Preço <AiOutlineCaretUp />
           </button>
           <button
+            id="btnFilterPrice_Rating"
             onClick={filterByMaxRating}
           >
             Maior Avaliação
             <AiFillStar />
           </button>
           <button
+            id="btnFilterPrice_Rating"
             onClick={filterByMinRating}
           >
             Menor Avaliação <AiOutlineStar />

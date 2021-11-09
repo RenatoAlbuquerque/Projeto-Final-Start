@@ -5,9 +5,10 @@
   font-weight: 600;
   padding-bottom: 20px;
   padding-left: 8vw;
+  background: #FBFBFB;
 
-  select,
-  option {
+  #selectPages,
+  #optionPages {
     cursor: pointer;
     font-size: 1rem;
     width: 50px;
@@ -29,9 +30,9 @@
   .pages {
     padding-left: 7vw;
 
-    select,
-    option,
-    p {
+    #selectPages,
+    #optionPages,
+    #quantPages {
       font-size: .875rem;
     }
   }

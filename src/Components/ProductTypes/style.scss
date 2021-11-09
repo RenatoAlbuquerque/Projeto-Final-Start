@@ -32,13 +32,13 @@
                 border: 2px solid #fbfbfb;
                 border-radius: 10px;
 
-                span {
+                #prodType {
                     color: white;
                 }
 
             }
 
-            img {
+            #imgTypes {
                 background: transparent;
                 width: 40px;
             }
@@ -57,7 +57,7 @@
 
             }
 
-            span {
+            #prodType {
                 font-size: 1rem;
                 text-align: center;
                 letter-spacing: 1px;
@@ -107,17 +107,17 @@
                 .eyebrow,
                 .mascara {
                     &:hover {
-                        span {
+                        #prodType {
                             color: #fbfbfb;
                         }
                     }
 
-                    img {
+                    #imgTypes {
                         background: transparent;
                         width: 30px;
                     }
 
-                    span {
+                    #prodType {
                         letter-spacing: 1px;
                         color: rgb(27, 24, 24);
                         font-weight: 700;

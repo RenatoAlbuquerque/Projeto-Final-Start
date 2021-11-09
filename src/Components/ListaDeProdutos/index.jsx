@@ -73,7 +73,7 @@ export default function ListaDeProdutos() {
             currentItens.map((product, index) => (
               <div className="CardProduct" key={index}>
                 <div className="CardImage">
-                  <img
+                  <img id="imgProduct"
                     src={product.api_featured_image}
                     alt={product.name}>
                   </img>

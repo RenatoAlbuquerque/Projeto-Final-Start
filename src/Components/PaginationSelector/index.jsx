@@ -4,15 +4,16 @@ import "./style.scss"
 const PaginationSelector = ({ itensPerPage, setItensPerPage }) => {
   return (
     <div className="pages">
-      <p>Quantidade de itens:</p>
+      <p id="quantPages">Quantidade de itens:</p>
       <div className="itens-per-pages">
         <select
+          id="selectPages"
           value={itensPerPage}
           onChange={(e) =>
             setItensPerPage(Number(e.target.value))}>
-          <option value={5}>5</option>
-          <option value={10}>10</option>
-          <option value={15}>15</option>
+          <option id="optionPages" value={5}>5</option>
+          <option id="optionPages" value={10}>10</option>
+          <option id="optionPages" value={15}>15</option>
         </select>
       </div>
     </div>

@@ -12,31 +12,31 @@ export default function Benefits() {
       <div className="vantagens-lista">
         <div className="vantagens">
           <div className="pagamento">
-            <BsFillCreditCard2FrontFill />
+            <BsFillCreditCard2FrontFill id="benefitImg" />
             <div className="pag-descript">
-              <h3>Parcelamento</h3>
-              <p>Em até 12x</p>
+              <h3 id="benefitType">Parcelamento</h3>
+              <p id="benefitTypeComp">Em até 12x</p>
             </div>
           </div>
           <div className="frete">
-            <FaTruckMoving />
+            <FaTruckMoving id="benefitImg" />
             <div className="fre-descript">
-              <h3>Frete Gratis</h3>
-              <p>Consulte as cidades</p>
+              <h3 id="benefitType">Frete Gratis</h3>
+              <p id="benefitTypeComp">Consulte as cidades</p>
             </div>
           </div>
           <div className="atendimento">
-            <BiConversation />
+            <BiConversation id="benefitImg" />
             <div className="atd-descript">
-              <h3>Fale Conosco</h3>
-              <p>Diversos canais de comunicação</p>
+              <h3 id="benefitType">Fale Conosco</h3>
+              <p id="benefitTypeComp">Diversos canais de comunicação</p>
             </div>
           </div>
           <div className="seguranca">
-            <RiLockPasswordFill />
+            <RiLockPasswordFill id="benefitImg" />
             <div className="seg-descript">
-              <h3>Site Seguro</h3>
-              <p>Compre protegido</p>
+              <h3 id="benefitType">Site Seguro</h3>
+              <p id="benefitTypeComp">Compre protegido</p>
             </div>
           </div>
         </div>

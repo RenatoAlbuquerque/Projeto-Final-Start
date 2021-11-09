@@ -1,6 +1,7 @@
 .vantagens-lista {
     padding-top: 20px;
     width: 100%;
+    background: #FBFBFB;
 
     .vantagens {
         margin: 0 auto;
@@ -17,19 +18,19 @@
             align-items: center;
             background-color: transparent;
 
-            svg {
+            #benefitImg {
                 width: 62px;
                 height: 40px;
                 margin-right: 10px;
                 color: #D6778E;
             }
 
-            h3 {
+            #benefitType {
                 font-weight: 700;
                 font-size: 1.3rem;
             }
 
-            p {
+            #benefitTypeComp {
                 color: #696868;
                 font-weight: 400;
                 font-size: .75rem;
@@ -103,7 +104,7 @@
             .pagamento {
                 margin-right: 25px;
 
-                svg {
+                #benefitImg {
                     margin-right: 0;
                 }
             }
@@ -111,30 +112,30 @@
             .atendimento {
                 display: flex;
 
-                svg {
+                #benefitImg {
                     padding-right: 1px;
                 }
             }
 
-            .pagamento h3,
-            .frete h3,
-            .atendimento h3,
-            .seguranca h3 {
+            .pagamento #benefitType,
+            .frete #benefitType,
+            .atendimento #benefitType,
+            .seguranca #benefitType {
                 font-size: .7rem;
                 width: 100%;
             }
 
-            .pagamento p,
-            .frete p,
-            .atendimento p,
-            .seguranca p {
+            .pagamento #benefitTypeComp,
+            .frete #benefitTypeComp,
+            .atendimento #benefitTypeComp,
+            .seguranca #benefitTypeComp {
                 font-size: .7rem;
             }
 
-            .pagamento svg,
-            .frete svg,
-            .atendimento svg,
-            .seguranca svg {
+            .pagamento #benefitImg,
+            .frete #benefitImg,
+            .atendimento #benefitImg,
+            .seguranca #benefitImg {
                 width: 45px;
                 height: 30px;
             }
