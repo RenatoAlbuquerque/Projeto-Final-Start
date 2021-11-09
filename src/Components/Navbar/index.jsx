@@ -7,10 +7,10 @@ export default function Navbar() {
         <nav>
             <ul id="links-list">
                 <li>
-                    <Link to='/'>Home</Link>
+                    <Link to='/'>Login</Link>
                 </li>
                 <li>
-                    <Link to='/login'>Login</Link>
+                    <Link to='/home'>Home</Link>
                 </li>
                 <li>
                     <Link to='/produto'>Produtos</Link>

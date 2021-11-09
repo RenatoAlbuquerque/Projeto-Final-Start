@@ -79,25 +79,27 @@ export default function ListaDeProdutos() {
                   </img>
                 </div>
                 <div className="CardName">
-                  {product.name}
+                  {product.name.substring(0, 55)}
                 </div>
                 <div className="CardBrand">
                   Marca: {product.brand}
                 </div>
+
                 <div className="CardCategory">
                   Tipo: {product.category}
                 </div>
+
                 <div className="CardPrice">
                   Preço: R${product.price === "0.0" ?
                     product.price = parseFloat(Math.random() * (80 - 1) + 1).toFixed(2)
                     :
-                    product.price}
+                    parseFloat(product.price).toFixed(2)}
                 </div>
                 <div className="CardRating">
                   Avaliação:{product.rating === null ?
-                    product.rating = parseInt(Math.random() * (5 - 1) + 1).toFixed(1)
+                    product.rating = parseInt(Math.random() * (5 - 1) + 1)
                     :
-                    product.rating}
+                    parseInt(product.rating)}
                 </div>
                 <div className="CardGapDetail">
                   <div className="CardFooter">
