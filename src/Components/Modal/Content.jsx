@@ -29,14 +29,14 @@ export default function Content(props) {
     }, [])
 
     return (
-        <div className="content">
+        <div id="content">
             <h3>{props.name}</h3>
             <div className="container">
                 <div className="img-product">
                     <img src={props.img} alt="img" />
                 </div>
 
-                <div className="item">
+                <div id="item">
                     <ul className="details">
                         <li><b>Marca:</b> {props.marca}</li>
                         <li><b>Tipo:</b> {props.tipo}</li>
@@ -56,12 +56,6 @@ export default function Content(props) {
                     }}>Comprar</button>
                 </div>
             </div>
-            <div className="description">
-                <p className="texto-desc">
-                    <b>Descrição:</b> {props.desc.substr(0, 300)}
-                </p>
-            </div>
-
         </div>
     );
 }

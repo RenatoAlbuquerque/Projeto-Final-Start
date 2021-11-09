@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { ProductsContext } from '../providers/products';
 import './style.scss';
 import FilterList from '../FilterList';
-import Modal from "../modal/Modal";
-import Content from "../modal/Content";
+import Modal from "../Modal/Modal";
+import Content from "../Modal/Content";
 import ProductTypes from '../ProductTypes';
 import Benefits from "../../Components/Benefits";
 import PaginationComponent from "../../Components/PaginationComponent";
@@ -144,7 +144,6 @@ export default function ListaDeProdutos() {
               tipo={filteredCard.category}
               preco={filteredCard.price}
               marca={filteredCard.brand}
-              desc={filteredCard.description}
               cor={sliceColors(filteredCard.product_colors)}
             />
           </Modal>
