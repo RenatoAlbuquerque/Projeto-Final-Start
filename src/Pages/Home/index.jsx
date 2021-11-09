@@ -31,16 +31,16 @@ export default function Home() {
 
         <div>
 
-          <img src="https://spinoff.com.br/entrete/wp-content/uploads/2021/09/Grazi-Massafera.jpg"></img>
-          <p>"Atendimento incrível, super recomendo"</p>
-          <p>Maria, Recife</p>
+          <img src="https://s2.glbimg.com/bh5jsmVOnUH9ew-HmZPv1y062Dw=/e.glbimg.com/og/ed/f/original/2020/01/10/flaviaalessandra-helena.jpg"></img>
+          <p>"Melhor qualidade, super recomendo"</p>
+          <p>Júlia, Olinda</p>
           
         </div>
 
         <div>
-          <img src="https://spinoff.com.br/entrete/wp-content/uploads/2021/09/Grazi-Massafera.jpg"></img>
-          <p>"Atendimento incrível, super recomendo"</p>
-          <p>Maria, Recife</p>
+          <img src="https://pbs.twimg.com/profile_images/1410974431166468101/3vATVvl7_400x400.jpg"></img>
+          <p>"Muito rápido, super recomendo"</p>
+          <p>Flávia, Caruaru</p>
         </div>
 
       </div>
