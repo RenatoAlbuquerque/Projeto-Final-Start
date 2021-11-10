@@ -8,8 +8,8 @@ const PaginationComponent = ({ pages, currentPage, setCurrentPage }) => {
         return (
           <button key={index}
             style={index === currentPage ? {
-              backgroundColor: "rgba(212, 114, 143, 1)",
-              color: "#FBFBFB"
+              backgroundColor: "#f3aca354",
+              color: "#4e4e4e"
             } : null}
             className="paginationButton"
             value={index}

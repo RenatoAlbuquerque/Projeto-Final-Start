@@ -7,6 +7,7 @@
     justify-content: center;
 
     .GlobalProduct {
+        padding-top: 20px;
         justify-content: center;
         margin: auto;
         display: grid;
@@ -69,6 +70,7 @@
 
             .CardImage {
                 #imgProduct {
+                    margin-top: 10px;
                     width: 156px;
                     height: 165px;
                     border-radius: 25px;

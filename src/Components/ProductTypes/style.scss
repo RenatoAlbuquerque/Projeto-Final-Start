@@ -1,9 +1,6 @@
 .product {
     width: 100%;
-    background: linear-gradient(90deg,
-            rgba(246, 177, 166, 1) 0%,
-            rgba(233, 155, 158, 1) 35%,
-            rgba(212, 114, 143, 1) 100%);
+    background: #FDF4F3;
 
     .types {
         display: flex;
@@ -29,13 +26,8 @@
             border: 2px solid transparent;
 
             &:hover {
-                border: 2px solid #fbfbfb;
                 border-radius: 10px;
-
-                #prodType {
-                    color: white;
-                }
-
+                background-color: #f3aca354;
             }
 
             #imgTypes {
@@ -54,7 +46,6 @@
                 flex-direction: column;
                 border: 2px solid transparent;
                 background-color: transparent;
-
             }
 
             #prodType {
@@ -64,11 +55,9 @@
                 display: block;
                 background-color: transparent;
                 color: rgb(27, 24, 24);
-                font-weight: 700;
+                font-weight: 600;
             }
         }
-
-
     }
 }
 

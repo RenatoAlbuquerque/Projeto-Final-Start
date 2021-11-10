@@ -7,6 +7,10 @@
   padding-left: 8vw;
   background: #FBFBFB;
 
+  #quantPages {
+    color: rgba(233, 155, 158, 1);
+  }
+
   #selectPages,
   #optionPages {
     cursor: pointer;
@@ -14,7 +18,7 @@
     width: 50px;
     size: 2rem;
     border-radius: 5px;
-    color: black;
+    color: rgb(12, 12, 12);
 
     &:hover {
       background-image: linear-gradient(90deg,
