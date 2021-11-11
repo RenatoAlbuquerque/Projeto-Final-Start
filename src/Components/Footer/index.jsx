@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+import ModalEquipe from '../ModalEquipe/ModalEquipe';
 
 export default function Footer() {
+  const [showModal,setShowModal] = useState(false);
   return (
     <footer>
       <div className="rowInfoOne">
@@ -67,10 +69,12 @@ export default function Footer() {
         <p id="copyrigth">
           Todos os direitos reservados a Equipe de desenvolvedores. ®
         </p>
-        <button id="btnProject">Desenvolvedores</button>
+        <button id="btnProject"  onClick={() => { setShowModal(true) }}>Desenvolvedores</button>
       </div>
-
-
+      {showModal ? 
+          <ModalEquipe onClose={() => setShowModal(false)} />
+        : null
+      }
     </footer>
   );
 }

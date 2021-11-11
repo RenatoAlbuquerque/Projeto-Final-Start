@@ -1,0 +1,87 @@
+
+#modal-equipe{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-equipe{
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    max-width: 650px;
+    padding: 15px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#titulo-modal{
+    text-align: center;
+    background-color: #fff;
+    color: #D6778e;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fa-laptop-code:before{
+    margin-left: 20px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    width: 180px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.25s ease-in;
+}
+
+.item:hover{
+    transform: scale(1.1);
+}
+
+#title{
+    background-color: #D6778e;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.img{
+    text-align: center;
+}
+
+.img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    box-shadow: 0 0 0.3em #333;;
+}
+
+.icons{
+    
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.icons a{
+    color: #D6778e;
+    font-size: 25px;
+}
