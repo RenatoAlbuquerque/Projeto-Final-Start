@@ -104,10 +104,10 @@ span {
 
 .btn-comprar {
     border: none;
-    color: #333;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
-    background-image: linear-gradient(90deg, rgba(246, 177, 166, 1) 0%, rgba(233, 155, 158, 1) 35%, rgba(212, 114, 143, 1) 100%);
+    background: rgba(212, 114, 143, 1);
     cursor: pointer;
     border-radius: 7px;
     padding: 7px;
@@ -118,8 +118,10 @@ span {
 }
 
 .btn-comprar:hover {
-    background-image: linear-gradient(90deg, rgba(212, 114, 143, 1) 0%, rgba(233, 155, 158, 1) 35%, rgba(246, 177, 166, 1) 100%);
-    transform: scale(1.1);
+    background-image: linear-gradient(90deg,
+                                    rgba(246, 177, 166, 1) 0%,
+                                    rgba(233, 155, 158, 1) 35%,
+                                    rgba(212, 114, 143, 1) 100%)
 }
 
 .btns {
