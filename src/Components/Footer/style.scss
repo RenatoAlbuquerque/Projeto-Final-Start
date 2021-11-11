@@ -1,0 +1,91 @@
+$color1:#D6778E;
+$color2:#F3ACA4;
+$color3:#FDF4F3;
+
+footer {
+  background-color: #D6778E;
+  display: flex;
+  flex-direction: column;
+  color: #FDF4F3;
+
+
+  .rowInfoOne {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+
+    .marketplace {
+      #titleFir {
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+
+    .titleSec {
+      font-size: 1.4rem;
+      font-style: italic;
+      font-weight: 600;
+
+    }
+
+    .contact {
+      .adress {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        #adrEmail {
+          text-decoration: none;
+          font-size: 1rem;
+          color: #FDF4F3;
+        }
+      }
+    }
+
+    .socialMedia {
+      .iconsMedia {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        #icon-social {
+          font-size: 2rem;
+          color: #FDF4F3;
+        }
+      }
+    }
+  }
+
+  .projectDescript {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+
+    #copyrigth {
+      text-align: center;
+      padding-bottom: 10px;
+      font-style: italic;
+    }
+
+    #btnProject {
+      border: 1px solid#FDF4F3;
+      border-radius: 5px;
+      background-color: transparent;
+      text-align: left;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 4px;
+      color: #FDF4F3;
+      font-style: italic;
+
+      &:hover {
+        border-color: #000000;
+        color: #000000;
+      }
+    }
+  }
+
+
+}

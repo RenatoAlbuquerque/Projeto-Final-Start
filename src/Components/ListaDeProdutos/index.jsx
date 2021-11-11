@@ -63,10 +63,10 @@ export default function ListaDeProdutos() {
       <ProductTypes />
       <Benefits />
       <FilterList />
+
       {products.products.length ?
         <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
         : null}
-
       <div className="GlobalStyleProduct">
         <div className="GlobalProduct">
           {products.products.length ?

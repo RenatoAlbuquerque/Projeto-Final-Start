@@ -23,11 +23,11 @@
             font-size: 1rem;
             background: transparent;
             padding: 0 5px;
-            border: 2px solid transparent;
+            border: 3px solid transparent;
 
             &:hover {
                 border-radius: 10px;
-                background-color: #f3aca354;
+                border: 3px solid rgba(212, 114, 143, 1);
             }
 
             #imgTypes {
