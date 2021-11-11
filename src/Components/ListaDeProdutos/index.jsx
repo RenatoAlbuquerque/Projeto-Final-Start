@@ -12,7 +12,7 @@ import PaginationSelector from "../../Components/PaginationSelector";
 export default function ListaDeProdutos() {
   const products = useContext(ProductsContext);
   const [modalOn, setModalOn] = useState(false);
-  const [positionCard, setPositionCard] = useState('');
+  const [filteredCard, setFilteredCard] = useState({});
 
   const [itensPerPage, setItensPerPage] = useState(15);
   const [currentPage, setCurrentPage] = useState(0);
@@ -56,7 +56,10 @@ export default function ListaDeProdutos() {
     setCurrentPage(0)
   }, [itensPerPage])
 
-  const filteredCard = products.products[positionCard];
+  const showModal = (produto) =>{
+    setModalOn(true);
+    setFilteredCard(produto);
+  }
 
   return (
     <div>
@@ -110,7 +113,7 @@ export default function ListaDeProdutos() {
                   <div className="CardDetail" >
                     <button
                       id="btnOpenModalDetail"
-                      onClick={() => { setPositionCard(index); setModalOn(true) }}
+                      onClick={() => { showModal(product) }}
                     >
                       + Detalhes
                     </button>
