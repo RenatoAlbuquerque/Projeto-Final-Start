@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import './style.scss';
 import gilberto from "../../Images/ImageProfile/gilberto.jpeg";
 import julia from "../../Images/ImageProfile/julia.jpeg";
 import mayane from "../../Images/ImageProfile/mayane.jpeg";
@@ -9,22 +9,22 @@ import wilhams from "../../Images/ImageProfile/wilhams.jpg";
 
 
 
-export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }) {
+export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () => { } }) {
 
     const outSideClick = (e => {
         if (e.target.id === id) onClose();
     })
     return (
-        <div id="modal-equipe" onClick={outSideClick}>
+        <div id="modal-equipe-overlay" onClick={outSideClick}>
             <div className="modal-equipe">
                 <button className="btn-close" type="button" onClick={onClose}>X</button>
                 <h1 id="titulo-modal"> Desenvolvedores
                     <i class="fas fa-laptop-code"></i>
                 </h1>
-                <div class="items">
+                <div id="container">
                     <div class="item">
-                        <h4 id="title">Gilberto Medeiros</h4>
-                        <div class="img">
+                        <h4 id="title-card">Gilberto Medeiros</h4>
+                        <div class="img-profile">
                             <img src={gilberto} alt="img-gilberto" />
                         </div>
                         <div class="icons">
@@ -37,8 +37,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                         </div>
                     </div>
                     <div class="item">
-                        <h4 id="title">Julia Silva</h4>
-                        <div class="img">
+                        <h4 id="title-card">Julia Silva</h4>
+                        <div class="img-profile">
                             <img src={julia} alt="img-julia" />
                         </div>
                         <div class="icons">
@@ -51,8 +51,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                         </div>
                     </div>
                     <div class="item">
-                        <h4 id="title">Mayane Miranda</h4>
-                        <div class="img">
+                        <h4 id="title-card">Mayane Miranda</h4>
+                        <div class="img-profile">
                             <img src={mayane} alt="img-mayane" />
                         </div>
                         <div class="icons">
@@ -65,8 +65,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                         </div>
                     </div>
                     <div class="item">
-                        <h4 id="title">Renato Abreu</h4>
-                        <div class="img">
+                        <h4 id="title-card">Renato Abreu</h4>
+                        <div class="img-profile">
                             <img src={renato} alt="img-renato" />
                         </div>
                         <div class="icons">
@@ -79,8 +79,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                         </div>
                     </div>
                     <div class="item">
-                        <h4 id="title">Ruggery Gusmão</h4>
-                        <div class="img">
+                        <h4 id="title-card">Ruggery Gusmão</h4>
+                        <div class="img-profile">
                             <img src={ruggery} alt="img-ruggery" />
                         </div>
                         <div class="icons">
@@ -93,8 +93,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                         </div>
                     </div>
                     <div class="item">
-                        <h4 id="title">Wilhams Silva</h4>
-                        <div class="img">
+                        <h4 id="title-card">Wilhams Silva</h4>
+                        <div class="img-profile">
                             <img src={wilhams} alt="img-wilhams" />
                         </div>
                         <div class="icons">

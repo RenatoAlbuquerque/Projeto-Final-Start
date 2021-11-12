@@ -23,7 +23,7 @@ const Login = () => {
       alert('Por favor insira o password')
     } else {
       localStorage.setItem('login', login)
-      history.push('/')
+      history.push('/home')
     }
   }
 

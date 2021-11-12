@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 
 
 export default function Modal({ id = 'modal', onClose = () => { }, children }) {

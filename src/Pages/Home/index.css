@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 body{
     background-color: #FDF4F3;
-    font-family: 'Lato';
+    font-family: 'Poppins';
 }
 
 .atendimento_feedback{
@@ -24,7 +24,8 @@ body{
 .card_opiniao{
     overflow: hidden;
     border-radius: 15px;
-    height: 550px;
+    width: 300px;
+    height: 510px;
     background-color: #FBFBFB;
 }
 
@@ -33,6 +34,16 @@ body{
     transition: 0.8s;
 }
 
-.card_opiniao p{
-    margin-top: 25px;
+.card_opiniao p{ 
+    margin: 25px 10px 10px 10px;
+    text-align: justify;
+    line-height: 30px;
+    color: #d6778e;
+}
+
+.nome_feed{
+    color: #F3ACA4;
+    float: right;
+    margin: 0 10px 0;
+    font-style: italic;
 }

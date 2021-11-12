@@ -3,6 +3,7 @@ import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import "./Carrossel.css";
 
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 1, itemsToScroll: 1 },
