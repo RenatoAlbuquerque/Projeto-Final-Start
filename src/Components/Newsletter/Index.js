@@ -11,11 +11,13 @@ export default function Newsletter(){
                 </div>
             </div>    
 
-            <div className="areaTxt">
-                <textarea  placeholder="Informe seu email"/>
-                <button className="botao">Enviar</button>
-            </div>
-           
+           <form className="form-newlestter">
+               <input type="email" className="n_email" placeholder="Informe seu email"/>
+               <button type="button" className="botao_new" onClick=""> Enviar </button>
+           </form>
+           <div className="paragrafotxt">
+                <p>Ao inserir seu endereço de e-mail você receberá atualizações de promoções. O consentimento não é uma condição para a compra. Ver Política de Privacidade . Desconto de 10% válido apenas para novos clientes. Seu código será enviado via email.</p>
+           </div> 
 
         </div>
     );

@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Uchen&display=swap');
+
+body{
+    background-color: #FDF4F3;
+    font-family: 'Lato';
+}
+
 .atendimento_feedback{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-top: 80px;
 }
 
 .atendimento_feedback div{
@@ -10,7 +17,22 @@
 }
 
 .atendimento_feedback img{
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
+}
+
+.card_opiniao{
+    overflow: hidden;
+    border-radius: 15px;
+    height: 550px;
+    background-color: #FBFBFB;
+}
+
+.card_opiniao img:hover{
+    margin-top: -15px;
+    transition: 0.8s;
+}
+
+.card_opiniao p{
+    margin-top: 25px;
 }

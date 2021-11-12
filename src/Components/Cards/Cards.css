@@ -5,7 +5,6 @@ body{
 .conteiner{
     height: 500px;
     background-color: #E98CF9;
-    /* background-image: linear-gradient( #ffa5d9, #ae72c5); */
 }
 
 .cards-conteiner{
@@ -18,7 +17,7 @@ body{
     position: relative;
     width: 320px;
     height: 420px;
-    background-color: #E98CF9;
+    background-color: #D6778E;
     border-radius: 20px;
     overflow: hidden;
     margin: 50px;
@@ -35,7 +34,7 @@ body{
     top: -50%;
     width: 100%;
     height: 100%;
-    background-color: rgb(235, 191, 191);
+    background-color: #F3ACA4;
     transform: skewY(345deg);
     transition: 0.5s;
 }
@@ -90,7 +89,7 @@ body{
 
 #card .contentBx h3{
     font-size: 18px;
-    color: #fff;
+    color: #FBFBFB;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -98,7 +97,7 @@ body{
 
 #card .contentBx .price{
     font-size: 24px;
-    color: #fff;
+    color: #FBFBFB;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -110,7 +109,7 @@ body{
     opacity: 0;
     padding: 10px 30px;
     margin-top: 5px;
-    color: #fff;
+    color: #FBFBFB;
     text-decoration: none;
     letter-spacing: 1px;
     transition: 0.5s;

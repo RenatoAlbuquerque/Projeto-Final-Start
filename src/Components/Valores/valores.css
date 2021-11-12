@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Uchen&display=swap');
 
 .valores{
     display: flex;
@@ -10,14 +10,14 @@
 .valores h3{
     padding: 0 80px 0 80px;
     font-size: 40px;
-    font-family: 'Uchen';   
-    color: #E98CF9;
+    font-family: 'Lato';
+    color: #D6778E;
 }
 
 .valores hr{
    margin-left: 20px;
    width: 300px;
-   background-color: rgb(235, 191, 191);
+   background-color: #F3ACA4;
    border: none;
    font-weight: bold;
    height: 6px;
@@ -25,10 +25,10 @@
 }
 
 .valores p{
-    font-family: 'Uchen'; 
+    font-family: 'Lato';
     text-align: center;
     font-size: 30px;
-    color: #E98CF9;
+    color: #D6778E;
 }
 
 .valores div{
