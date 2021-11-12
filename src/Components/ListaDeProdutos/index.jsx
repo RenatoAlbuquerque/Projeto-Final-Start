@@ -8,6 +8,7 @@ import ProductTypes from '../ProductTypes';
 import Benefits from "../../Components/Benefits";
 import PaginationComponent from "../../Components/PaginationComponent";
 import PaginationSelector from "../../Components/PaginationSelector";
+import LoadingSkeleton from "../../Components/LoadingSkeleton";
 
 export default function ListaDeProdutos() {
   const products = useContext(ProductsContext);
@@ -61,15 +62,15 @@ export default function ListaDeProdutos() {
     setFilteredCard(produto);
   }
 
+
+
   return (
     <div>
-      <ProductTypes />
       <Benefits />
+      <ProductTypes />
       <FilterList />
+      <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
 
-      {products.products.length ?
-        <PaginationSelector itensPerPage={itensPerPage} setItensPerPage={setItensPerPage} />
-        : null}
       <div className="GlobalStyleProduct">
         <div className="GlobalProduct">
           {products.products.length ?
@@ -122,13 +123,15 @@ export default function ListaDeProdutos() {
               </div>
             ))
             :
-            <div className="loading">
-              <input type="checkbox" id="check" />
-              <label id="checkLoading">
-                <div className="check-icon"></div>
-              </label>
-            </div>
+            <>
+              <LoadingSkeleton />
+              <LoadingSkeleton />
+              <LoadingSkeleton />
+              <LoadingSkeleton />
+              <LoadingSkeleton />
+            </>
           }
+
         </div>
       </div>
       <div className="pagination">

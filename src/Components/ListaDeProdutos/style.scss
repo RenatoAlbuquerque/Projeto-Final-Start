@@ -165,6 +165,44 @@
 
 
             }
+
+        }
+
+    }
+
+    .loadingSkeletonProduct {
+        width: 100%;
+        padding-top: 10px;
+        justify-content: center;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 54px;
+        grid-row-gap: 0px;
+        justify-items: center;
+
+        @media(max-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 2vw;
+        }
+
+        @media(max-width: 950px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 2vw;
+        }
+
+        @media(max-width: 950px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 2vw;
+        }
+
+        @media(max-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10vw;
+        }
+
+        @media(max-width: 500px) {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

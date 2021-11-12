@@ -1,0 +1,96 @@
+$loadingColor: rgba(190, 173, 173, 0.26);
+
+.loadingCard {
+  width: 180px;
+  height: 450px;
+  padding: 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8e8e686;
+  margin-bottom: 20px;
+  animation: skeleton-loading 1.3s linear infinite alternate;
+  opacity: .7;
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(314, 20%, 70%);
+    }
+
+    100% {
+      background-color: hsl(300, 20%, 95%);
+    }
+  }
+
+
+  .loadingImage {
+    margin: 15px auto;
+    width: 156px;
+    height: 165px;
+    border-radius: 25px;
+    background-color: $loadingColor;
+  }
+
+  .loadingRowOne {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .loadingName {
+      height: 30px;
+      width: 100%;
+      margin: 3px 0;
+      background-color: $loadingColor;
+      border-radius: 5px;
+    }
+
+    .loadingBrand {
+      height: 25px;
+      background-color: $loadingColor;
+      width: 90%;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+
+    .loadingCategory {
+      height: 20px;
+      background-color: $loadingColor;
+      width: 80%;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+
+    .loadingPrice {
+      height: 18px;
+      background-color: $loadingColor;
+      width: 70%;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+
+    .loadingRating {
+      height: 15px;
+      background-color: $loadingColor;
+      width: 60%;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+  }
+
+
+  .loadingGapDetail {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+
+    .loadingDetail {
+      height: 25px;
+      background-color: rgba(212, 114, 143, 0.253);
+      width: 70%;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+  }
+}
+
+.SkeletonGridCard {}

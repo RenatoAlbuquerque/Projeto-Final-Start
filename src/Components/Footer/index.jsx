@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import './style.scss';
 import { AiOutlineFacebook, AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import ModalEquipe from '../ModalEquipe/ModalEquipe';
+import ModalProject from '../ModalProject';
 
 export default function Footer() {
-  const [showModal,setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalProject, setModalProject] = useState(false);
+
   return (
     <footer>
       <div className="rowInfoOne">
@@ -65,14 +68,32 @@ export default function Footer() {
         </div>
       </div>
       <div className="projectDescript">
-        <button id="btnProject">Sobre o Projeto</button>
+        <button
+          id="btnProject"
+          onClick={() => {
+            setModalProject(true)
+          }}
+        >
+          Sobre o Projeto
+        </button>
         <p id="copyrigth">
           Todos os direitos reservados a Equipe de desenvolvedores. ®
         </p>
-        <button id="btnProject"  onClick={() => { setShowModal(true) }}>Desenvolvedores</button>
+        <button
+          id="btnProject"
+          onClick={() => {
+            setShowModal(true)
+          }}
+        >
+          Desenvolvedores
+        </button>
       </div>
-      {showModal ? 
-          <ModalEquipe onClose={() => setShowModal(false)} />
+      {showModal ?
+        <ModalEquipe onClose={() => setShowModal(false)} />
+        : null
+      }
+      {modalProject ?
+        <ModalProject onClose={() => setModalProject(false)} />
         : null
       }
     </footer>

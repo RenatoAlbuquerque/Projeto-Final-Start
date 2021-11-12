@@ -1,22 +1,22 @@
 import React from "react";
 import "./style.css";
-import gilberto from"../../Images/ImageProfile/gilberto.jpeg";
-import julia from"../../Images/ImageProfile/julia.jpeg";
-import mayane from"../../Images/ImageProfile/mayane.jpeg";
-import renato from"../../Images/ImageProfile/renato.jpeg";
-import ruggery from"../../Images/ImageProfile/ruggery.jpeg";
-import wilhams from"../../Images/ImageProfile/wilhams.jpg";
+import gilberto from "../../Images/ImageProfile/gilberto.jpeg";
+import julia from "../../Images/ImageProfile/julia.jpeg";
+import mayane from "../../Images/ImageProfile/mayane.jpeg";
+import renato from "../../Images/ImageProfile/renato.jpeg";
+import ruggery from "../../Images/ImageProfile/ruggery.jpeg";
+import wilhams from "../../Images/ImageProfile/wilhams.jpg";
 
 
 
-export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }){
+export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }) {
 
     const outSideClick = (e => {
         if (e.target.id === id) onClose();
     })
-    return(
-        <div id="modal-equipe"  onClick={outSideClick}>
-           <div className="modal-equipe">
+    return (
+        <div id="modal-equipe" onClick={outSideClick}>
+            <div className="modal-equipe">
                 <button className="btn-close" type="button" onClick={onClose}>X</button>
                 <h1 id="titulo-modal"> Desenvolvedores
                     <i class="fas fa-laptop-code"></i>
@@ -108,8 +108,8 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     </div>
                 </div>
             </div>
-     </div>
-        
+        </div>
+
     );
 }
 
