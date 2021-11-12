@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Uchen&display=swap');
+
 .conteinerA{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-}
+} 
 
 .texto{
-    color: rgb(235, 191, 191);
+    color: #D6778E; 
     text-align: center;
 }
 
@@ -17,41 +19,60 @@
 
 .texto p{
     font-size: 20px;
-    color: #E98CF9;
+    color: #F3ACA4;
     font-weight: bold;
 }
 
-textarea{
-    resize:none;
-    border: none;
-    border-radius: 25px;
-    background-color: rgb(226, 220, 213);
-    width: 360px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.areaTxt{
-    margin-top: 20px;
+.form-newlestter{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 70px;
+    margin-top: 15px;
 }
 
-textarea::-webkit-input-placeholder{
+.n_email{
+    border-radius: 8px;
+    background-color: #FBFBFB;
+    width: 360px;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Lato';
+}
+
+.n_email::-webkit-input-placeholder{
     font-size: 15px;
-    text-align: center;
     padding-top: 6px;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
-.areaTxt button{
-    border-radius: 25px;
-    background-color: rgb(226, 220, 213);
-    height: 35px;
-    width: 90px;
+.botao_new{
+    margin-top: -30px;
+    border-radius: 8px;
+    background-color: #FBFBFB;
     border: none;
     cursor: pointer;
-    margin: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    font-family: 'Lato';
+}
+
+.botao_new:hover{
+    transition: 0.8s;
+    background-color: #dbdbdb;
+}
+
+.paragrafotxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.paragrafotxt p{ 
+    width: 700px;
+    font-weight: bold;
+    text-align: center;
+    color: #F3ACA4;
+    font-size: 14px;
 }
