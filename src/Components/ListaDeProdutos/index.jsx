@@ -56,7 +56,7 @@ export default function ListaDeProdutos() {
     setCurrentPage(0)
   }, [itensPerPage])
 
-  const showModal = (produto) =>{
+  const showModal = (produto) => {
     setModalOn(true);
     setFilteredCard(produto);
   }
