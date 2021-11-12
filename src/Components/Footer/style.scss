@@ -1,12 +1,9 @@
-$color1:#D6778E;
-$color2:#F3ACA4;
-$color3:#FDF4F3;
-
 footer {
   background-color: #D6778E;
   display: flex;
   flex-direction: column;
   color: #FDF4F3;
+  font-family: 'Poppins', sans-serif;
 
 
   .rowInfoOne {
@@ -17,16 +14,15 @@ footer {
     .marketplace {
       #titleFir {
         font-size: 1.4rem;
-        font-style: italic;
         font-weight: 600;
+        padding-bottom: 5px;
       }
     }
 
     .titleSec {
       font-size: 1.4rem;
-      font-style: italic;
       font-weight: 600;
-
+      padding-bottom: 5px;
     }
 
     .contact {
@@ -66,7 +62,7 @@ footer {
     #copyrigth {
       text-align: center;
       padding-bottom: 10px;
-      font-style: italic;
+      font-size: .8rem;
     }
 
     #btnProject {
@@ -78,7 +74,6 @@ footer {
       cursor: pointer;
       padding: 4px;
       color: #FDF4F3;
-      font-style: italic;
 
       &:hover {
         border-color: #000000;
@@ -86,6 +81,34 @@ footer {
       }
     }
   }
+}
 
+@media(max-width: 800px) {
+  footer {
+    width: 100%;
 
+    .rowInfoOne {
+      width: 100%;
+      text-align: center;
+    }
+
+    .projectDescript {
+      flex-direction: column;
+
+      #copyrigth {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  footer {
+    .rowInfoOne {
+      width: 90%;
+      margin: auto;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }

@@ -7,6 +7,7 @@
     justify-content: center;
 
     .GlobalProduct {
+        padding-top: 10px;
         justify-content: center;
         margin: auto;
         display: grid;
@@ -55,17 +56,6 @@
 
             &:hover {
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-                .CardGapDetail {
-                    .CardDetail {
-                        #btnOpenModalDetail {
-                            background-image: linear-gradient(90deg,
-                                    rgba(246, 177, 166, 1) 0%,
-                                    rgba(233, 155, 158, 1) 35%,
-                                    rgba(212, 114, 143, 1) 100%)
-                        }
-                    }
-                }
             }
 
             .CardImage {
@@ -78,7 +68,7 @@
             }
 
             .CardName {
-                font: normal 400 1.125rem cursive;
+                font: normal 400 1rem 'Poppins', sans-serif;
                 letter-spacing: 1px;
                 text-align: left;
                 width: 100%;
@@ -88,7 +78,7 @@
             }
 
             .CardBrand {
-                font: normal 400 1rem cursive;
+                font: normal 400 1rem 'Poppins', sans-serif;
                 letter-spacing: 1px;
                 text-align: left;
                 width: 100%;
@@ -98,7 +88,7 @@
             }
 
             .CardCategory {
-                font: normal 400 0.875rem cursive;
+                font: normal 400 0.8rem 'Poppins', sans-serif;
                 letter-spacing: 1px;
                 text-align: left;
                 width: 100%;
@@ -108,7 +98,7 @@
             }
 
             .CardPrice {
-                font: normal 400 0.75rem cursive;
+                font: normal 400 0.7rem 'Poppins', sans-serif;
                 letter-spacing: 1px;
                 text-align: left;
                 width: 100%;
@@ -118,7 +108,7 @@
             }
 
             .CardRating {
-                font: normal 400 0.625rem cursive;
+                font: normal 400 0.6rem 'Poppins', sans-serif;
                 letter-spacing: 1px;
                 text-align: left;
                 width: 100%;
@@ -157,7 +147,7 @@
                     background-color: transparent;
 
                     #btnOpenModalDetail {
-                        font: normal 400 0.938rem cursive;
+                        font: normal 400 0.938rem 'Poppins', sans-serif;
                         letter-spacing: 1px;
                         text-align: left;
                         height: 30px;
@@ -196,8 +186,6 @@
 
 //LOADING DE CARREGAMENTO
 .loading {
-    position: fixed;
-    padding-top: 200px;
     height: 600px;
     justify-content: center;
     align-items: center;
@@ -207,83 +195,83 @@
     }
 }
 
-#checkLoading {
-    margin: auto;
-    height: 150px;
-    width: 150px;
-    display: inline-block;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    border-left-color: rgba(212, 114, 143, 1);
-    animation: rotate 1.2s linear infinite;
-}
+// #checkLoading {
+//     margin: auto;
+//     height: 150px;
+//     width: 150px;
+//     display: inline-block;
+//     border: 3px solid rgba(255, 255, 255, 0.2);
+//     border-radius: 50%;
+//     border-left-color: rgba(212, 114, 143, 1);
+//     animation: rotate 1.2s linear infinite;
+// }
 
-@keyframes rotate {
-    50% {
-        border-left-color: #9b59b6;
-    }
+// @keyframes rotate {
+//     50% {
+//         border-left-color: #9b59b6;
+//     }
 
-    75% {
-        border-left-color: rgba(212, 114, 143, 1);
-    }
+//     75% {
+//         border-left-color: rgba(212, 114, 143, 1);
+//     }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
 
-#checkLoading .check-icon {
-    display: none;
-}
+// #checkLoading .check-icon {
+//     display: none;
+// }
 
-#checkLoading .check-icon:after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 28px;
-    transform: scaleX(-1) rotate(135deg);
-    height: 56px;
-    width: 28px;
-    border-top: 4px solid rgba(233, 155, 158, 1);
-    border-right: 4px solid rgba(246, 177, 166, 1);
-    transform-origin: left top;
-    animation: check-icon 0.8s ease;
-}
+// #checkLoading .check-icon:after {
+//     position: absolute;
+//     content: "";
+//     top: 50%;
+//     left: 28px;
+//     transform: scaleX(-1) rotate(135deg);
+//     height: 56px;
+//     width: 28px;
+//     border-top: 4px solid rgba(233, 155, 158, 1);
+//     border-right: 4px solid rgba(246, 177, 166, 1);
+//     transform-origin: left top;
+//     animation: check-icon 0.8s ease;
+// }
 
-@keyframes check-icon {
-    0% {
-        height: 0;
-        width: 0;
-        opacity: 1;
-    }
+// @keyframes check-icon {
+//     0% {
+//         height: 0;
+//         width: 0;
+//         opacity: 1;
+//     }
 
-    20% {
-        height: 0;
-        width: 28px;
-        opacity: 1;
-    }
+//     20% {
+//         height: 0;
+//         width: 28px;
+//         opacity: 1;
+//     }
 
-    40% {
-        height: 56px;
-        width: 28px;
-        opacity: 1;
-    }
+//     40% {
+//         height: 56px;
+//         width: 28px;
+//         opacity: 1;
+//     }
 
-    100% {
-        height: 56px;
-        width: 28px;
-        opacity: 1;
-    }
-}
+//     100% {
+//         height: 56px;
+//         width: 28px;
+//         opacity: 1;
+//     }
+// }
 
 
 
-#checkLoading:checked~label .check-icon {
-    display: block;
-}
+// #checkLoading:checked~label .check-icon {
+//     display: block;
+// }
 
-#checkLoading:checked~label {
-    animation: none;
-    border-color: rgba(212, 114, 143, 1);
-    transition: border 0.5s ease-out;
-}
+// #checkLoading:checked~label {
+//     animation: none;
+//     border-color: rgba(212, 114, 143, 1);
+//     transition: border 0.5s ease-out;
+// }

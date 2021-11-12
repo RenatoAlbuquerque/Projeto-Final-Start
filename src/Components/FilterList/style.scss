@@ -1,15 +1,8 @@
-/*.lineGradientUP{
-    height: 50px;
-    width: 100%;
-    background: linear-gradient(270deg,
-        rgba(246, 177, 166, 1) 0%,
-        rgba(233, 155, 158, 1) 35%,
-        rgba(212, 114, 143, 1) 100%);
-    }*/
 .filter {
     padding: 20px 0;
     width: 100%;
     background-color: #FBFBFB;
+    font-family: 'Poppins', sans-serif;
 
     .filter-list {
         margin: 0 auto;
@@ -45,7 +38,7 @@
                 position: absolute;
                 top: 420px;
                 left: 0;
-                color: white;
+                color: #FBFBFB;
                 transition: all 0.5s ease-out;
 
                 .modal-brand {
@@ -62,10 +55,11 @@
                         background: transparent;
                         border: transparent;
                         font-size: 1.3rem;
-                        color: white;
+                        color: #FBFBFB;
                         width: 100%;
                         padding: 10px 20px;
                         cursor: pointer;
+                        font-family: 'Lato', sans-serif;
 
                         &:hover {
                             background: #FDF4F3;
