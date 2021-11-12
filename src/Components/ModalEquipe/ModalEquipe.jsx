@@ -25,13 +25,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Gilberto Medeiros</h4>
                         <div class="img">
-                            <img src={gilberto} alt="" />
+                            <img src={gilberto} alt="img-gilberto" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/gilbertomoj/" target="_blank">
+                            <a href="https://linkedin.com/in/gilbertomoj/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/gilbertomoj/" target="_blank">
+                            <a href="https://github.com/gilbertomoj/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -39,13 +39,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Julia Silva</h4>
                         <div class="img">
-                            <img src={julia} alt="" />
+                            <img src={julia} alt="img-julia" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/julia-eduarda/" target="_blank">
+                            <a href="https://linkedin.com/in/julia-eduarda/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/Julia-Edu/" target="_blank">
+                            <a href="https://github.com/Julia-Edu/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -53,13 +53,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Mayane Miranda</h4>
                         <div class="img">
-                            <img src={mayane} alt="" />
+                            <img src={mayane} alt="img-mayane" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/mayane-miranda-859771209/" target="_blank">
+                            <a href="https://linkedin.com/in/mayane-miranda-859771209/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/mayanemirandaa/" target="_blank">
+                            <a href="https://github.com/mayanemirandaa/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -67,13 +67,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Renato Abreu</h4>
                         <div class="img">
-                            <img src={renato} alt="" />
+                            <img src={renato} alt="img-renato" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/renato-albuquerque-dev/" target="_blank">
+                            <a href="https://linkedin.com/in/renato-albuquerque-dev/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/RenatoAlbuquerque/" target="_blank">
+                            <a href="https://github.com/RenatoAlbuquerque/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -81,13 +81,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Ruggery Gusmão</h4>
                         <div class="img">
-                            <img src={ruggery} alt="" />
+                            <img src={ruggery} alt="img-ruggery" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/ruggerygusmao/" target="_blank">
+                            <a href="https://linkedin.com/in/ruggerygusmao/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/ruggerygusmao/" target="_blank">
+                            <a href="https://github.com/ruggerygusmao/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -95,13 +95,13 @@ export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }
                     <div class="item">
                         <h4 id="title">Wilhams Silva</h4>
                         <div class="img">
-                            <img src={wilhams} alt="" />
+                            <img src={wilhams} alt="img-wilhams" />
                         </div>
                         <div class="icons">
-                            <a href="https://linkedin.com/in/wilhamsgomes/" target="_blank">
+                            <a href="https://linkedin.com/in/wilhamsgomes/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/WilhamsGomes/" target="_blank">
+                            <a href="https://github.com/WilhamsGomes/" target="_blank" rel="noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
