@@ -22,6 +22,23 @@ $color2: #FFF;
         margin-right: -50%;
         transform: translate(-50%, -50%);
 
+        .btn-close {
+            background-color: #333;
+            color: $color2;
+            border-radius: 15px;
+            width: 24px;
+            height: 24px;
+            float: right;
+            border: unset;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.12s ease-in;
+
+            &:hover{
+                background-color: #d13737;
+            }
+        }
+
         #titulo-modal{
             text-align: center;
             background-color: $color2;

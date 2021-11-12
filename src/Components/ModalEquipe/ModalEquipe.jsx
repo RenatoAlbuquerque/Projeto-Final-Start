@@ -9,7 +9,7 @@ import wilhams from"../../Images/ImageProfile/wilhams.jpg";
 
 
 
-export default function ModalEquipe({ id = 'modal-equipe', onClose = () => { } }){
+export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () => { } }){
 
     const outSideClick = (e => {
         if (e.target.id === id) onClose();
