@@ -30,7 +30,7 @@ export default function ModalProject({ id = 'modal-projeto-overlay', onClose = (
           <p>Tela de Boletos (Bônus)</p>
         </div>
         <div className="projectDescriptModal">
-          <p>Utilizando as softskills repassadas ao longo do curso.</p>
+          <p>Utilizando as stacks ensinadas ao longo do curso.</p>
         </div>
         <div className="projectIcons">
           <AiOutlineHtml5 />
