@@ -64,7 +64,15 @@ $color2: #333;
                     width: 50%;
                     background-color: $color1;
                     img{
-                        width: 100%; 
+                        width: 100%;
+                        @media(max-width: 600px){
+                            height: 50%;
+                        } 
+                    }
+
+                    @media(max-width: 600px){
+                        display: flex;
+                        align-items: center;
                     }
                 }
 
@@ -86,6 +94,10 @@ $color2: #333;
                             grid-template-columns: repeat(10, 1fr);
                             grid-row-gap: 2px;
                             background-color: $color1;
+
+                            @media(max-width: 600px){
+                                grid-template-columns: repeat(5, 1fr);
+                            }
                         }
                     }
 
@@ -112,22 +124,31 @@ $color2: #333;
                             background-color: $color1;
                         }
 
-                        .btn-calculo {
-                            width: 24px;
-                            height: 24px;
-                            color: $color2;
-                            border: solid 2px $color2;
-                            border-radius: 15px;
-                            font-size: 20px;
-                            cursor: pointer;
-                            transition: 0.20s ease-in;
-                            background-color: $color1;
-
-                            &:hover{
-                                color: $color1;
-                                background-color: $color2;
-                            }
-                        }    
+                        .btns-quantidade{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .btn-calculo {
+                                width: 24px;
+                                height: 24px;
+                                color: $color2;
+                                border: solid 2px $color2;
+                                border-radius: 15px;
+                                font-size: 20px;
+                                cursor: pointer;
+                                transition: 0.20s ease-in;
+                                background-color: $color1;
+    
+                                &:hover{
+                                    color: $color1;
+                                    background-color: $color2;
+                                }
+                            } 
+                        }
+                        @media(max-width: 410px){
+                            flex-direction: column;
+                           align-items: flex-start ;
+                        }  
                     }
                     .btn-comprar {
                         border: none;
@@ -147,9 +168,19 @@ $color2: #333;
                         &:hover{
                             background-color: #c9708a;
                         }
+
+                        @media(max-width: 410px){
+                            margin:  15px 35px 10px 0;
+                            padding: 7px;
+                            width: 100px;
+                            height: 37px;
+                        }
                     }
                 }
             }
+        }
+        @media(max-width: 300px){
+                margin-bottom: 30px;
         }
     }
 }

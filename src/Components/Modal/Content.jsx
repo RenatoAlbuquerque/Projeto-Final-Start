@@ -76,9 +76,11 @@ export default function Content(props) {
                         <p className="text-quantidade">
                             <b>Quant:</b>
                         </p>
-                        <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
-                        <p className="quantCompras">{num}</p>
-                        <button className="btn-calculo" onClick={sub}>-</button>
+                        <div className="btns-quantidade">
+                            <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
+                            <p className="quantCompras">{num}</p>
+                            <button className="btn-calculo" onClick={sub}>-</button>
+                        </div>
                     </div>
                     <button className="btn-comprar" type="button" onClick={() => {
                         addToSacola(props.name, props.preco, num, props.marca, props.img);
