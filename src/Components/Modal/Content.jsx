@@ -30,7 +30,6 @@ export default function Content(props) {
                 localStorage.setItem('itens', JSON.stringify(produtos))
             }
         }
-        // console.log(produtos)
 
     }
 
