@@ -1,8 +1,28 @@
 import React, {useEffect, useState} from "react";
 import './Cards.css'
 import { Link } from "react-router-dom";
+import api from '../../Services/api'
 
 export default function Cards(){
+
+    const [Dados, setDados] = useState([]);
+
+    var infos = [];
+
+    useEffect(()=>{
+        api.get().then((response)=>
+    
+        setDados(response.data.results))
+    
+        .catch((error) =>{
+    
+          console.log(error)
+          
+        })
+      },[])
+    
+      infos = Dados.slice(0,2);
+
 
     return(
         <div>

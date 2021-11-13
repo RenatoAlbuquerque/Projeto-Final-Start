@@ -7,13 +7,14 @@ import Newsletter from '../../Components/Newsletter/Index';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
 import Benefits from '../../Components/Benefits';
+import Header from '../../Components/Header/index'
 
 import './index.css'
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <Header />
       <App />
       <Cards />
       <Valores />
