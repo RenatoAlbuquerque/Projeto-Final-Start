@@ -1,4 +1,4 @@
-import './modalProject.scss';
+import './style.scss';
 import { AiOutlineHtml5, AiOutlineApi, AiOutlineGithub } from "react-icons/ai";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
@@ -6,13 +6,13 @@ import { FaReact } from "react-icons/fa";
 import { DiTrello } from "react-icons/di";
 import { RiPagesLine } from "react-icons/ri";
 
-export default function ModalProject({ id = 'modal-equipe', onClose = () => { } }) {
+export default function ModalProject({ id = 'modal-projeto-overlay', onClose = () => { } }) {
 
   const outSideClick = (e => {
     if (e.target.id === id) onClose();
   })
   return (
-    <div id="modal-equipe" onClick={outSideClick}>
+    <div id="modal-projeto-overlay" onClick={outSideClick}>
       <div className="ModalProject">
         <div className="btnCloseModal">
           <button className="btn-close" onClick={onClose}>X</button>
