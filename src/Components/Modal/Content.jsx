@@ -9,8 +9,8 @@ export default function Content(props) {
         }
     }
 
-    function addToSacola(nome, preco, quant, total) {
-        const produto = { nome, preco, quant }
+    function addToSacola(nome, preco, quant, marca, img) {
+        const produto = { nome, preco, quant, marca, img };
         // console.log(produto)
         let produtos = JSON.parse(localStorage.getItem('itens'))
         if(produtos.length === 0) {
@@ -81,7 +81,7 @@ export default function Content(props) {
                         <button className="btn-calculo" onClick={sub}>-</button>
                     </div>
                     <button className="btn-comprar" type="button" onClick={() => {
-                        addToSacola(props.name, props.preco, num, num * props.preco);
+                        addToSacola(props.name, props.preco, num, props.marca, props.img);
                     }}>Comprar</button>
                 </div>
             </div>
