@@ -22,7 +22,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                     <i class="fas fa-laptop-code"></i>
                 </h1>
                 <div id="container">
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Gilberto Medeiros</h4>
                         <div class="img-profile">
                             <img src={gilberto} alt="img-gilberto" />
@@ -36,7 +36,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                             </a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Julia Silva</h4>
                         <div class="img-profile">
                             <img src={julia} alt="img-julia" />
@@ -50,7 +50,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                             </a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Mayane Miranda</h4>
                         <div class="img-profile">
                             <img src={mayane} alt="img-mayane" />
@@ -64,7 +64,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                             </a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Renato Abreu</h4>
                         <div class="img-profile">
                             <img src={renato} alt="img-renato" />
@@ -78,7 +78,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                             </a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Ruggery Gusmão</h4>
                         <div class="img-profile">
                             <img src={ruggery} alt="img-ruggery" />
@@ -92,7 +92,7 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
                             </a>
                         </div>
                     </div>
-                    <div class="item">
+                    <div id="item-container">
                         <h4 id="title-card">Wilhams Silva</h4>
                         <div class="img-profile">
                             <img src={wilhams} alt="img-wilhams" />
