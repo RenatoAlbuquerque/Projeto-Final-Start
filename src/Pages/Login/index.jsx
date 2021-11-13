@@ -1,6 +1,6 @@
 import React from 'react';
-import person_icon from '../../Images/IconsLogin/person-icon.png'
-import showcase from '../../Images/IconsLogin/showcase.png';
+import siteIcon from '../../Images/Logo_startSuaBeleza.png'
+
 import './styles.css'
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
@@ -31,33 +31,31 @@ const Login = () => {
   //   console.log('adsd')
   // }
 
-  return (
-    <div className="App">
-      <div className="login-container">
-        <img className="showcase" src={showcase} alt="Logo" />
-        <form onSubmit={handleSubmit(dataSubmit)}>
-          <div className="card">
-            <img className="person_icon" src={person_icon} alt="Logo" />
-            <h2 className="title">Bem vindo ao '**'*'</h2>
-
-            <input placeholder="Login" type="text" id="Login" name="login" {...register("login")} />
-            <input placeholder="Password" type="password" id="password" name="password" {...register("password")} />
-
-            <h6 className="forget_password" onClick={() => {
-              alert('Por favor consulte a administração para alterar a senha')
-            }}>Esqueci minha senha</h6>
-            <button className="btn">Login</button>
-            <span className="btn-cadastro" onClick={() => {
-              console.log('ads')
-            }}>Cadastro</span>
-          </div>
+  return(
+    <div className="container">
+    <div className="login-container">
+      <div className="login-card">
+        <form className="login-form">
+          <h1 className="form-title">Login</h1>
+          <input type="text" className="input-login" />
+          <input type="password" className="input-login" />
+          <a onClick={()=>{
+                console.log('asda')
+              }} href="#s" className="forget-password">Esqueceu sua senha ?</a>
+          <button className="login-button">Entrar</button>
         </form>
-
       </div>
-      <Footer />
+      <div className="showcase">
+        <img src={siteIcon} alt="Icon" className="showcase-icon"/>
+        <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
+        <p className="showcase-content">Não possui uma conta ?</p>
+        <button className="showcase-button">Cadastrar</button>
+      </div>
     </div>
-  );
-}
+    <Footer />
+    </div>
+  )
+  }
 
 
 export default Login;
