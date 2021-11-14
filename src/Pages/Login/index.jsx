@@ -5,7 +5,10 @@ import './styles.css'
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import Footer from '../../Components/Footer';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+const MySwal = withReactContent(Swal)
 
 
 const Login = () => {
@@ -16,11 +19,20 @@ const Login = () => {
   const dataSubmit = data => {
     const { login, password } = data;
     if (!login && !password) {
-      alert('Por favor insira o login e o password')
+      Swal.fire({
+        icon: 'error',
+        text: 'Insira o login e a senha para acessar!',
+      })
     } else if (!login) {
-      alert('Por favor insira o login')
+      Swal.fire({
+        icon: 'error',
+        text: 'Por favor insira o login',
+      })    
     } else if (!password) {
-      alert('Por favor insira o password')
+      Swal.fire({
+        icon: 'error',
+        text: 'Por favor insira a senha',
+      })         
     } else {
       localStorage.setItem('login', login)
       history.push('/home')
@@ -30,18 +42,45 @@ const Login = () => {
   // function cadastro(){
   //   console.log('adsd')
   // }
+  async function changeToRegister(){
+    // history.push('/cadastro')
+    const { value: formValues } = await Swal.fire({
+      title: 'Cadastro',
+      html:
+        '<input id="swal-input1" class="swal2-input" placeholder="Nome">' +
+        '<input id="swal-input2" class="swal2-input" placeholder="Login">' +
+        '<input id="swal-input3" class="swal2-input" placeholder="Senha" type="password">',
+      focusConfirm: false,
+      preConfirm: () => {
+        return [
+          document.getElementById('swal-input1').value,
+          document.getElementById('swal-input2').value,
+          document.getElementById('swal-input3').value
 
+        ]
+      }
+    })
+    console.log(formValues[1])
+    if (formValues[0] != [] && formValues[1] != [] && formValues[2] != []) {
+      localStorage.setItem('login', formValues[1])
+    }else{
+      Swal.fire({
+        icon: 'error',
+        text: 'Todos os campos de cadastro devem ser preenchidos',
+      }) 
+    }
+  }
   return(
     <div className="container">
     <div className="login-container">
       <div className="login-card">
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleSubmit(dataSubmit)}>
           <h1 className="form-title">Login</h1>
-          <input type="text" className="input-login" />
-          <input type="password" className="input-login" />
+          <input type="text" className="input-login" placeholder="Login" {...register("login")}/>
+          <input type="password" className="input-login" placeholder="Senha" {...register("password")}/>
           <a onClick={()=>{
-                console.log('asda')
-              }} href="#s" className="forget-password">Esqueceu sua senha ?</a>
+          Swal.fire('Sua requisição para alteração de senha foi enviada')
+              }}  className="forget-password">Esqueceu sua senha ?</a>
           <button className="login-button">Entrar</button>
         </form>
       </div>
@@ -49,7 +88,7 @@ const Login = () => {
         <img src={siteIcon} alt="Icon" className="showcase-icon"/>
         <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
         <p className="showcase-content">Não possui uma conta ?</p>
-        <button className="showcase-button">Cadastrar</button>
+        <button className="showcase-button" onClick={()=>{changeToRegister()}}>Cadastrar</button>
       </div>
     </div>
     <Footer />
