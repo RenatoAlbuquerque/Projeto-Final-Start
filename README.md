@@ -28,6 +28,7 @@
 <p><a href="https://www.npmjs.com/package/react-hook-form" target="_blank">React Hook Form</a><p/>
 <p><a href="https://react-icons.github.io/react-icons/" target="_blank">React Icons</a><p/>
 <p><a href="https://www.npmjs.com/package/react-router" target="_blank">React Router</a><p/>                                                                     
+<p><a href="https://sweetalert.js.org/docs/" target="_blank">Sweet Alert</a><p/>
 
 ## Colaboradores: 
 
