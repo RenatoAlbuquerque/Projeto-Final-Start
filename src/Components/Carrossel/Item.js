@@ -11,5 +11,5 @@ export default styled.div`
   margin: 0;
   font-size: 4em;
   border-radius: 30px;
-  overflow: hidden;
+  overflow: hidden; 
 `;

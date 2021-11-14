@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css'
+import swal from 'sweetalert';
 
 export default function Newsletter(){
     return(
@@ -13,8 +14,16 @@ export default function Newsletter(){
 
            <form className="form-newlestter">
                <input type="email" className="n_email" placeholder="Informe seu email"/>
-               <button type="button" className="botao_new" onClick=""> Enviar </button>
+               <button type="button" className="botao_new" onClick={() => 
+                {swal({
+                    title: "Email cadastrado",
+                    text: "Agradecemos o seu contato",
+                    icon: "success",
+                    button: "Ok",});
+                }
+                }>Enviar </button>
            </form>
+
            <div className="paragrafotxt">
                 <p>Ao inserir seu endereço de e-mail você receberá atualizações de promoções. O consentimento não é uma condição para a compra. Ver Política de Privacidade . Desconto de 10% válido apenas para novos clientes. Seu código será enviado via email.</p>
            </div> 

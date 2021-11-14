@@ -22,7 +22,7 @@ export default function Valores(){
 
             <div>
 
-                <h3>+ 2 MIL</h3>
+                <h3> + 2 MIL</h3>
                 <hr></hr>
                 <p>Cidades atendidas</p> 
 
