@@ -4,6 +4,7 @@ import bag3 from '../../Images/IconCompras/bag3.png';
 import bag2 from '../../Images/IconCompras/bag2.png';
 import './style.css';
 import Bag from '../Bag/Bag'
+import Logo from '../../Images/Logo_startSuaBeleza.png'
 const delay = 5;
 
 export default function Navbar(props) {
@@ -39,21 +40,20 @@ export default function Navbar(props) {
         }
     },[])
     return (
-        <nav>
+
+        <nav id="menu_header">
+
             <ul id="links-list">
-                <li>
-                    <Link to='/'>Login</Link>
-                </li>
-                <li>
-                    <Link to='/home'>Home</Link>
-                </li>
-                <li>
-                    <Link to='/produto'>Produtos</Link>
-                </li>
-                <li>
-                    <Link to='/compras'><img src={bag} alt='Bag' className='bagIcon'/></Link>
-                </li>
+                <li> <Link to='/home'> <img src={Logo} alt='Logo' className='logo_menu'/> </Link> </li>
+                
+                <li> <Link to='/home'>Home</Link> </li>
+                <li> <Link to='/produto'>Produtos</Link> </li>
+
+                <li> <Link to='/compras'><img src={bag} alt='Bag' className='bagIcon'/></Link> </li>
+                <li className="sair_btn"> <Link to='/'>Sair</Link> </li>
             </ul>
+
         </nav>
+
     );
 }

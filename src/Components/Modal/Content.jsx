@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 export default function Content(props) {
     const [num, setNum] = useState(1);
@@ -16,18 +18,56 @@ export default function Content(props) {
         if(produtos.length === 0) {
             produtos.push(produto)
             localStorage.setItem('itens', JSON.stringify(produtos))
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `${nome} foi adicionado à sua sacola`,
+                showConfirmButton: false,
+                timer: 1500
+              })
         }else{
             const object = foundItem(produtos, produto)
             if(object.count == 0){
                 let produtos = JSON.parse(localStorage.getItem('itens'))
                 produtos.push(produto)
                 localStorage.setItem('itens', JSON.stringify(produtos))
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${nome} foi adicionado à sua sacola`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             }else{
                 //Preparar um modal para a confirmação de uma compra a mais
+
                 let produtos = JSON.parse(localStorage.getItem('itens'))
+
+                
                 console.log(produtos[object.indexItem].quant)
-                produtos[object.indexItem].quant = produtos[object.indexItem].quant + produto.quant
-                localStorage.setItem('itens', JSON.stringify(produtos))
+
+                Swal.fire({
+                    title: `Já existem ${produtos[object.indexItem].quant} ${nome} na sua sacola, deseja adicionar mais ${produto.quant} ?`,
+                    showDenyButton: true,
+                    showCancelButton: false,
+                    confirmButtonText: 'Sim',
+                    denyButtonText: `Não`,
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        produtos[object.indexItem].quant = produtos[object.indexItem].quant + produto.quant
+                        localStorage.setItem('itens', JSON.stringify(produtos))
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: `${nome} foi adicionado à sua sacola`,
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
+                    } else if (result.isDenied) {
+                      
+                    }
+                  })
+
             }
         }
 
@@ -76,9 +116,11 @@ export default function Content(props) {
                         <p className="text-quantidade">
                             <b>Quant:</b>
                         </p>
-                        <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
-                        <p className="quantCompras">{num}</p>
-                        <button className="btn-calculo" onClick={sub}>-</button>
+                        <div className="btns-quantidade">
+                            <button className="btn-calculo" onClick={() => setNum(num + 1)}>+</button>
+                            <p className="quantCompras">{num}</p>
+                            <button className="btn-calculo" onClick={sub}>-</button>
+                        </div>
                     </div>
                     <button className="btn-comprar" type="button" onClick={() => {
                         addToSacola(props.name, props.preco, num, props.marca, props.img);

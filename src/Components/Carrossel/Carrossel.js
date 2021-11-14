@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import "./Carrossel.css";
-
+import Banner1 from '../../Images/Banner/Banners01.jpg'
+import Banner2 from '../../Images/Banner/Banners02.jpg'
+import Banner3 from '../../Images/Banner/Banners03.jpg' 
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -14,16 +16,16 @@ const breakPoints = [
 export default function App() {
 
   const [items] = useState([
-    <img src="" height="100%" width="100%"></img> , 
-    <img src="" width="100%" height="100%"></img> ,
-    <img src="" width="100%" height="100%"></img>
+    <img src={Banner1} alt="Promoção Black Friday"></img> , 
+    <img src= {Banner2} alt="Promoção Black Friday"></img> ,
+    <img src={Banner3} alt="Cupom de desconto"></img>
   ]);
 
   return (
     <div className="App">
 
       <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints}>
+        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={2500} infinite>
           {items.map((item) => (
             <Item key={item}> {item} </Item>
           ))}

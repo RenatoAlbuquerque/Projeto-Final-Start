@@ -4,16 +4,16 @@ import Cards from '../../Components/Cards/Cards';
 import Valores from '../../Components/Valores/valores';
 import App from '../../Components/Carrossel/Carrossel';
 import Newsletter from '../../Components/Newsletter/Index';
-import Footer from '../../Components/Footer';
-import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer'; 
 import Benefits from '../../Components/Benefits';
+import Header from '../../Components/Header/index'
 
 import './index.css'
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <Header />
       <App />
       <Cards />
       <Valores />

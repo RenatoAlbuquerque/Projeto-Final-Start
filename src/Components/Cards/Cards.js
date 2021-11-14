@@ -1,8 +1,28 @@
 import React, {useEffect, useState} from "react";
 import './Cards.css'
 import { Link } from "react-router-dom";
+import api from '../../Services/api'
 
 export default function Cards(){
+
+    const [Dados, setDados] = useState([]);
+
+    var infos = [];
+
+    useEffect(()=>{
+        api.get().then((response)=>
+    
+        setDados(response.data.results))
+    
+        .catch((error) =>{
+    
+          console.log(error)
+          
+        })
+      },[])
+    
+      infos = Dados.slice(0,2);
+
 
     return(
         <div>
@@ -16,7 +36,7 @@ export default function Cards(){
                     <div class="contentBx"> 
                         <h3>Double Exposure Palette</h3>
                         <h2 class="price">R$50.<small>99</small> </h2>
-                        <a class="descricao">Pros in our L.A. photo studio created this transformative palette to multiply their eye shadow collections by adding water.</a>
+                        <a class="descricao">Pros in our L.A. photo studio created this transformative palette to multiply their eye.</a>
                     </div>        
                 </div>
 
@@ -39,7 +59,7 @@ export default function Cards(){
                     <div class="contentBx"> 
                         <h3>Full Exposure Palette</h3>
                         <h2 class="price">R$52.<small>00</small> </h2>
-                        <a class="descricao">Pros in our L.A. studio use neutral eye shadows constantly, and they LOVE having the option to turn luster up or down.</a>
+                        <a class="descricao">Pros in our L.A. studio use neutral eye shadows constantly, and they LOVE</a>
                     </div>  
                    
                 </div>
