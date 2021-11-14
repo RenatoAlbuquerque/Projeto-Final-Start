@@ -67,9 +67,7 @@ function ItemComponent(props){
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire(
-        'Deleted!',
         `${nome} retirado da sua sacola`,
-        'success'
       )
       const newProducts = itens.filter(subjects => subjects.nome !== nome)
 
