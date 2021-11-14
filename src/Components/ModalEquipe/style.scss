@@ -10,6 +10,10 @@ $color2: #FFF;
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
 
+    @media(max-width: 640px){
+        overflow-y:unset;
+      } 
+
     .modal-equipe{
         box-sizing: border-box;
         font-family: 'Poppins';
@@ -21,6 +25,10 @@ $color2: #FFF;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+
+        @media(max-width: 640px){
+            height: 100vh;
+          } 
 
         .btn-close {
             background-color: #333;
@@ -46,6 +54,10 @@ $color2: #FFF;
             border-radius: 10px;
             margin-bottom: 15px;
 
+            @media(max-width: 410px){
+                font-size: 27px;
+              } 
+
             .fa-laptop-code:before{
                 margin-left: 20px;
             }
@@ -58,12 +70,41 @@ $color2: #FFF;
             justify-content: space-between;
             align-items: center;
 
+            @media(max-width: 630px){
+                justify-content: center;
+                height: 100vh;
+                overflow-y: auto;
+              }  
+
             #item-container{
                 width: 180px;
                 background-color: $color2;
                 margin: 10px;
                 border-radius: 8px;
                 transition: 0.55s ease-in;
+
+                @media(max-width: 630px){
+                    &:nth-child(5){
+                      margin-bottom: 100px;
+                    }
+                    &:nth-child(6){
+                        margin-bottom: 100px;
+                      }
+                  }
+
+                  @media(max-width: 441px){
+                    &:nth-child(5){
+                        margin-bottom: 10px;
+                      }
+                      &:nth-child(6){
+                          margin-bottom: 100px;
+                        }
+                } 
+                @media(max-width: 360px){
+                      &:nth-child(6){
+                          margin-bottom: 130px;
+                        }
+                } 
 
                 #title-card{
                     background-color: $color1;
