@@ -57,7 +57,7 @@
     cursor: pointer;
     border-radius: 7px;
     padding: 7px;
-    margin: 25px 0 25px 0;
+    margin: 100px 0 25px 0;
     width: 20%;
     min-height: 70px;
     transition: 0.20s ease-in;
@@ -66,4 +66,10 @@
 }
 .end-shop:hover{
     background-color: #c9708a;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
