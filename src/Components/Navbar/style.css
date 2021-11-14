@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-nav {
-  display: flex;
-  overflow: hidden;
-}
-
 #menu_header ul{
   padding: 0px;
   margin: 0px;
   list-style-type: none;
   display: flex;
-  
 }
 
 #menu_header{
@@ -19,9 +13,17 @@ nav {
   background-color: #d6778e;
   margin-bottom: 10px;
   font-family: 'Poppins';
+  display: flex;
+  justify-content: space-between;
 }
 
-#links-list li{
+#links-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-list li{
   padding: 25px;
 }
 
@@ -34,14 +36,11 @@ a {
 
 .bagIcon{
   width: 40px;
-  float: right;
-  margin-left: 980px;
   margin-top: -6px;
 }
 
 .logo_menu{
   height: 60px;
-  margin-top: -15px;
 }
 
 a:hover{
