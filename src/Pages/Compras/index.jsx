@@ -76,7 +76,7 @@ export default function Compras() {
   return (
     <div className="bag-container">
       <Header />
-      <div classeName="title">
+      <div classeName="tit">
       <p>|Sacola de Compras</p>
       <hr></hr>
       <h2>Valor</h2>  <h2>Total</h2> 
