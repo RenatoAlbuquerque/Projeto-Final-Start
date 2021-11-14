@@ -9,7 +9,7 @@
     justify-content: space-between;
 }
 
-.title p{
+.tit p{
     color:#d4728f ;
     font-size: 50px;
     position: absolute;
@@ -17,11 +17,11 @@
     top: 110px;
 }
 
-.title hr{
+.tit hr{
     border-color: #d4728f;
 }
 
-.title h2{
+.tit h2{
     color: #d4728f;
     position: relative;
     left: 72%;
