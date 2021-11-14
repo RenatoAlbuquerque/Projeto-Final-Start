@@ -17,10 +17,7 @@ export default function Navbar(props) {
   
     useEffect(() => { 
         setTimeout(() => {setCount(count + 1)}, 1000);
-
-        
         const itens = localStorage.getItem('itens')
-        console.log(typeof itens)
         if(!itens || itens == '[]'){
             setBag(bag3)
         }else{
