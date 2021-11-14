@@ -27,12 +27,12 @@ const Login = () => {
       Swal.fire({
         icon: 'error',
         text: 'Por favor insira o login',
-      })    
+      })
     } else if (!password) {
       Swal.fire({
         icon: 'error',
         text: 'Por favor insira a senha',
-      })         
+      })
     } else {
       localStorage.setItem('login', login)
       history.push('/home')
@@ -42,7 +42,7 @@ const Login = () => {
   // function cadastro(){
   //   console.log('adsd')
   // }
-  async function changeToRegister(){
+  async function changeToRegister() {
     // history.push('/cadastro')
     const { value: formValues } = await Swal.fire({
       title: 'Cadastro',
@@ -63,38 +63,38 @@ const Login = () => {
     console.log(formValues[1])
     if (formValues[0] != [] && formValues[1] != [] && formValues[2] != []) {
       localStorage.setItem('login', formValues[1])
-    }else{
+    } else {
       Swal.fire({
         icon: 'error',
         text: 'Todos os campos de cadastro devem ser preenchidos',
-      }) 
+      })
     }
   }
-  return(
+  return (
     <div className="container">
-    <div className="login-container">
-      <div className="login-card">
-        <form className="login-form" onSubmit={handleSubmit(dataSubmit)}>
-          <h1 className="form-title">Login</h1>
-          <input type="text" className="input-login" placeholder="Login" {...register("login")}/>
-          <input type="password" className="input-login" placeholder="Senha" {...register("password")}/>
-          <a onClick={()=>{
-          Swal.fire('Sua requisição para alteração de senha foi enviada')
-              }}  className="forget-password">Esqueceu sua senha ?</a>
-          <button className="login-button">Entrar</button>
-        </form>
+      <div className="login-container">
+        <div className="login-card">
+          <form className="login-form" onSubmit={handleSubmit(dataSubmit)}>
+            <h1 className="form-title">Login</h1>
+            <input type="text" className="input-login" placeholder="Login" {...register("login")} />
+            <input type="password" className="input-login" placeholder="Senha" {...register("password")} />
+            <a onClick={() => {
+              Swal.fire('Sua requisição para alteração de senha foi enviada')
+            }} className="forget-password">Esqueceu sua senha ?</a>
+            <button className="login-button">Entrar</button>
+          </form>
+        </div>
+        <div className="showcase">
+          <img src={siteIcon} alt="Icon" className="showcase-icon" />
+          <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
+          <p className="showcase-content">Não possui uma conta ?</p>
+          <button className="showcase-button" onClick={() => { changeToRegister() }}>Cadastrar</button>
+        </div>
       </div>
-      <div className="showcase">
-        <img src={siteIcon} alt="Icon" className="showcase-icon"/>
-        <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
-        <p className="showcase-content">Não possui uma conta ?</p>
-        <button className="showcase-button" onClick={()=>{changeToRegister()}}>Cadastrar</button>
-      </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   )
-  }
+}
 
 
 export default Login;
