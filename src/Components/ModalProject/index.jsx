@@ -19,15 +19,15 @@ export default function ModalProject({ id = 'modal-projeto-overlay', onClose = (
         </div>
         <h1 id="titulo-modal">O Projeto</h1>
         <div className="projectDescriptModal">
-          <p>O site desenvolvido é o trabalho final do curso Start Brasil de Desenvolvimento Front-End realizado em 2021, foi proposto que o site em questão retratasse uma Loja de maquiagem, contendo uma:</p>
+          <p>O site desenvolvido é o trabalho final do curso Start Brasil de Desenvolvimento Front-End realizado em 2021, foi proposto que o site em questão retratasse uma Loja de maquiagem, contendo:</p>
         </div>
         <div className="projectDescriptPages">
-          <p>Tela de Login</p>
-          <p>Tela de Home com Menu</p>
-          <p>Tela de Produtos</p>
-          <p>Tela de Detalhes</p>
-          <p>Tela de Compras</p>
-          <p>Tela de Boletos (Bônus)</p>
+          <p>Login</p>
+          <p>Home com Menu</p>
+          <p>Listagem de produtos</p>
+          <p>Detalhes dos produtos</p>
+          <p>Simulação de compra</p>
+          <p>Gerar Boleto de pagamento</p>
         </div>
         <div className="projectDescriptModal">
           <p>Utilizando as stacks ensinadas ao longo do curso.</p>

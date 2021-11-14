@@ -11,9 +11,12 @@
     box-sizing: border-box;
     font-family: 'Poppins';
     max-width: 40vw;
-    padding: 15px;
+    padding: 15px 30px;
     color: #D6778E;
-    background-color: rgb(255, 255, 255);
+    background-image: url(../../Images/LogoModalBackground.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     position: absolute;
     top: 50%;
     left: 50%;
