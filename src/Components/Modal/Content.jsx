@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 export default function Content(props) {
     const [num, setNum] = useState(1);
