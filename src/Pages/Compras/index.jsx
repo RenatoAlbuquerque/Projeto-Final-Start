@@ -24,10 +24,12 @@ function ItemComponent(props){
   if(itens){
     return(
       <div className="item-list">
+
       {
         itens.map( (element, key) => {
           return(
             <div className="item">
+              
             <a onClick={()=>{deleteItem(element.nome)}}><img src={Bin} alt="Bin icon" className="bin-icon"/></a>
             <Items nome={element.nome} preco={element.preco} quant={element.quant} marca={element.marca} img={element.img}/>
   
@@ -122,6 +124,13 @@ function ItemComponent(props){
   return (
     <div className="bag-container">
       <Header />
+      <div classeName="tit">
+        <p className="tit-p">Sacola de Compras</p>
+        <hr className="tit-hr"></hr>
+        <div className="title-bars">
+        <h2 className="marca">Item/Marca</h2> <h2 className="valor">Valor</h2>  <h2 className="quant">Quant.</h2><h2 className="total">Total</h2> 
+        </div>
+      </div>
       {/* <h1>Sacola de Compras</h1> */}
       { ItemComponent()}
       {/* <div className="item-list">

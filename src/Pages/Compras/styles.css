@@ -3,13 +3,19 @@
 }
 
 .bag-container{
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.tit p{
+.tit{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.tit-p{
     color:#d4728f ;
     font-size: 50px;
     position: absolute;
@@ -17,14 +23,48 @@
     top: 110px;
 }
 
-.tit hr{
+.tit-hr{
     border-color: #d4728f;
 }
-
-.tit h2{
+.marca{
     color: #d4728f;
     position: relative;
-    left: 72%;
+    left: 50%;
+    display: inline-block;
+    margin-right: 15%;
+}
+.valor{
+    color: #d4728f;
+    position: relative;
+    left: 49%;
+    display: inline-block;
+    margin-right: 2%;
+}
+.quant{
+    color: #d4728f;
+    position: relative;
+    left: 49%;
+    display: inline-block;
+
+}
+.total{
+    color: #d4728f;
+    position: relative;
+    left: 52%;
+    display: inline-block;
+
+}
+/* 
+.title-bars{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+} */
+
+.tit-h2{
+    color: #d4728f;
+    position: relative;
+    left: 50%;
     display: inline-block;
     margin-right: 5%;
 }
