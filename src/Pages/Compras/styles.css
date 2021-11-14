@@ -70,12 +70,12 @@
 .end-shop {
     border: none;
     color: #f4f4f4;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     background-color: #d4728f; 
     /* background-image: linear-gradient(90deg, rgba(246, 177, 166, 1) 0%, rgba(233, 155, 158, 1) 35%, rgba(212, 114, 143, 1) 100%); */ 
     cursor: pointer;
-    border-radius: 7px;
+    border-radius: 9px;
     padding: 7px;
     margin: 25px 0 25px 0;
     width: 20%;
