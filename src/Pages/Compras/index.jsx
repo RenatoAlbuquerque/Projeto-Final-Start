@@ -76,7 +76,11 @@ export default function Compras() {
   return (
     <div className="bag-container">
       <Header />
-      <h1>Sacola de Compras</h1>
+      <div classeName="title">
+      <p>|Sacola de Compras</p>
+      <hr></hr>
+      <h2>Valor</h2>  <h2>Total</h2> 
+      </div>
       <div className="item-list">
       {
         itens.map( (element, key) => {
