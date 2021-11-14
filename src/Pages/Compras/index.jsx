@@ -6,6 +6,7 @@ import Bin from '../../Images/IconCompras/bin.png';
 import './styles.css';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import jsPDF from 'jspdf' 
 
 export default function Compras() {
   const [itens, setItens ] = useState([]);
@@ -94,7 +95,7 @@ function ItemComponent(props){
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      Swal.fire('Saved!', '', 'success')
+      geradorPDF(user,showItens())
     } else if (result.isDenied) {
       Swal.fire('Sua compra foi finalizada', '', 'info')
       localStorage.removeItem("itens");
@@ -103,6 +104,32 @@ function ItemComponent(props){
   })
 
  }
+
+ function geradorPDF(){
+  var doc = new jsPDF('landscape', 'mm', [230,230]);
+
+  doc.setFont('arial');
+  doc.text(20, 30, showItensPDF());
+
+  var utc = new Date().toJSON().slice(0,10)
+  doc.save(utc + "_"+user+"_"+".pdf");
+
+}
+
+function showItensPDF(){
+  let produtos = JSON.parse(localStorage.getItem('itens'))
+  var string = ''
+  var finalV = 0
+  for(var i in produtos){
+    string += produtos[i].nome + " " + produtos[i].quant + " un. R$" + produtos[i].preco * produtos[i].quant +'\n \n'
+    finalV += produtos[i].preco * produtos[i].quant
+  }
+
+  string += "\n\n\nValor da Compra : R$ " + finalV + "\n \n"
+  string += "Compra efetuada pelo usuário \"" + user + "\" \n \n"
+  return string
+}
+
 
  function showItens(){
   let produtos = JSON.parse(localStorage.getItem('itens'))
@@ -116,7 +143,6 @@ function ItemComponent(props){
   string += "<b>Valor da Compra : R$ " + finalV + "</b><br>"
   string += "Compra efetuada pelo usuário \"<b>" + user + "</b>\"<br><br><br>"
   string += "Deseja gerar o PDF da compra ?"
-  console.log(string)
   return string
 }
 
