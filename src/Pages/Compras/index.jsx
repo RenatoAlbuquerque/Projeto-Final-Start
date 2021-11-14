@@ -4,6 +4,9 @@ import Footer from '../../Components/Footer';
 import Items from '../../Components/Items/index';
 import Bin from '../../Images/IconCompras/bin.png';
 import './styles.css';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 export default function Compras() {
   const [itens, setItens ] = useState([]);
   const [user, setUser] = useState("");
@@ -28,14 +31,41 @@ export default function Compras() {
   },[]);
 
  function deleteItem(nome){
-  const newProducts = itens.filter(subjects => subjects.nome !== nome)
+  Swal.fire({
+    text: `Deseja retirar ${nome} da sacola ?`,
+    icon: 'warning',
+    showDenyButton: true,
+    denyButtonText: 'Não',
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        `${nome} retirado da sua sacola`,
+        'success'
+      )
+      const newProducts = itens.filter(subjects => subjects.nome !== nome)
 
-  localStorage.setItem('itens', JSON.stringify(newProducts))
-  setItens(newProducts)
+      localStorage.setItem('itens', JSON.stringify(newProducts))
+      setItens(newProducts)
+    }
+  })
+
  }
 
- function setMinus(element){
-   
+ function endShop(){
+  Swal.fire({
+    title:'Compra finalizada',
+    text: `Itens comprados`,
+    icon: 'info',
+    showDenyButton: true,
+    denyButtonText: 'Não',
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim'
+  })
  }
 
  function setPlus(element){
@@ -63,7 +93,7 @@ export default function Compras() {
           )
         })
       }
-      <button className="end-shop" onClick={()=>{alert("Compra finalizada")}}>Finalizar Compra</button>
+      <button className="end-shop" onClick={()=>{endShop()}}>Finalizar Compra</button>
 
       </div>
       <Footer />
