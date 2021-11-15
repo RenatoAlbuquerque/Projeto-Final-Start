@@ -38,7 +38,7 @@
 .marca{
     color: #d4728f;
     position: relative;
-    left: 50%;
+    left: 53%;
     display: inline-block;
     margin-right: 15%;
 }
@@ -109,6 +109,9 @@
     flex-direction: column;
 }
 
+.item-component{
+    margin-right: 35px;
+}
 
 .item-info{
     width: 30%;

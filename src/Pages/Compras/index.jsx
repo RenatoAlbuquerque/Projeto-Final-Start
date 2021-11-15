@@ -25,7 +25,7 @@ function ItemComponent(props){
       {
         itens.map( (element, key) => {
           return(
-            <div className="item">
+            <div className="item" key={key}>
             <a className="bin-content"><img src={Bin} alt="Bin icon" className="bin-icon" onClick={()=>{deleteItem(element.nome)}} /></a>
             <Items nome={element.nome} preco={element.preco} quant={element.quant} marca={element.marca} img={element.img}/>
             </div>

@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom';
 import bag3 from '../../Images/IconCompras/bag3.png';
 import bag2 from '../../Images/IconCompras/bag2.png';
 import './style.css';
-import Bag from '../Bag/Bag'
 import Logo from '../../Images/Logo_startSuaBeleza.png'
-const delay = 5;
 
 export default function Navbar(props) {
     const [bag, setBag] = useState()
-    const [show, setShow] = useState(false);
 
 
     const [value, setValue] = useState('');
