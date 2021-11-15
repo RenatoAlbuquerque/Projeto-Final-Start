@@ -58,7 +58,7 @@ export default function ModalProject({ id = 'modal-projeto-overlay', onClose = (
             <p>Repositório</p>
             <a
               href="https://github.com/RenatoAlbuquerque/Projeto-Final-Start"
-              className="linkTrello"
+              className="linkGithub"
               target="_blank"
               rel="noreferrer"
             >
@@ -68,8 +68,8 @@ export default function ModalProject({ id = 'modal-projeto-overlay', onClose = (
           <div className="linkAbout">
             <p>Hospedagem</p>
             <a
-              href="/"
-              className="linkTrello"
+              href="https://zealous-hypatia-ee860e.netlify.app"
+              className="linkSite"
               target="_blank"
               rel="noreferrer"
             >
