@@ -3,3 +3,7 @@
     width: 100%;
     justify-content: space-evenly;
 }
+.item-component{
+    white-space: nowrap;
+
+}
