@@ -108,7 +108,7 @@ export default function Content(props) {
                     <ul className="details">
                         <li><b>Marca:</b> {props.marca}</li>
                         <li><b>Tipo:</b> {props.tipo}</li>
-                        <li><b>Preço:</b> R$ {props.preco}</li>
+                        <li><b>Preço:</b> R$ {parseFloat(props.preco).toFixed(2)}</li>
                         <li><b>Cores:</b><span className="cor">{props.cor}</span></li>
                     </ul>
                     <div className="btns">
