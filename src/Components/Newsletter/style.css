@@ -79,3 +79,26 @@
     font-size: 14px;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 992px) {
+
+    .conteinerA{
+        flex-direction: column;
+    }
+
+    .conteinerA h3{
+        font-size: 18px;
+    }
+
+    .conteinerA p{
+        font-size: 90%;
+    }
+
+    .paragrafotxt p{
+        font-size: 80%;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}

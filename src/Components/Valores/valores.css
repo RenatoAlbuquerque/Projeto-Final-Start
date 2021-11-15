@@ -35,3 +35,23 @@
 .valores div{
     margin: 20px 50px 0px 50px;
 }
+
+
+@media screen and (max-width: 992px) {
+    .valores{
+        flex-direction: column;
+    }
+
+    .valores h3{
+        font-size: 35px;
+    }
+
+    .valores p{
+        font-size: 25px;
+    }
+
+    .valores div{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

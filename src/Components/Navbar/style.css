@@ -56,3 +56,38 @@ a:hover{
 .sair_btn a{
   color: #000000;
 }
+
+
+@media screen and (max-width: 992px) {
+
+  #menu_header{
+    justify-content: center;
+  }
+
+  .links-list li{
+    padding-left: 10px;
+  }
+
+  a{
+    font-size: 15px;
+  }
+
+  .logo_menu{
+    height: 50px;
+  }
+
+  .bagIcon{
+    width: 30px;
+    margin-top: 0px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  #menu_header{
+    justify-content: center;
+  }
+
+}
+

@@ -25,7 +25,7 @@ export default function App() {
     <div className="App">
 
       <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={2500} infinite>
+        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={3500} infinite>
           {items.map((item) => (
             <Item key={item}> {item} </Item>
           ))}

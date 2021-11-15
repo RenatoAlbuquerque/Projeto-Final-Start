@@ -56,33 +56,53 @@ const Login = () => {
           document.getElementById('swal-input1').value,
           document.getElementById('swal-input2').value,
           document.getElementById('swal-input3').value
-
         ]
       }
     })
-    console.log(formValues[1])
-    if (formValues[0] != [] && formValues[1] != [] && formValues[2] != []) {
-      localStorage.setItem('login', formValues[1])
-    } else {
-      Swal.fire({
-        icon: 'error',
-        text: 'Todos os campos de cadastro devem ser preenchidos',
-      })
+
+    const form = JSON.stringify(formValues)
+    console.log(form)
+    if(form === undefined){
+
+    }else{
+      if (form[0] === [''] && form[1] === [''] && form[2] === [''] || form == ['']) {
+        localStorage.setItem('login', formValues[1])
+      }else{
+        Swal.fire({
+          icon: 'error',
+          text: 'Todos os campos de cadastro devem ser preenchidos',
+        }) 
+      }
     }
   }
   return (
     <div className="container">
-      <div className="login-container">
-        <div className="login-card">
-          <form className="login-form" onSubmit={handleSubmit(dataSubmit)}>
-            <h1 className="form-title">Login</h1>
-            <input type="text" className="input-login" placeholder="Login" {...register("login")} />
-            <input type="password" className="input-login" placeholder="Senha" {...register("password")} />
-            <a onClick={() => {
-              Swal.fire('Sua requisição para alteração de senha foi enviada')
-            }} className="forget-password">Esqueceu sua senha ?</a>
-            <button className="login-button">Entrar</button>
-          </form>
+    <div className="login-container">
+      <div className="login-card">
+        <form className="login-form" onSubmit={handleSubmit(dataSubmit)}>
+          <h1 className="form-title">Login</h1>
+          <input type="text" className="input-login" placeholder="Login" {...register("login")}/>
+          <input type="password" className="input-login" placeholder="Senha" {...register("password")}/>
+          <a onClick={async ()=>{
+
+          const { value: email } = await Swal.fire({
+            title: 'Insira seu email',
+            input: 'email',
+            inputLabel: 'Informe seu email para realizarmos a recuperação',
+            showCancelButton: true,
+            cancelButtonText: "Cancelar",
+            inputValidator: (value) => {
+              if (!value) {
+                return 'Por favor insira um email valido!'
+              }
+            }
+          })
+          
+          if (email) {
+            Swal.fire(`Sua requisição para alteração de senha foi enviada`)
+          }}}  className="forget-password" >Esqueceu sua senha ?</a>
+          <button className="login-button">Entrar</button>
+        </form>
         </div>
         <div className="showcase">
           <img src={siteIcon} alt="Icon" className="showcase-icon" />
