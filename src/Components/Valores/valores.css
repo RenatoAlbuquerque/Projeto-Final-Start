@@ -1,56 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-.valores{
+.valores {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 35px;
     margin-bottom: 70px;
+    text-align: center;
 }
 
-.valores h3{
-    padding: 0 80px 0 80px;
+.valores #quantClientes {
     font-size: 40px;
     font-family: 'Poppins';
     color: #D6778E;
+    width: 100%;
 }
 
-.valores hr{
-   margin-left: 20px;
-   width: 300px;
-   background-color: #F3ACA4;
-   border: none;
-   font-weight: bold;
-   height: 6px;
-   border-radius: 30px;
+.valores hr {
+    width: 300px;
+    background-color: #F3ACA4;
+    border: none;
+    font-weight: bold;
+    height: 6px;
+    border-radius: 30px;
 }
 
-.valores p{
+.valores p {
     font-family: 'Poppins';
     text-align: center;
     font-size: 30px;
     color: #D6778E;
+    width: 100%;
 }
 
-.valores div{
+.valores div {
     margin: 20px 50px 0px 50px;
 }
 
+@media screen and (max-width: 1200px) {
+    .valores #quantClientes {
+        font-size: 22px;
+    }
+
+    .valores hr {
+        width: 230px;
+    }
+
+    .valores p {
+        font-size: 22px;
+    }
+}
 
 @media screen and (max-width: 992px) {
-    .valores{
+    .valores {
         flex-direction: column;
     }
 
-    .valores h3{
+    .valores #quantClientes {
         font-size: 35px;
     }
 
-    .valores p{
+    .valores p {
         font-size: 25px;
     }
 
-    .valores div{
+    .valores div {
         margin-top: 30px;
         margin-bottom: 30px;
     }

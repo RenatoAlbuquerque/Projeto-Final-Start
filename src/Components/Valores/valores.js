@@ -5,8 +5,8 @@ export default function Valores(){
     return(
         <div className="valores">
             <div>
-               
-                <h3>+ 50 MIL</h3>
+            
+                <h3 id="quantClientes">+ 50 MIL</h3>
                 <hr></hr>
                 <p>Produtos vendidos</p>
                 
@@ -14,7 +14,7 @@ export default function Valores(){
 
             <div>
 
-                <h3>+ 20 MIL</h3>
+                <h3 id="quantClientes">+ 20 MIL</h3>
                 <hr></hr>
                 <p>Clientes atendidos</p>
                 
@@ -22,7 +22,7 @@ export default function Valores(){
 
             <div>
 
-                <h3> + 2 MIL</h3>
+                <h3 id="quantClientes"> + 2 MIL</h3>
                 <hr></hr>
                 <p>Cidades atendidas</p> 
 
