@@ -1,5 +1,7 @@
 .vantagens-lista {
-    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
     width: 100%;
     background: #FBFBFB;
     height: 70px;
@@ -66,19 +68,20 @@
 @media (max-width: 940px) {
 
     .vantagens-lista {
+        padding-bottom: 30px;
+
         .vantagens {
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-            justify-items: center;
+            justify-items: start;
 
-            .pagamento {
-                margin-right: 35px;
-            }
+
+
 
             .frete {
                 margin-right: 55px;
@@ -91,19 +94,16 @@
     }
 }
 
-@media (max-width: 500px) {
-
+@media (max-width: 570px) {
     .vantagens-lista {
         .vantagens {
             width: 90%;
-            display: grid;
-            justify-items: start;
             flex-direction: column;
             align-items: center;
             grid-row-gap: 10px;
 
             .pagamento {
-                margin-right: 25px;
+
 
                 #benefitImg {
                     margin-right: 0;
@@ -112,10 +112,6 @@
 
             .atendimento {
                 display: flex;
-
-                #benefitImg {
-                    padding-right: 1px;
-                }
             }
 
             .pagamento #benefitType,
@@ -139,6 +135,18 @@
             .seguranca #benefitImg {
                 width: 45px;
                 height: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .vantagens-lista {
+        .vantagens {
+            width: 90%;
+
+            .atendimento {
+                margin-left: 10px;
             }
         }
     }

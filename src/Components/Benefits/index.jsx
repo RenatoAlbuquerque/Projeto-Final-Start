@@ -1,8 +1,7 @@
 import React from 'react';
 import './style.scss';
-import { BsFillCreditCard2FrontFill } from "react-icons/bs";
 import { FaTruckMoving } from "react-icons/fa";
-import { BiConversation } from "react-icons/bi";
+import { BiConversation, BiCreditCardFront } from "react-icons/bi";
 import { RiLockPasswordFill, } from "react-icons/ri";
 
 
@@ -12,7 +11,7 @@ export default function Benefits() {
       <div className="vantagens-lista">
         <div className="vantagens">
           <div className="pagamento">
-            <BsFillCreditCard2FrontFill id="benefitImg" />
+            <BiCreditCardFront id="benefitImg" />
             <div className="pag-descript">
               <h3 id="benefitType">Parcelamento</h3>
               <p id="benefitTypeComp">Em até 12x</p>

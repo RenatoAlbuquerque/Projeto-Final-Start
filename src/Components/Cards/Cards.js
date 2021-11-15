@@ -16,12 +16,12 @@ export default function Cards(){
     
         .catch((error) =>{
     
-          console.log(error)
-          
+        console.log(error)
+        
         })
-      },[])
+    },[])
     
-      infos = Dados.slice(0,2);
+    infos = Dados.slice(0,2);
 
 
     return(
@@ -29,9 +29,9 @@ export default function Cards(){
             
             <div className="cards-conteiner">
 
-                 <div id="card">
+                <div id="card">
                     <div class="imgBx">
-                         <Link to='/produto'><img src="http://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/530/original/open-uri20171223-4-5v7061?1514062152" alt="Produto"/></Link>   
+                        <Link to='/produto'><img src="http://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/530/original/open-uri20171223-4-5v7061?1514062152" alt="Produto"/></Link>   
                     </div>
                     <div class="contentBx"> 
                         <h3>Double Exposure Palette</h3>
@@ -61,7 +61,7 @@ export default function Cards(){
                         <h2 class="price">R$52.<small>00</small> </h2>
                         <a class="descricao">Pros in our L.A. studio use neutral eye shadows constantly, and they LOVE</a>
                     </div>  
-                   
+                
                 </div>
 
             </div>
