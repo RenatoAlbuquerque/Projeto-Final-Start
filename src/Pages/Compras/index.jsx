@@ -5,14 +5,11 @@ import Items from '../../Components/Items/index';
 import Bin from '../../Images/IconCompras/bin.png';
 import './styles.css';
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 import jsPDF from 'jspdf' 
 
 export default function Compras() {
   const [itens, setItens ] = useState([]);
   const [user, setUser] = useState("");
-  const [counter, setCounter] = useState(0);
-  const [finalValue, setFinalValue] = useState();
 
   // useEffect(()=>{
   //     const produtos = localStorage.getItem('itens')
@@ -25,15 +22,12 @@ function ItemComponent(props){
   if(itens){
     return(
       <div className="item-list">
-
       {
         itens.map( (element, key) => {
           return(
             <div className="item">
-              
-            <a onClick={()=>{deleteItem(element.nome)}}><img src={Bin} alt="Bin icon" className="bin-icon"/></a>
+            <a className="bin-content"><img src={Bin} alt="Bin icon" className="bin-icon" onClick={()=>{deleteItem(element.nome)}} /></a>
             <Items nome={element.nome} preco={element.preco} quant={element.quant} marca={element.marca} img={element.img}/>
-  
             </div>
           )
         })

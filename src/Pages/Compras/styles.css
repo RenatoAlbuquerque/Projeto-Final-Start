@@ -1,5 +1,14 @@
 .bin-icon{
-    width: 10%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bin-content{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .bag-container{
@@ -36,21 +45,21 @@
 .valor{
     color: #d4728f;
     position: relative;
-    left: 49%;
+    left: 45%;
     display: inline-block;
     margin-right: 2%;
 }
 .quant{
     color: #d4728f;
     position: relative;
-    left: 49%;
+    left: 44%;
     display: inline-block;
 
 }
 .total{
     color: #d4728f;
     position: relative;
-    left: 52%;
+    left: 45%;
     display: inline-block;
 
 }
@@ -68,7 +77,7 @@
     display: inline-block;
     margin-right: 5%;
 }
-
+ 
 .item-list{
     width: 100%;
     display: flex;
@@ -79,7 +88,7 @@
 
 .item{
     padding: 10px 10px ;
-    width: 70%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,12 +96,14 @@
     
 }
 .item-img{
-    width: 10%;
+    width: 15%;
+    min-height: 15%;
 }
 
 .item-content{
     display: flex;
     width: 70%;
+    text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -133,3 +144,82 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 900px) {
+
+    .bin-icon{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bin-content{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .item{
+        padding: 10px 10px ;
+        width: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .item-container{
+        display: flex;
+        width: 100%;    
+        height: calc(100% + 100px); /* para suporte nativo */
+        justify-content: space-evenly;
+        flex-direction: column;
+
+    }
+
+    .item-info{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .item-content{
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-img{
+        width: 20%;
+        margin: 0 auto;
+    }
+    .tit{
+        display: none;
+    }
+
+    .tit-hr{
+        display: none;
+    }
+    .marca{
+        display: none;
+
+    }
+    .valor{
+        display: none;
+
+    }
+    .quant{
+        display: none;
+
+    
+    }
+    .total{
+        display: none;
+    }
+    .tit-p{
+        display: none;
+    }
+} 

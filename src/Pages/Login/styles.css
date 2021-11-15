@@ -8,7 +8,7 @@ input{
   border: none;
   background: #e8ebed;
   color: #576366;
-  font-size: 24px;
+  font-size: 17px;
   margin-bottom: 30px;
   /* background: url(../Images/IconsLogin/key-icon.png) no-repeat scroll 1px 1px; */
   background-size: 20px 20px;
@@ -78,8 +78,11 @@ font-weight: bold;
 padding: 12px 45px;
 letter-spacing: 1px;
 text-transform: uppercase;
-transition: transform 80ms ease-in;
 margin-bottom: 25px;
+}
+.login-button:hover{
+  background-color: #ba6b7e;
+
 }
 
 .forget-password{
@@ -124,7 +127,7 @@ margin-bottom: 25px;
 
 }
 .showcase-button:hover{
-  /* background-color: #714c80; */
+  background-color: #ba6b7e;
 
 }
 .showcase-icon{
@@ -132,6 +135,9 @@ margin-bottom: 25px;
   max-width: 20vh;
 }
 
+input:-ms-input-placeholder  {
+  font-size:116px;
+}
 @media screen and (max-width: 800px) {
   .login-container {
     font-family: 'Poppins';
@@ -150,17 +156,17 @@ margin-bottom: 25px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     height: 100%;
     min-height: 60vh;
     box-shadow: 1px 1px 12px rgba(0,0,0,0.25), 
     0 10px 10px rgba(0,0,0,0.22);
     border-radius: 15px 15px 0px 0px;
-  
+
   }
 
   .showcase{
-    width: 70%;
+    width: 80%;
     height: 100%;
     min-height: 60vh;
     display: flex;
