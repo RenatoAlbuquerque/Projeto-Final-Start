@@ -126,3 +126,9 @@ body{
     top: 0px;
     opacity: 1;
 }
+
+@media screen and (max-width: 992px) {
+    .cards-conteiner{
+        flex-direction: column;
+    }
+  }
