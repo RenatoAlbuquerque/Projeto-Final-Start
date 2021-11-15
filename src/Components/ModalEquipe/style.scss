@@ -30,6 +30,10 @@ $color2: #FFF;
             height: 100vh;
           } 
 
+          @media(max-width: 440px){
+           margin-top: 20px;
+          } 
+
         .btn-close {
             background-color: #333;
             color: $color2;
@@ -60,6 +64,11 @@ $color2: #FFF;
               } 
               @media(max-width: 366px){
                 font-size: 24px;
+                padding: 5px;
+              } 
+
+              @media(max-width: 335px){
+                font-size: 21.5px;
                 padding: 5px;
               } 
 
