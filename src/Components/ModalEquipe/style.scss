@@ -11,7 +11,7 @@ $color2: #FFF;
     background-color: rgba(0, 0, 0, 0.6);
 
     @media(max-width: 640px){
-        overflow-y:unset;
+        overflow-y:hidden;
       } 
 
     .modal-equipe{
@@ -28,10 +28,7 @@ $color2: #FFF;
 
         @media(max-width: 640px){
             height: 100vh;
-          } 
-
-          @media(max-width: 440px){
-           margin-top: 20px;
+            margin-top: 25px;
           } 
 
         .btn-close {
@@ -59,11 +56,11 @@ $color2: #FFF;
             margin-bottom: 15px;
 
             @media(max-width: 410px){
-                font-size: 27px;
+                font-size: 23px;
                 padding: 5px;
               } 
               @media(max-width: 366px){
-                font-size: 24px;
+                font-size: 23px;
                 padding: 5px;
               } 
 
@@ -71,6 +68,10 @@ $color2: #FFF;
                 font-size: 21.5px;
                 padding: 5px;
               } 
+              @media(max-width: 310px){
+                font-size: 19px;
+                padding: 5px;
+              }
 
             .fa-laptop-code:before{
                 margin-left: 20px;
