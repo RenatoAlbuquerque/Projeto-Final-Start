@@ -56,6 +56,11 @@ $color2: #FFF;
 
             @media(max-width: 410px){
                 font-size: 27px;
+                padding: 5px;
+              } 
+              @media(max-width: 366px){
+                font-size: 24px;
+                padding: 5px;
               } 
 
             .fa-laptop-code:before{
@@ -97,12 +102,12 @@ $color2: #FFF;
                         margin-bottom: 10px;
                       }
                       &:nth-child(6){
-                          margin-bottom: 100px;
+                          margin-bottom: 130px;
                         }
                 } 
                 @media(max-width: 360px){
                       &:nth-child(6){
-                          margin-bottom: 130px;
+                          margin-bottom: 150px;
                         }
                 } 
 
