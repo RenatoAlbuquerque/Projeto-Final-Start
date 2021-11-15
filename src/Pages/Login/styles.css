@@ -81,7 +81,7 @@ text-transform: uppercase;
 margin-bottom: 25px;
 }
 .login-button:hover{
-  background-color: black;
+  background-color: #ba6b7e;
 
 }
 
@@ -127,7 +127,7 @@ margin-bottom: 25px;
 
 }
 .showcase-button:hover{
-  /* background-color: #714c80; */
+  background-color: #ba6b7e;
 
 }
 .showcase-icon{
