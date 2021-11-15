@@ -47,3 +47,15 @@ body{
     margin: 0 10px 0;
     font-style: italic;
 }
+
+@media screen and (max-width: 992px) {
+
+    .atendimento_feedback{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .atendimento_feedback div{
+        margin: 0px 0px 20px 0px
+    }
+}

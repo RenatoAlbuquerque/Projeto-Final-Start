@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
 
 export default function Content(props) {
     const [num, setNum] = useState(1);
@@ -27,7 +26,7 @@ export default function Content(props) {
               })
         }else{
             const object = foundItem(produtos, produto)
-            if(object.count == 0){
+            if(object.count === 0){
                 let produtos = JSON.parse(localStorage.getItem('itens'))
                 produtos.push(produto)
                 localStorage.setItem('itens', JSON.stringify(produtos))
@@ -79,7 +78,7 @@ export default function Content(props) {
         for (let index = 0; index < array.length; index++) {
             if(array[index].nome === item.nome){
                 count += 1
-                var indexItem = index
+                indexItem = index;
             }else{
                 
             }

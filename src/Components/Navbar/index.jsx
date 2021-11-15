@@ -40,12 +40,12 @@ export default function Navbar(props) {
 
         <nav id="menu_header">
 
-            <ul id="links-list">
+            <ul id="links-list" className="links-list">
                 <li> <Link to='/home'> <img src={Logo} alt='Logo' className='logo_menu'/> </Link> </li>
-                
                 <li> <Link to='/home'>Home</Link> </li>
                 <li> <Link to='/produto'>Produtos</Link> </li>
-
+            </ul>
+            <ul className="links-list">
                 <li> <Link to='/compras'><img src={bag} alt='Bag' className='bagIcon'/></Link> </li>
                 <li className="sair_btn"> <Link to='/'>Sair</Link> </li>
             </ul>

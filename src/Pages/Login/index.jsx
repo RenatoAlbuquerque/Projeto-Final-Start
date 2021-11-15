@@ -27,12 +27,12 @@ const Login = () => {
       Swal.fire({
         icon: 'error',
         text: 'Por favor insira o login',
-      })    
+      })
     } else if (!password) {
       Swal.fire({
         icon: 'error',
         text: 'Por favor insira a senha',
-      })         
+      })
     } else {
       localStorage.setItem('login', login)
       history.push('/home')
@@ -42,7 +42,7 @@ const Login = () => {
   // function cadastro(){
   //   console.log('adsd')
   // }
-  async function changeToRegister(){
+  async function changeToRegister() {
     // history.push('/cadastro')
     const { value: formValues } = await Swal.fire({
       title: 'Cadastro',
@@ -75,7 +75,7 @@ const Login = () => {
       }
     }
   }
-  return(
+  return (
     <div className="container">
     <div className="login-container">
       <div className="login-card">
@@ -103,18 +103,18 @@ const Login = () => {
           }}}  className="forget-password" >Esqueceu sua senha ?</a>
           <button className="login-button">Entrar</button>
         </form>
+        </div>
+        <div className="showcase">
+          <img src={siteIcon} alt="Icon" className="showcase-icon" />
+          <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
+          <p className="showcase-content">Não possui uma conta ?</p>
+          <button className="showcase-button" onClick={() => { changeToRegister() }}>Cadastrar</button>
+        </div>
       </div>
-      <div className="showcase">
-        <img src={siteIcon} alt="Icon" className="showcase-icon"/>
-        <p className="showcase-content">Seja bem vindo(a) ao START SUA BELEZA</p>
-        <p className="showcase-content">Não possui uma conta ?</p>
-        <button className="showcase-button" onClick={()=>{changeToRegister()}}>Cadastrar</button>
-      </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   )
-  }
+}
 
 
 export default Login;
