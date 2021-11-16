@@ -1,44 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HiOutlineShoppingBag, HiShoppingBag } from "react-icons/hi";
+import bag3 from '../../Images/IconCompras/bag3.png';
+import bag2 from '../../Images/IconCompras/bag2.png';
+import bag1 from '../../Images/IconCompras/bag1.png';
+
 import './style.css';
 import Logo from '../../Images/Logo_startSuaBeleza.png'
 
 export default function Navbar(props) {
+    const [bag, setBag] = useState()
+
+
+    const [value, setValue] = useState('');
     const [count, setCount] = useState(-1);
-    const [itens, setItem] = useState('');
 
     useEffect(() => {
         setTimeout(() => { setCount(count + 1) }, 1000);
-        setItem(localStorage.getItem('itens'))
-
+        const itens = localStorage.getItem('itens')
+        if (!itens || itens === '[]') {
+            setBag(bag3)
+        } else {
+            setBag(bag1)
+        }
     });
 
+    const onChange = ({ target }) => setValue(target.value);
+
+    useEffect(() => {
+
+        const itens = localStorage.getItem('itens')
+        if (!itens) {
+            setBag(bag3)
+        } else {
+            setBag(bag2)
+        }
+    }, [])
     return (
 
         <nav id="menu_header">
-            <div className="logo-linkPages">
-                <Link to='/home'> <img src={Logo} alt='Logo' className='logo_menu' /> </Link>
-                <ul id="links-list" className="links-list">
-                    <li> <Link to='/home'>Home</Link> </li>
-                    <li> <Link to='/produto'>Produtos</Link> </li>
-                </ul>
-            </div>
-            <ul className="links-list">
-                {itens.length !== 2 ?
-                    <li>
-                        <Link to='/compras'>
-                            <HiShoppingBag id="newBag" />
-                        </Link>
-                    </li>
-                    :
-                    <li>
-                        <Link to='/compras'>
-                            <HiOutlineShoppingBag id="newBag" />
-                        </Link>
-                    </li>
-                }
 
+            <ul id="links-list" className="links-list">
+                <li> <Link to='/home'> <img src={Logo} alt='Logo' className='logo_menu' /> </Link> </li>
+                <li> <Link to='/home'>Home</Link> </li>
+                <li> <Link to='/produto'>Produtos</Link> </li>
+            </ul>
+            <ul className="links-list">
+                <li> <Link to='/compras'><img src={bag} alt='Bag' className='bagIcon' /></Link> </li>
                 <li className="sair_btn"> <Link to='/'>Sair</Link> </li>
             </ul>
 
