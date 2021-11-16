@@ -65,13 +65,19 @@ const Login = () => {
     if(form === undefined){
 
     }else{
-      if (form[0] === [''] && form[1] === [''] && form[2] === [''] || form == ['']) {
-        localStorage.setItem('login', formValues[1])
-      }else{
+      if (form[0] === [''] && form[1] === [''] && form[2] === ['']) {
         Swal.fire({
           icon: 'error',
           text: 'Todos os campos de cadastro devem ser preenchidos',
         }) 
+        localStorage.setItem('login', formValues[1])
+      }else{
+        Swal.fire({
+          icon: 'success',
+          text: 'Cadastro feito com sucesso',
+        }) 
+        localStorage.setItem('login', formValues[1])
+
       }
     }
   }
