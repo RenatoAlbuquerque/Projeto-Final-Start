@@ -90,6 +90,8 @@ function ItemComponent(props){
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       geradorPDF(user,showItens())
+      localStorage.removeItem("itens");
+      setItens()
     } else if (result.isDenied) {
       Swal.fire('Sua compra foi finalizada', '', 'info')
       localStorage.removeItem("itens");

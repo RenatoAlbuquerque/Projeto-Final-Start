@@ -38,13 +38,7 @@ export default function Content(props) {
                     timer: 1500
                   })
             }else{
-                //Preparar um modal para a confirmação de uma compra a mais
-
                 let produtos = JSON.parse(localStorage.getItem('itens'))
-
-                
-                console.log(produtos[object.indexItem].quant)
-
                 Swal.fire({
                     title: `Já existem ${produtos[object.indexItem].quant} ${nome} na sua sacola, deseja adicionar mais ${produto.quant} ?`,
                     showDenyButton: true,
