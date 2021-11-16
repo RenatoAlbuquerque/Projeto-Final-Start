@@ -151,7 +151,7 @@
                 }
 
                 .modalGlobalBrand {
-                    top: 400px;
+                    top: 420px;
 
                     .modal-brand {
                         #btnBrand {
@@ -161,7 +161,7 @@
                 }
 
                 .modalNone {
-                    top: 400px;
+                    top: 420px;
 
                     .modal-brand {
                         #btnBrand {
@@ -185,11 +185,11 @@
         .filter-list {
             .filter-brand {
                 .modalGlobalBrand {
-                    top: 435px;
+                    top: 465px;
                 }
 
                 .modalNone {
-                    top: 435px;
+                    top: 465px;
                 }
             }
 
@@ -209,13 +209,26 @@
                     }
                 }
 
-                .modalGlobalBrand {
+                .modalNone {
+                    top: 425px;
+
                     .modal-brand {
                         #btnFilterBrand {
                             font-size: .7rem;
                         }
                     }
                 }
+
+                .modalGlobalBrand {
+                    top: 425px;
+
+                    .modal-brand {
+                        #btnFilterBrand {
+                            font-size: .7rem;
+                        }
+                    }
+                }
+
             }
 
             .filter-price_rating {
