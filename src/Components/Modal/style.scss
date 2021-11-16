@@ -29,7 +29,6 @@ $color2: #333;
         @media(max-width: 380px) {
             max-width: 380px;
         }
-
         .btn-close {
             background-color: $color2;
             color: $color1;
@@ -59,7 +58,6 @@ $color2: #333;
             h3 {
                 text-align: center;
                 margin-bottom: 20px;
-                background-color: $color1;
             }
 
             .container {
@@ -70,12 +68,14 @@ $color2: #333;
                 .img-product {
                     width: 250px;
                     height: 240px;
+
                     img {
                         width: 250px;
                         height: 240px;
                         border-radius: 25px;
+
                         @media(max-width: 500px) {
-                            width: 200px;
+                            width: 170px;
                             height: 240px;
                         }
                     }
@@ -95,19 +95,14 @@ $color2: #333;
 
                     .details {
                         list-style-type: none;
-                        background-color: $color1;
 
                         li {
                             margin-bottom: 5px;
-                            background-color: $color1;
-
-
                         span {
                             display: grid;
                             grid-template-columns: repeat(7, 1fr);
                             grid-column-gap: 4px;
                             grid-row-gap: 2px;
-                            background-color: $color1;
 
                             @media(max-width: 600px) {
                                 grid-template-columns: repeat(5, 1fr);
@@ -115,7 +110,7 @@ $color2: #333;
                             @media(max-width: 430px) {
                                 grid-template-columns: repeat(4, 1fr);
                                 grid-column-gap: unset;
-                            grid-row-gap: 2px;
+                                grid-row-gap: 2px;
                             }
                         }
                     }
@@ -126,15 +121,9 @@ $color2: #333;
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        background-color: $color1;
 
                         .text-quantidade {
                             margin-right: 10px;
-                            background-color: $color1;
-
-                            b {
-                                background-color: $color1;
-                            }
                         }
 
                         .quantCompras {
@@ -164,6 +153,10 @@ $color2: #333;
                                 &:hover {
                                     color: $color1;
                                     background-color: $color2;
+                                }
+
+                                @media(max-width: 480px) {
+                                    font-size: 16px;
                                 }
                             }
                         }

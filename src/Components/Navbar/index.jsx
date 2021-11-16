@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import bag3 from '../../Images/IconCompras/bag3.png';
 import bag2 from '../../Images/IconCompras/bag2.png';
+import bag1 from '../../Images/IconCompras/bag1.png';
+
 import './style.css';
 import Logo from '../../Images/Logo_startSuaBeleza.png'
 
@@ -15,10 +17,10 @@ export default function Navbar(props) {
     useEffect(() => { 
         setTimeout(() => {setCount(count + 1)}, 1000);
         const itens = localStorage.getItem('itens')
-        if(!itens || itens == '[]'){
+        if(!itens || itens === '[]'){
             setBag(bag3)
         }else{
-            setBag(bag2)
+            setBag(bag1)
         }
     });
     

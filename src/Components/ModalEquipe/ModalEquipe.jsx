@@ -17,10 +17,10 @@ export default function ModalEquipe({ id = 'modal-equipe-overlay', onClose = () 
     return (
         <div id="modal-equipe-overlay" onClick={outSideClick}>
             <div className="modal-equipe">
-                <button className="btn-close" type="button" onClick={onClose}>X</button>
-                <h1 id="titulo-modal"> Desenvolvedores
-                    <i class="fas fa-laptop-code"></i>
-                </h1>
+                    <button className="btn-close" type="button" onClick={onClose}>X</button>
+                    <h1 id="titulo-modal"> Desenvolvedores
+                        <i class="fas fa-laptop-code"></i>
+                    </h1>
                 <div id="container">
                     <div id="item-container">
                         <h4 id="title-card">Gilberto Medeiros</h4>

@@ -47,8 +47,8 @@ const Login = () => {
     const { value: formValues } = await Swal.fire({
       title: 'Cadastro',
       html:
-        '<input id="swal-input1" class="swal2-input" placeholder="Nome">' +
-        '<input id="swal-input2" class="swal2-input" placeholder="Login">' +
+        '<input id="swal-input1" class="swal2-input" placeholder="Login">' +
+        '<input id="swal-input2" class="swal2-input" placeholder="Email" type="email">' +
         '<input id="swal-input3" class="swal2-input" placeholder="Senha" type="password">',
       focusConfirm: false,
       preConfirm: () => {
@@ -61,12 +61,15 @@ const Login = () => {
     })
 
     const form = JSON.stringify(formValues)
-    console.log(form)
     if(form === undefined){
 
     }else{
-      if (form[0] === [''] && form[1] === [''] && form[2] === [''] || form == ['']) {
-        localStorage.setItem('login', formValues[1])
+      if (formValues[0] !== '' && formValues[1] !== '' && formValues[2] !== '') {
+        Swal.fire({
+          icon: 'success',
+          text: 'Cadastro feito com sucesso',
+        }) 
+        localStorage.setItem('login', formValues[0])
       }else{
         Swal.fire({
           icon: 'error',
