@@ -1,68 +1,74 @@
-.bin-icon{
+.bin-icon {
     width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.bin-content{
+
+.bin-content {
     display: flex;
     width: 50%;
     justify-content: center;
     align-items: center;
 }
 
-.bag-container{
+.bag-container {
     height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.tit{
+.tit {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
 }
 
-.tit-p{
-    color:#d4728f ;
+.tit-p {
+    color: #d4728f;
     font-size: 50px;
     position: absolute;
     left: 60px;
     top: 110px;
 }
 
-.tit-hr{
+.tit-hr {
     border-color: #d4728f;
 }
-.marca{
+
+.marca {
     color: #d4728f;
     position: relative;
     left: 53%;
     display: inline-block;
     margin-right: 15%;
 }
-.valor{
+
+.valor {
     color: #d4728f;
     position: relative;
     left: 45%;
     display: inline-block;
     margin-right: 2%;
 }
-.quant{
+
+.quant {
     color: #d4728f;
     position: relative;
     left: 44%;
     display: inline-block;
 
 }
-.total{
+
+.total {
     color: #d4728f;
     position: relative;
     left: 45%;
     display: inline-block;
 
 }
+
 /* 
 .title-bars{
     display: grid;
@@ -70,15 +76,15 @@
 
 } */
 
-.tit-h2{
+.tit-h2 {
     color: #d4728f;
     position: relative;
     left: 50%;
     display: inline-block;
     margin-right: 5%;
 }
- 
-.item-list{
+
+.item-list {
     width: 100%;
     display: flex;
     align-items: center;
@@ -86,21 +92,23 @@
     flex-direction: column;
 }
 
-.item{
-    padding: 10px 10px ;
+.item {
+    padding: 10px 10px;
     width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    
+    font-size: .8rem;
+
 }
-.item-img{
+
+.item-img {
     width: 15%;
     min-height: 15%;
 }
 
-.item-content{
+.item-content {
     display: flex;
     width: 70%;
     text-align: center;
@@ -109,11 +117,11 @@
     flex-direction: column;
 }
 
-.item-component{
+.item-component {
     margin-right: 35px;
 }
 
-.item-info{
+.item-info {
     width: 30%;
     display: flex;
     align-items: center;
@@ -126,8 +134,8 @@
     color: #f4f4f4;
     font-size: 20px;
     font-weight: bold;
-    background-color: #d4728f; 
-    /* background-image: linear-gradient(90deg, rgba(246, 177, 166, 1) 0%, rgba(233, 155, 158, 1) 35%, rgba(212, 114, 143, 1) 100%); */ 
+    background-color: #d4728f;
+    /* background-image: linear-gradient(90deg, rgba(246, 177, 166, 1) 0%, rgba(233, 155, 158, 1) 35%, rgba(212, 114, 143, 1) 100%); */
     cursor: pointer;
     border-radius: 9px;
     padding: 7px;
@@ -136,13 +144,14 @@
     min-height: 70px;
     transition: 0.20s ease-in;
 
-    
+
 }
-.end-shop:hover{
+
+.end-shop:hover {
     background-color: #c9708a;
 }
 
-.message{
+.message {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,13 +159,14 @@
 
 @media screen and (max-width: 900px) {
 
-    .bin-icon{
+    .bin-icon {
         width: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .bin-content{
+
+    .bin-content {
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -164,8 +174,8 @@
 
     }
 
-    .item{
-        padding: 10px 10px ;
+    .item {
+        padding: 10px 10px;
         width: 55%;
         display: flex;
         align-items: center;
@@ -173,56 +183,66 @@
         flex-direction: column;
         margin-bottom: 50px;
     }
-    .item-container{
+
+    .item-container {
         display: flex;
-        width: 100%;    
-        height: calc(100% + 100px); /* para suporte nativo */
+        width: 100%;
+        height: calc(100% + 100px);
+        /* para suporte nativo */
         justify-content: space-evenly;
         flex-direction: column;
 
     }
 
-    .item-info{
+    .item-info {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
-    .item-content{
+
+    .item-content {
         width: 100%;
         display: flex;
         margin-bottom: 10px;
         align-items: center;
         justify-content: center;
     }
-    .item-img{
+
+    .item-img {
         width: 20%;
         margin: 0 auto;
     }
-    .tit{
+
+    .tit {
         display: none;
     }
 
-    .tit-hr{
+    .tit-hr {
         display: none;
     }
-    .marca{
+
+    .marca {
         display: none;
 
     }
-    .valor{
+
+    .valor {
         display: none;
 
     }
-    .quant{
+
+    .quant {
         display: none;
 
-    
+
     }
-    .total{
+
+    .total {
         display: none;
     }
-    .tit-p{
+
+    .tit-p {
         display: none;
     }
-} 
+}

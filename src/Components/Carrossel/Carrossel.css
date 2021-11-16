@@ -1,40 +1,44 @@
 .carousel-wrapper {
-    width: 100%;
-  }
-  
-.rec-carousel-item:focus {
-    outline: none;
-    box-shadow: inset 0 0 1px 0px hsl(6, 77%, 80%);
+  width: 100%;
+  padding-top: 10px;
 }
 
-.carousel-wrapper img:hover{
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 0px hsl(6, 77%, 80%);
+}
+
+.carousel-wrapper img:hover {
   cursor: pointer;
 }
 
-button.rec-dot{
+button.rec-dot {
   background-color: #D6778E;
 }
 
-button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
   background-color: rgb(235, 86, 123);
 }
 
-.rec.rec-arrow{
+.rec.rec-arrow {
   background-color: #D6778E;
 }
 
-.rec.rec-arrow:hover:disabled{
+.rec.rec-arrow:hover:disabled {
   background-color: #F3ACA4;
 }
 
-.rec.rec-arrow:enabled, .rec.rec-arrow:disabled{
-  background-color:#F3ACA4;
-}
-
-button.sc-bdvvtL.jRFJkP.rec.rec-arrow.rec.rec-arrow-left{
+.rec.rec-arrow:enabled,
+.rec.rec-arrow:disabled {
   background-color: #F3ACA4;
 }
 
-button.sc-bdvvtL.jRFJkP.rec.rec-arrow.rec.rec-arrow-right{
+button.sc-bdvvtL.jRFJkP.rec.rec-arrow.rec.rec-arrow-left {
+  background-color: #F3ACA4;
+}
+
+button.sc-bdvvtL.jRFJkP.rec.rec-arrow.rec.rec-arrow-right {
   background-color: #F3ACA4;
 }
