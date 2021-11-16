@@ -82,6 +82,7 @@ a:hover {
 
   .logo_menu {
     height: 50px;
+    padding-left: 20px;
   }
 
   .bagIcon {
@@ -99,7 +100,8 @@ a:hover {
   }
 
   #links-list {
-    flex-direction: column;
+
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -108,16 +110,23 @@ a:hover {
   }
 
   .logo_menu {
-    padding: 0;
+    padding-left: 1px;
   }
 
   .logo-linkPages {
-
     gap: 20px;
   }
 
   .links-list li {
     padding: 0;
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+
+  #menu_header ul {
+    gap: 15px;
   }
 
 }

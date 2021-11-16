@@ -9,8 +9,6 @@ import Logo from '../../Images/Logo_startSuaBeleza.png'
 
 export default function Navbar(props) {
     const [bag, setBag] = useState()
-
-
     const [value, setValue] = useState('');
     const [count, setCount] = useState(-1);
 
